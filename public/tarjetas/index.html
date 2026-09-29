@@ -12,7 +12,8 @@
 <meta property="og:title" content="¿Qué tarjeta de crédito te conviene más?">
 <meta property="og:description" content="Comparador de tarjetas de crédito en México: 6 preguntas, 105 tarjetas, topes y anualidades ya descontados. Se actualiza cada mes.">
 <meta property="og:url" content="https://elplanquefalta.com/tarjetas">
-<meta name="theme-color" content="#2D382E">
+<meta name="theme-color" content="#F7F5EF">
+<meta name="color-scheme" content="light">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap">
@@ -40,12 +41,8 @@
   --red:#B42D2D; --line:#cfcabd; --chip:#e1ddd1; --rowalt:#f0ede5; --onsage:#F7F5EF; --warnbg:#f3e6e0; --cream:#F5F2EB;
   --display:"Fraunces", Georgia, serif; --body:"DM Sans", system-ui, sans-serif;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#1b221c; --surface:#243026; --fg:#ebe7dc; --muted:#a9b3a9; --sage:#9fb7a1; --deep:#141a15; --gold:#D4A853;
-  --red:#e07070; --line:#3a473b; --chip:#2f3c31; --rowalt:#29362b; --onsage:#1b221c; --warnbg:#3a2a26; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#1b221c; --surface:#243026; --fg:#ebe7dc; --muted:#a9b3a9; --sage:#9fb7a1; --deep:#141a15; --gold:#D4A853;
-  --red:#e07070; --line:#3a473b; --chip:#2f3c31; --rowalt:#29362b; --onsage:#1b221c; --warnbg:#3a2a26; color-scheme:dark}
+/* Siempre en claro, aunque el celular esté en modo oscuro */
+:root{color-scheme:light}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5;overflow-x:hidden}
@@ -55,16 +52,16 @@ h2{font-size:clamp(20px,3vw,24px)} h3{font-size:17px}
 p{margin:0;max-width:72ch}
 
 /* Barra superior y encabezado, igual que las herramientas de la página principal */
-.nav{background:var(--deep);color:var(--cream);padding:16px;display:flex;justify-content:space-between;align-items:center}
+.nav{background:var(--surface);color:var(--sage);border-bottom:1px solid var(--line);padding:16px;display:flex;justify-content:space-between;align-items:center}
 .nav .logo{font-family:var(--display);font-weight:700;font-size:16px;text-decoration:none}
-.nav .logo em,.hero em{color:var(--goldbright)}
-.nav .back{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--goldbright);text-decoration:none;display:flex;align-items:center;gap:4px;min-height:44px}
-.hero{background:var(--deep);color:var(--cream);padding:28px 16px 64px;text-align:center;position:relative}
+.nav .logo em,.hero em{color:var(--gold)}
+.nav .back{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:4px;min-height:44px}
+.hero{background:var(--surface);color:var(--fg);padding:28px 16px 64px;text-align:center;position:relative}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:40px;background:var(--bg);clip-path:ellipse(60% 100% at 50% 100%)}
-.hero .badge{display:inline-block;padding:6px 14px;border-radius:99px;background:rgba(212,168,83,.1);border:1px solid rgba(212,168,83,.35);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--goldbright);margin-bottom:18px}
-.hero h1{color:var(--cream);font-size:clamp(30px,6vw,46px);line-height:1.08;max-width:760px;margin:0 auto 14px}
-.hero p{color:rgba(245,242,235,.72);margin:0 auto;max-width:560px}
-.hero .date{margin-top:14px;font-size:13px;color:rgba(245,242,235,.55)}
+.hero .badge{display:inline-block;padding:6px 14px;border-radius:99px;background:rgba(154,112,32,.08);border:1px solid rgba(154,112,32,.3);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.hero h1{color:var(--sage);font-size:clamp(30px,6vw,46px);line-height:1.08;max-width:760px;margin:0 auto 14px}
+.hero p{color:var(--muted);margin:0 auto;max-width:560px}
+.hero .date{margin-top:14px;font-size:13px;color:var(--muted)}
 
 .wrap{max-width:1100px;margin:0 auto;padding:8px 16px 56px;display:grid;grid-template-columns:minmax(0,1fr);gap:36px}
 .narrow{max-width:780px;width:100%;margin-inline:auto}
@@ -173,10 +170,10 @@ summary{cursor:pointer;font-family:var(--display);font-size:18px;color:var(--sag
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 ul.plain{margin:0;padding-left:18px;display:grid;gap:6px}
 ul.plain li{font-size:13.5px}
-.follow{background:var(--deep);color:var(--cream);border-radius:16px;padding:24px 20px;display:grid;gap:12px;justify-items:center;text-align:center}
-.follow h2{color:var(--cream)}
-.follow p{color:rgba(245,242,235,.72)}
-.follow a{display:inline-flex;align-items:center;gap:10px;background:var(--goldbright);color:#2D382E;font-weight:700;text-decoration:none;border-radius:99px;padding:12px 22px;min-height:48px}
+.follow{background:var(--surface);border:1px solid var(--line);color:var(--fg);border-radius:16px;padding:24px 20px;display:grid;gap:12px;justify-items:center;text-align:center}
+.follow h2{color:var(--sage)}
+.follow p{color:var(--muted)}
+.follow a{display:inline-flex;align-items:center;gap:10px;background:var(--sage);color:var(--onsage);font-weight:700;text-decoration:none;border-radius:99px;padding:12px 22px;min-height:48px}
 .follow a:hover{filter:brightness(1.05)}
 footer{text-align:center;padding:8px 16px 40px;color:var(--muted);font-size:12.5px;display:grid;gap:6px}
 footer .logo{font-family:var(--display);font-weight:700;color:var(--sage);text-transform:uppercase;letter-spacing:-.01em}
