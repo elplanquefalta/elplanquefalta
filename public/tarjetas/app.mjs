@@ -56,6 +56,23 @@ function podium(res) {
     <p class="disclaimer">Cálculo ilustrativo. Beneficios sujetos a términos de cada institución y a aprobación de crédito. CAT promedio sin IVA, para fines informativos y de comparación.</p></div>`;
 }
 
+// Dato del renglón corto en celular: el mismo criterio por el que se ordenó
+const MID = {
+  net: ["Regreso", (c) => c.eff.toFixed(2) + "%"],
+  cat: ["CAT", (c) => (catNum(c.cat) == null ? "—" : catNum(c.cat) + "%")],
+  eff: ["Regreso", (c) => c.eff.toFixed(2) + "%"],
+  rew: ["Recompensa", (c) => fmt(c.rew)],
+  cost: ["Costo", (c) => fmt(c.cost)],
+  inc: ["Ingreso", (c) => (c.inc ? fmt(c.inc) : "—")],
+};
+
+function detail(c) {
+  return `<dl><div><dt>Regreso</dt><dd>${c.eff.toFixed(2)}%</dd></div><div><dt>Recompensa</dt><dd>${fmt(c.rew)}</dd></div>
+    <div><dt>Costo</dt><dd>${fmt(c.cost)}</dd></div><div><dt>Ingreso mín.</dt><dd>${c.inc ? fmt(c.inc) : "—"}</dd></div>
+    <div><dt>CAT</dt><dd>${esc(c.cat)}</dd></div><div><dt>Dato</dt><dd><span class="pill ${VL[c.v][0]}">${VL[c.v][1]}</span></dd></div></dl>
+    <p>${c.capHit ? `<span class="capflag">${esc(c.capHit)}.</span> ` : ""}${esc(c.note)} <a href="${esc(c.url)}" target="_blank" rel="noopener">Fuente</a></p>`;
+}
+
 function row(c, pos) {
   const tag = c.tooHigh ? `<br><span class="pill">Pide ${fmt(c.inc)}</span>` : c.feeOut ? `<br><span class="pill">Tiene costo</span>` : "";
   return `<tr class="${c.ok ? "" : "dim"}">
@@ -63,12 +80,16 @@ function row(c, pos) {
     <td class="card"><b>${esc(c.n)}</b><small><span class="rk">#${pos} · </span>${esc(c.i)}</small>${tag}</td>
     <td class="num" data-l="Regreso">${c.eff.toFixed(2)}%</td>
     <td class="num" data-l="Recompensa">${fmt(c.rew)}</td>
-    <td class="num" data-l="Costo">${fmt(c.cost)}</td>
+    <td class="num c-cost" data-l="Costo">${fmt(c.cost)}</td>
     <td class="net ${c.net < 0 ? "neg" : ""}" data-l="Neto al año">${fmt(c.net)}</td>
     <td class="num" data-l="Ingreso mín.">${c.inc ? fmt(c.inc) : "—"}</td>
-    <td class="num" data-l="CAT">${esc(c.cat)}</td>
+    <td class="num c-cat" data-l="CAT">${esc(c.cat)}</td>
     <td class="ver"><span class="pill ${VL[c.v][0]}">${VL[c.v][1]}</span></td>
-    <td class="note">${c.capHit ? `<span class="capflag">${esc(c.capHit)}.</span> ` : ""}${esc(c.note)} <a href="${esc(c.url)}" target="_blank" rel="noopener">Fuente</a></td></tr>`;
+    <td class="note">${c.capHit ? `<span class="capflag">${esc(c.capHit)}.</span> ` : ""}${esc(c.note)} <a href="${esc(c.url)}" target="_blank" rel="noopener">Fuente</a></td>
+    <td class="mid">${MID[view.sort][1](c)}</td>
+    <td class="catc">${MID.cat[1](c)}</td>
+    <td class="chev"><button type="button" aria-expanded="false" aria-label="Ver detalle de ${esc(c.n)}">▾</button></td>
+    <td class="detail">${detail(c)}</td></tr>`;
 }
 
 // Orden: las que la persona puede sacar van primero; dentro de cada grupo, el criterio elegido.
@@ -100,6 +121,9 @@ function renderTable(res) {
   $("count").textContent = `${DATA.cards.length} tarjetas calculadas · ${res.eligible.length} disponibles para tu ingreso` +
     (view.filters.size || q ? ` · ${list.length} con tus filtros` : "");
   $("rows").innerHTML = shown.map((c, i) => row(c, i + 1)).join("");
+  $("mhead").innerHTML = $("all").querySelector(".tbl").dataset.m === "b"
+    ? "<span></span><span>Tarjeta</span><span>CAT</span><span>Costo</span><span>Neto/año</span>"
+    : `<span>#</span><span>Tarjeta</span><span>${MID[view.sort][0]}</span><span>Neto/año</span><span></span>`;
   const rest = list.length - shown.length;
   $("more").hidden = rest <= 0;
   $("more").textContent = `Ver las ${rest} tarjetas restantes`;
@@ -174,6 +198,22 @@ document.querySelector(".filters").addEventListener("click", (e) => {
   const b = e.target.closest(".chip");
   if (!b) return;
   toggleMulti(b, b.dataset.f, view.filters);
+  lastRes && renderTable(lastRes);
+});
+// Vista 1: tocar un renglón abre su detalle (los links de Fuente siguen funcionando)
+$("rows").addEventListener("click", (e) => {
+  if (e.target.closest("a") || $("all").querySelector(".tbl").dataset.m !== "a") return;
+  const tr = e.target.closest("tr");
+  if (!tr) return;
+  const open = tr.classList.toggle("open");
+  tr.querySelector(".chev button").setAttribute("aria-expanded", String(open));
+});
+// TEMPORAL: selector de vista para elegir cómo se ve la tabla en celular
+document.querySelector(".vistas").addEventListener("click", (e) => {
+  const b = e.target.closest(".chip");
+  if (!b) return;
+  document.querySelectorAll(".vistas .chip").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+  $("all").querySelector(".tbl").dataset.m = b.dataset.m;
   lastRes && renderTable(lastRes);
 });
 $("sort").addEventListener("change", (e) => { view.sort = e.target.value; lastRes && renderTable(lastRes); });

@@ -138,22 +138,52 @@ tr.dim td{opacity:.55} tr.dim td.note{opacity:.85}
 .capflag{font-weight:700;color:var(--red)}
 .more{font:inherit;font-weight:700;font-size:14px;color:var(--sage);background:var(--surface);border:1.5px solid var(--sage);border-radius:99px;padding:10px 18px;min-height:44px;cursor:pointer;justify-self:center}
 
-/* Celular: cada fila de la tabla se vuelve una tarjeta */
+/* Celular y tablet. TEMPORAL: 3 vistas para elegir (data-m en .tbl): a = renglón que se abre, b = renglón fijo, c = tabla con scroll */
+.mhead,.vistas,td.mid,td.catc,td.chev,td.detail{display:none}
 @media (max-width:999px){
-  table{font-size:13.5px}
-  thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-  tbody tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 10px;padding:14px;border-bottom:1px solid var(--line)}
-  tbody tr:last-child{border-bottom:0}
-  td{padding:0;border:0;text-align:left}
-  td.rank{display:none}
-  td.card{grid-column:1/3}
-  td.card{grid-row:1}
-  td.net{grid-row:1;grid-column:3;text-align:right;font-size:18px}
-  td[data-l]::before{content:attr(data-l);display:block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;font-family:var(--body)}
-  td.num{text-align:left;white-space:normal}
-  td.net[data-l]::before{text-align:right}
-  td.ver{grid-column:1/-1}
-  td.note{grid-column:1/-1;min-width:0}
+  .vistas{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--warnbg);border-radius:10px;padding:10px 12px}
+  .tbl[data-m="c"]{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .tbl[data-m="c"] table{min-width:900px}
+  .tbl[data-m="c"] td.note{min-width:220px}
+  .tbl[data-m="c"] td.card{min-width:150px}
+  .tbl[data-m="c"] .rk{display:none}
+  .tbl[data-m="c"] thead th,.tbl[data-m="c"] td.num{white-space:nowrap}
+  .tbl:not([data-m="c"]) thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .tbl:not([data-m="c"]) tbody tr,.tbl:not([data-m="c"]) .mhead{display:grid;align-items:center;gap:2px 10px;padding:10px 12px}
+  .tbl:not([data-m="c"]) tbody tr{border-bottom:1px solid var(--line)}
+  .tbl:not([data-m="c"]) tbody tr:last-child{border-bottom:0}
+  .tbl:not([data-m="c"]) td{display:none;padding:0;border:0}
+  .tbl:not([data-m="c"]) td.card b{font-size:14px;line-height:1.25}
+  .tbl:not([data-m="c"]) td.card small{font-size:11.5px}
+  .tbl:not([data-m="c"]) td.card .pill{font-size:10px}
+  .tbl:not([data-m="c"]) td.net{font-size:15px}
+  .mhead{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--surface);z-index:1;border-radius:10px 10px 0 0}
+  .mhead span:not(:nth-child(2)){text-align:right}
+  .tbl .num{text-align:right}
+  /* Vista 1: renglón que se abre */
+  .tbl[data-m="a"] .mhead,.tbl[data-m="a"] tbody tr{grid-template-columns:20px minmax(0,1fr) auto 70px 22px}
+  .tbl[data-m="a"] .mhead span:nth-child(1){text-align:left}
+  .tbl[data-m="a"] td.rank,.tbl[data-m="a"] td.card,.tbl[data-m="a"] td.mid,.tbl[data-m="a"] td.net,.tbl[data-m="a"] td.chev{display:block}
+  .tbl[data-m="a"] td.rank{text-align:left;font-size:12px}
+  .tbl[data-m="a"] td.mid{text-align:right;white-space:nowrap;font-size:13px}
+  .tbl[data-m="a"] tr{cursor:pointer}
+  .tbl[data-m="a"] td.rank{grid-area:1/1} .tbl[data-m="a"] td.card{grid-area:1/2} .tbl[data-m="a"] td.mid{grid-area:1/3}
+  .tbl[data-m="a"] td.net{grid-area:1/4} .tbl[data-m="a"] td.chev{grid-area:1/5} .tbl[data-m="a"] .rk{display:none}
+  .tbl[data-m="a"] tr.open td.detail{display:block;grid-column:1/-1;padding-top:8px}
+  .chev button{font:inherit;background:none;border:0;color:var(--muted);width:22px;height:32px;padding:0;cursor:pointer;transition:transform .2s}
+  tr.open .chev button{transform:rotate(180deg)}
+  .detail dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 10px;margin:0 0 8px}
+  .detail dt{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .detail dd{margin:0;font-size:13px}
+  .detail p{font-size:12.5px;color:var(--muted);margin-top:6px}
+  /* Vista 2: renglón fijo de 4 datos */
+  .tbl[data-m="b"] .mhead,.tbl[data-m="b"] tbody tr{grid-template-columns:minmax(0,1fr) 52px 60px 70px}
+  .tbl[data-m="b"] .mhead span:nth-child(1){display:none}
+  .tbl[data-m="b"] td.card,.tbl[data-m="b"] td.catc,.tbl[data-m="b"] td.c-cost,.tbl[data-m="b"] td.net{display:block;font-size:13px;text-align:right}
+  .tbl[data-m="b"] td.card{text-align:left}
+  .tbl[data-m="b"] td.card{grid-column:1} .tbl[data-m="b"] td.catc{grid-column:2} .tbl[data-m="b"] td.c-cost{grid-column:3} .tbl[data-m="b"] td.net{grid-column:4}
+  .tbl[data-m="b"] td.card,.tbl[data-m="b"] td.catc,.tbl[data-m="b"] td.c-cost,.tbl[data-m="b"] td.net{grid-row:1}
+  .tbl[data-m="b"] td.net{font-size:15px}
 }
 /* Laptop: toda la tabla cabe en pantalla, sin barra horizontal; el encabezado se queda fijo al bajar */
 @media (min-width:1000px){
@@ -300,7 +330,13 @@ footer .logo em{color:var(--gold)}
     <span><span class="pill est">Estimado</span> tasa o valor del punto sólo de blogs o prensa</span>
     <span><span class="pill">Pide más ingreso</span> se muestra en gris; no entra en tu top 3</span>
   </div>
-  <div class="tbl"><table>
+  <div class="vistas" role="group" aria-label="Vista de la tabla (temporal)">
+    <span class="flabel">Prueba de vista (temporal):</span>
+    <button class="chip sm" type="button" data-m="a" aria-pressed="true">Vista 1</button>
+    <button class="chip sm" type="button" data-m="b" aria-pressed="false">Vista 2</button>
+    <button class="chip sm" type="button" data-m="c" aria-pressed="false">Vista 3</button>
+  </div>
+  <div class="tbl" data-m="a"><div class="mhead" id="mhead" aria-hidden="true"></div><table>
     <colgroup><col class="c-rank"><col class="c-card"><col class="c-n"><col class="c-n"><col class="c-n"><col class="c-net"><col class="c-n"><col class="c-n"><col class="c-ver"><col class="c-note"></colgroup>
     <caption class="sr">Todas las tarjetas ordenadas por beneficio neto anual</caption>
     <thead><tr><th class="num">#</th><th>Tarjeta</th><th class="num">Regreso real</th><th class="num">Recompensa al año</th><th class="num">Costo al año</th><th class="num">Neto al año</th><th class="num">Ingreso mínimo</th><th class="num">CAT sin IVA</th><th>Verificación</th><th>Tope y letra chiquita</th></tr></thead>
