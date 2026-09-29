@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Qué tarjeta de crédito te conviene más? | Comparador de tarjetas en México 2026</title>
+<meta name="description" content="Contesta 6 preguntas y ve qué tarjetas de crédito te regresan más dinero al año en México, con topes, anualidades, membresías e IVA ya descontados. 105 tarjetas revisadas.">
+<link rel="canonical" href="https://elplanquefalta.com/tarjetas">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="El Plan Que Falta">
+<meta property="og:title" content="¿Qué tarjeta de crédito te conviene más?">
+<meta property="og:description" content="Comparador de tarjetas de crédito en México: 6 preguntas, 105 tarjetas, topes y anualidades ya descontados. Se actualiza cada mes.">
+<meta property="og:url" content="https://elplanquefalta.com/tarjetas">
+<meta name="theme-color" content="#2D382E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap">
+<link rel="modulepreload" href="/tarjetas/calc.mjs">
+<link rel="preload" href="/tarjetas/data/cards.json" as="fetch" crossorigin>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Cómo sé qué tarjeta de crédito me conviene?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Compara el beneficio neto anual: lo que la tarjeta te regresa en un año según tus gastos, menos lo que cuesta tenerla (anualidad, comisiones y membresías con IVA). Los topes de recompensa cambian mucho el resultado."}},
+    {"@type": "Question", "name": "¿Importa el CAT si pago el total de mi tarjeta?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Si pagas el total cada mes no pagas intereses, así que el CAT casi no te afecta. Si dejas saldo, primero conviene liquidarlo: los intereses superan cualquier recompensa."}},
+    {"@type": "Question", "name": "¿Qué tarjetas de crédito tienen tope de cashback?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Casi todas. Hay topes mensuales, por categoría, anuales, ligados a tu línea de crédito y hasta de por vida, como el de RappiCard ($1,500 por contrato)."}},
+    {"@type": "Question", "name": "¿Cada cuánto se actualizan los datos?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Cada mes: se revisan cambios en términos y condiciones, anualidades y topes, y se agregan las tarjetas nuevas que salen al mercado. Cada tarjeta muestra si su dato es oficial, oficial con dudas o estimado, y enlaza a su fuente."}}
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#E8E5DC; --surface:#F7F5EF; --fg:#243026; --muted:#5d685f; --sage:#4A5D4C; --deep:#2D382E; --gold:#9A7020; --goldbright:#D4A853;
+  --red:#B42D2D; --line:#cfcabd; --chip:#e1ddd1; --rowalt:#f0ede5; --onsage:#F7F5EF; --warnbg:#f3e6e0; --cream:#F5F2EB;
+  --display:"Fraunces", Georgia, serif; --body:"DM Sans", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1b221c; --surface:#243026; --fg:#ebe7dc; --muted:#a9b3a9; --sage:#9fb7a1; --deep:#141a15; --gold:#D4A853;
+  --red:#e07070; --line:#3a473b; --chip:#2f3c31; --rowalt:#29362b; --onsage:#1b221c; --warnbg:#3a2a26; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1b221c; --surface:#243026; --fg:#ebe7dc; --muted:#a9b3a9; --sage:#9fb7a1; --deep:#141a15; --gold:#D4A853;
+  --red:#e07070; --line:#3a473b; --chip:#2f3c31; --rowalt:#29362b; --onsage:#1b221c; --warnbg:#3a2a26; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:var(--sage)}
+h2{font-size:clamp(20px,3vw,24px)} h3{font-size:17px}
+p{margin:0;max-width:72ch}
+
+/* Barra superior y encabezado, igual que las herramientas de la página principal */
+.nav{background:var(--deep);color:var(--cream);padding:16px;display:flex;justify-content:space-between;align-items:center}
+.nav .logo{font-family:var(--display);font-weight:700;font-size:16px;text-decoration:none}
+.nav .logo em,.hero em{color:var(--goldbright)}
+.nav .back{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--goldbright);text-decoration:none;display:flex;align-items:center;gap:4px;min-height:44px}
+.hero{background:var(--deep);color:var(--cream);padding:28px 16px 64px;text-align:center;position:relative}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:40px;background:var(--bg);clip-path:ellipse(60% 100% at 50% 100%)}
+.hero .badge{display:inline-block;padding:6px 14px;border-radius:99px;background:rgba(212,168,83,.1);border:1px solid rgba(212,168,83,.35);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--goldbright);margin-bottom:18px}
+.hero h1{color:var(--cream);font-size:clamp(30px,6vw,46px);line-height:1.08;max-width:760px;margin:0 auto 14px}
+.hero p{color:rgba(245,242,235,.72);margin:0 auto;max-width:560px}
+.hero .date{margin-top:14px;font-size:13px;color:rgba(245,242,235,.55)}
+
+.wrap{max-width:1100px;margin:0 auto;padding:8px 16px 56px;display:grid;grid-template-columns:minmax(0,1fr);gap:36px}
+.narrow{max-width:780px;width:100%;margin-inline:auto}
+.stack{display:grid;gap:12px;min-width:0}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+
+/* Cuestionario */
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:24px;box-shadow:0 10px 30px rgba(52,65,54,.08)}
+.progress{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px;color:var(--muted);font-weight:500}
+.bar{flex:1;height:6px;border-radius:99px;background:var(--chip);overflow:hidden;max-width:220px}
+.bar span{display:block;height:100%;width:0;background:var(--goldbright);border-radius:99px;transition:width .3s ease}
+.q{display:grid;gap:10px;border:0;margin:0;padding:0;min-width:0}
+.q legend{padding:0;font-weight:700;font-size:16px;margin-bottom:10px}
+.q legend span{color:var(--muted);font-weight:500;margin-right:6px;font-variant-numeric:tabular-nums}
+.q .h{font-size:13px;color:var(--muted)}
+.q.off{opacity:.45}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:14.5px;border:1.5px solid var(--line);background:var(--bg);color:var(--fg);border-radius:99px;padding:9px 15px;min-height:44px;cursor:pointer;transition:background .15s,border-color .15s;-webkit-tap-highlight-color:transparent}
+.chip:hover{border-color:var(--sage)}
+.chip[aria-pressed="true"]{background:var(--sage);border-color:var(--sage);color:var(--onsage);font-weight:700}
+.chip:disabled{cursor:not-allowed}
+.chip:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+#alert:empty{display:none}
+#result:focus{outline:none}
+.alert{background:var(--warnbg);border-left:4px solid var(--red);padding:14px 16px;border-radius:8px;display:grid;gap:6px}
+.alert b{color:var(--red)}
+.profile{font-size:13.5px;color:var(--muted)}
+.placeholder{background:var(--surface);border:1.5px dashed var(--line);border-radius:16px;padding:28px 20px;text-align:center;color:var(--muted)}
+
+/* Podio */
+.podium{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.pod{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:8px;align-content:start;min-width:0}
+.pod.first{background:#4A5D4C;color:#F7F5EF;border-color:#4A5D4C;box-shadow:0 14px 40px rgba(45,56,46,.25)}
+.pod .k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.8;font-weight:700}
+.pod .n{font-family:var(--display);font-size:22px;font-weight:700;line-height:1.15}
+.pod .v{font-family:var(--display);font-size:32px;font-weight:700;color:var(--gold);line-height:1.1}
+.pod.first .v{color:var(--goldbright)}
+.pod ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:13.5px}
+.pod .pill{justify-self:start}
+.pod.first .pill{background:rgba(255,255,255,.18);color:inherit}
+.disclaimer{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
+
+/* Tabla */
+.row-h{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px}
+.src{font-size:12.5px;color:var(--muted)}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:12px;max-width:760px}
+.search{display:grid;gap:4px;font-size:13px;color:var(--muted);font-weight:500}
+.search input,.search select{font:inherit;font-size:16px;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;min-height:44px;width:100%}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.flabel{font-size:13px;color:var(--muted);font-weight:500;margin-right:2px}
+.chip.sm{font-size:13.5px;padding:7px 13px;min-height:40px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--muted)}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--chip);white-space:nowrap}
+.ok{color:var(--sage)} .warn{color:var(--gold)} .est{color:var(--red)}
+.tbl{border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:13.5px}
+th,td{padding:10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--surface);line-height:1.3;vertical-align:bottom}
+tbody tr:nth-child(even){background:var(--rowalt)}
+tbody tr:last-child td{border-bottom:0}
+td.card b{display:block} td.card small{color:var(--muted)}
+.num{text-align:right;white-space:nowrap}
+td.net{font-family:var(--display);font-weight:700;color:var(--gold);font-size:16px;text-align:right;white-space:nowrap}
+td.net.neg{color:var(--red)}
+td.rank{color:var(--muted);text-align:right}
+td.note{color:var(--muted);font-size:12.5px}
+td.card,td.note{overflow-wrap:anywhere}
+td a{color:var(--sage);font-weight:500}
+tr.dim td{opacity:.55} tr.dim td.note{opacity:.85}
+.capflag{font-weight:700;color:var(--red)}
+.more{font:inherit;font-weight:700;font-size:14px;color:var(--sage);background:var(--surface);border:1.5px solid var(--sage);border-radius:99px;padding:10px 18px;min-height:44px;cursor:pointer;justify-self:center}
+
+/* Celular: cada fila de la tabla se vuelve una tarjeta */
+@media (max-width:999px){
+  table{font-size:13.5px}
+  thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  tbody tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 10px;padding:14px;border-bottom:1px solid var(--line)}
+  tbody tr:last-child{border-bottom:0}
+  td{padding:0;border:0;text-align:left}
+  td.rank{display:none}
+  td.card{grid-column:1/3}
+  td.card{grid-row:1}
+  td.net{grid-row:1;grid-column:3;text-align:right;font-size:18px}
+  td[data-l]::before{content:attr(data-l);display:block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;font-family:var(--body)}
+  td.num{text-align:left;white-space:normal}
+  td.net[data-l]::before{text-align:right}
+  td.ver{grid-column:1/-1}
+  td.note{grid-column:1/-1;min-width:0}
+}
+/* Laptop: toda la tabla cabe en pantalla, sin barra horizontal; el encabezado se queda fijo al bajar */
+@media (min-width:1000px){
+  table{table-layout:fixed}
+  col.c-rank{width:34px} col.c-card{width:15%} col.c-n{width:8.2%} col.c-net{width:9%} col.c-ver{width:10.5%} col.c-note{width:auto}
+  thead th{position:sticky;top:0;z-index:1;box-shadow:inset 0 -1px 0 var(--line)}
+  th,td{padding:10px 8px}
+  thead th.num,td.num{white-space:normal}
+  thead th{letter-spacing:.02em;font-size:10px}
+  td.ver .pill{white-space:normal;text-align:center}
+  .rk{display:none}
+}
+
+/* Inventario y secciones de cierre */
+details{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+details[open]{display:grid;gap:16px}
+summary{cursor:pointer;font-family:var(--display);font-size:18px;color:var(--sage);font-weight:700;min-height:28px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+ul.plain{margin:0;padding-left:18px;display:grid;gap:6px}
+ul.plain li{font-size:13.5px}
+.follow{background:var(--deep);color:var(--cream);border-radius:16px;padding:24px 20px;display:grid;gap:12px;justify-items:center;text-align:center}
+.follow h2{color:var(--cream)}
+.follow p{color:rgba(245,242,235,.72)}
+.follow a{display:inline-flex;align-items:center;gap:10px;background:var(--goldbright);color:#2D382E;font-weight:700;text-decoration:none;border-radius:99px;padding:12px 22px;min-height:48px}
+.follow a:hover{filter:brightness(1.05)}
+footer{text-align:center;padding:8px 16px 40px;color:var(--muted);font-size:12.5px;display:grid;gap:6px}
+footer .logo{font-family:var(--display);font-weight:700;color:var(--sage);text-transform:uppercase;letter-spacing:-.01em}
+footer .logo em{color:var(--gold)}
+.error{color:var(--red);font-weight:500}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal">
+  <a class="logo" href="/">El Plan<em>QueFalta</em></a>
+  <a class="back" href="/"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M10 4l-4 4 4 4"/></svg> INICIO</a>
+</nav>
+
+<header class="hero">
+  <span class="badge">Comparador de tarjetas</span>
+  <h1>¿Qué tarjeta de crédito te conviene <em>más</em>?</h1>
+  <p>Contesta 6 preguntas. Estimamos cuánto te regresaría cada tarjeta en un año, con topes, anualidades y membresías ya descontados.</p>
+  <p class="date" id="updated">Se actualiza cada mes</p>
+</header>
+
+<main class="wrap">
+<section class="quiz narrow" aria-label="Cuestionario">
+  <div class="progress"><span id="progress-txt">Contestaste 0 de 6</span><div class="bar" aria-hidden="true"><span id="progress-bar"></span></div></div>
+
+  <fieldset class="q"><legend><span>1</span>¿Pagas el total de tu tarjeta cada mes?</legend>
+    <div class="chips" data-q="total" data-single>
+      <button class="chip" type="button" data-v="si" aria-pressed="false">Sí, siempre</button>
+      <button class="chip" type="button" data-v="no" aria-pressed="false">A veces dejo saldo</button>
+    </div></fieldset>
+  <div id="alert" aria-live="polite"></div>
+
+  <fieldset class="q"><legend><span>2</span>¿Cuánto ganas al mes?</legend>
+    <div class="chips" data-q="inc" data-single>
+      <button class="chip" type="button" data-v="0" aria-pressed="false">Menos de $10,000</button>
+      <button class="chip" type="button" data-v="1" aria-pressed="false">$10,000 a $15,000</button>
+      <button class="chip" type="button" data-v="2" aria-pressed="false">$15,000 a $25,000</button>
+      <button class="chip" type="button" data-v="3" aria-pressed="false">$25,000 a $40,000</button>
+      <button class="chip" type="button" data-v="4" aria-pressed="false">$40,000 a $75,000</button>
+      <button class="chip" type="button" data-v="5" aria-pressed="false">Más de $75,000</button>
+    </div><p class="h">Sirve para mostrarte sólo las tarjetas que te pueden aprobar y estimar tu gasto. No se guarda.</p></fieldset>
+
+  <fieldset class="q"><legend><span>3</span>¿Cuánto de tu gasto pasa por la tarjeta?</legend>
+    <div class="chips" data-q="share" data-single>
+      <button class="chip" type="button" data-v="0.3" aria-pressed="false">Poco</button>
+      <button class="chip" type="button" data-v="0.5" aria-pressed="false">Como la mitad</button>
+      <button class="chip" type="button" data-v="0.75" aria-pressed="false">Casi todo</button>
+    </div></fieldset>
+
+  <fieldset class="q"><legend><span>4</span>¿Qué de esto pagas con tarjeta?</legend>
+    <div class="chips" data-q="cats">
+      <button class="chip" type="button" data-v="super" aria-pressed="false">Súper</button>
+      <button class="chip" type="button" data-v="rest" aria-pressed="false">Restaurantes y bares</button>
+      <button class="chip" type="button" data-v="gas" aria-pressed="false">Gasolina</button>
+      <button class="chip" type="button" data-v="farm" aria-pressed="false">Farmacia</button>
+      <button class="chip" type="button" data-v="deliv" aria-pressed="false">Apps de comida</button>
+      <button class="chip" type="button" data-v="movil" aria-pressed="false">Uber o DiDi</button>
+      <button class="chip" type="button" data-v="online" aria-pressed="false">Compras en línea</button>
+      <button class="chip" type="button" data-v="subs" aria-pressed="false">Streaming</button>
+      <button class="chip" type="button" data-v="viajes" aria-pressed="false">Vuelos y hoteles</button>
+      <button class="chip" type="button" data-v="none" aria-pressed="false">Ninguna de estas</button>
+    </div><p class="h">Marca todas las que apliquen.</p></fieldset>
+
+  <fieldset class="q" id="q-chain"><legend><span>5</span>¿Dónde haces el súper?</legend>
+    <div class="chips" data-q="chains">
+      <button class="chip" type="button" data-v="walmart" aria-pressed="false">Walmart o Bodega</button>
+      <button class="chip" type="button" data-v="sams" aria-pressed="false">Sam's</button>
+      <button class="chip" type="button" data-v="costco" aria-pressed="false">Costco</button>
+      <button class="chip" type="button" data-v="soriana" aria-pressed="false">Soriana</button>
+      <button class="chip" type="button" data-v="heb" aria-pressed="false">HEB</button>
+      <button class="chip" type="button" data-v="chedraui" aria-pressed="false">Chedraui</button>
+      <button class="chip" type="button" data-v="lacomer" aria-pressed="false">La Comer o City Market</button>
+      <button class="chip" type="button" data-v="otro" aria-pressed="false">Otro</button>
+    </div><p class="h" id="chain-h">Marca todas donde compras. Algunas tarjetas pagan más en una cadena específica.</p></fieldset>
+
+  <fieldset class="q"><legend><span>6</span>¿Pagarías anualidad o membresía si al final te regresa más?</legend>
+    <div class="chips" data-q="fee" data-single>
+      <button class="chip" type="button" data-v="si" aria-pressed="false">Sí, si sale a cuenta</button>
+      <button class="chip" type="button" data-v="no" aria-pressed="false">No, sólo sin costo</button>
+    </div></fieldset>
+</section>
+
+<section class="stack" id="result" aria-live="polite" tabindex="-1">
+  <h2>Tus tarjetas ideales</h2>
+  <div id="result-body"><p class="placeholder">Contesta las 6 preguntas y aquí aparecen las 3 tarjetas que más dinero te regresan.</p></div>
+</section>
+
+<section class="stack" id="all" hidden>
+  <div class="row-h"><h2>Todas las tarjetas con tu perfil</h2><span class="src" id="count"></span></div>
+  <div class="tools">
+    <label class="search">Buscar una tarjeta o banco
+      <input type="search" id="q" placeholder="Ej. BBVA Oro, Nu, Openbank" autocomplete="off"></label>
+    <label class="search">Ordenar por
+      <select id="sort">
+        <option value="net">Más dinero al año</option>
+        <option value="cat">CAT más bajo</option>
+        <option value="eff">Mayor % de regreso</option>
+        <option value="rew">Mayor recompensa</option>
+        <option value="cost">Menor costo anual</option>
+        <option value="inc">Menor ingreso pedido</option>
+      </select></label>
+  </div>
+  <div class="filters" role="group" aria-label="Filtros">
+    <span class="flabel">Mostrar sólo:</span>
+    <button class="chip sm" type="button" data-f="ok" aria-pressed="false">Las que me aprueban</button>
+    <button class="chip sm" type="button" data-f="free" aria-pressed="false">Sin costo</button>
+    <button class="chip sm" type="button" data-f="official" aria-pressed="false">Datos oficiales</button>
+    <button class="chip sm" type="button" data-f="open" aria-pressed="false">Sin invitación ni membresía</button>
+    <button class="chip sm" type="button" data-f="nocap" aria-pressed="false">Sin tope alcanzado</button>
+  </div>
+  <div class="legend">
+    <span><span class="pill ok">Oficial</span> dato de la institución</span>
+    <span><span class="pill warn">Oficial con dudas</span> conflicto entre páginas, vigencia por vencer o valor de punto de referencia</span>
+    <span><span class="pill est">Estimado</span> tasa o valor del punto sólo de blogs o prensa</span>
+    <span><span class="pill">Pide más ingreso</span> se muestra en gris; no entra en tu top 3</span>
+  </div>
+  <div class="tbl"><table>
+    <colgroup><col class="c-rank"><col class="c-card"><col class="c-n"><col class="c-n"><col class="c-n"><col class="c-net"><col class="c-n"><col class="c-n"><col class="c-ver"><col class="c-note"></colgroup>
+    <caption class="sr">Todas las tarjetas ordenadas por beneficio neto anual</caption>
+    <thead><tr><th class="num">#</th><th>Tarjeta</th><th class="num">Regreso real</th><th class="num">Recompensa al año</th><th class="num">Costo al año</th><th class="num">Neto al año</th><th class="num">Ingreso mínimo</th><th class="num">CAT sin IVA</th><th>Verificación</th><th>Tope y letra chiquita</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+  <button class="more" type="button" id="more" hidden></button>
+  <p class="src" id="notfound" aria-live="polite"></p>
+</section>
+
+<details id="inv">
+  <summary>Inventario completo: las tarjetas que no entran en el cálculo y por qué</summary>
+  <div class="cols">
+    <div class="stack"><h3>Tienen recompensa, pero no se puede calcular en pesos</h3><ul class="plain" id="nocalc"></ul></div>
+    <div class="stack"><h3>Sólo sirven en su tienda</h3><ul class="plain" id="store"></ul></div>
+    <div class="stack"><h3>Sin recompensas</h3><ul class="plain" id="norew"></ul></div>
+    <div class="stack"><h3>Descontinuadas o sin lanzar</h3><ul class="plain" id="disc"></ul></div>
+  </div>
+</details>
+
+<section class="stack narrow">
+  <h2>Cómo se calcula</h2>
+  <ul class="plain">
+    <li>Sólo aplica si pagas el total cada mes. Si dejas saldo, los intereses se comen cualquier recompensa.</li>
+    <li>Gasto con tarjeta = tu ingreso × la parte que pasa por la tarjeta. Se reparte entre lo que marcaste con pesos típicos (el súper pesa más que el streaming); siempre se suma celular e internet y "todo lo demás".</li>
+    <li>Se aplican todos los topes publicados: mensuales, por categoría, anuales, de por vida (RappiCard: $1,500 por contrato; su neto se promedia a 2 años para no inflarlo) y los que dependen de tu línea de crédito, que se supone de 1.5 veces tu ingreso mensual.</li>
+    <li>Costo con IVA de 16%: anualidades, comisiones mensuales y membresías necesarias para el beneficio (Meli+, Plata Plus, planes Revolut, anualidad opcional de Hey). Cuotas en dólares a $19 por dólar.</li>
+    <li>Valor de puntos: Premia, Afirme, Inbursa y Membership Rewards $0.10; Puntos BBVA $0.10 en restaurantes, farmacia, telecom y en línea y $0.07 en el resto; Banorte $0.08 en vuelos. altitude $0.035, Aeroméxico $0.16, RevPoints $0.143, Unique $0.06 y Momentos $0.05 salen de blogs y se marcan como estimados.</li>
+    <li>Compras de contado: casi ninguna tarjeta da recompensa en meses sin intereses. Bonos de bienvenida y créditos de viaje no se suman. Amex Gold sí suma sus Golden Cashbacks ($1,000 por trimestre y categoría si gastas $5,000 en ella).</li>
+    <li>Tus respuestas no se guardan ni se envían a ningún lado: el cálculo ocurre en tu navegador.</li>
+  </ul>
+  <p class="disclaimer">Cálculo ilustrativo. Beneficios sujetos a términos de cada institución y a aprobación de crédito. CAT promedio sin IVA, para fines informativos y de comparación.</p>
+</section>
+
+<section class="follow narrow">
+  <h2>Esta herramienta se actualiza cada mes</h2>
+  <p>Revisamos cambios en términos y condiciones, anualidades y topes de cada tarjeta, y agregamos las nuevas que salen al mercado. En Instagram te aviso cuando algo importante cambia.</p>
+  <a href="https://instagram.com/elplanquefalta" target="_blank" rel="noopener" id="ig">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+    Sígueme en @elplanquefalta</a>
+</section>
+</main>
+
+<footer>
+  <div class="logo">El Plan<em>QueFalta</em></div>
+  <span>Comparador de tarjetas de crédito · <span id="updated-foot"></span></span>
+</footer>
+
+<script type="module" src="/tarjetas/app.mjs"></script>
+</body>
+</html>

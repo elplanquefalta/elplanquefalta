@@ -12,6 +12,10 @@
     
     <!-- Tailwind CSS (compiled) -->
     <link rel="stylesheet" href="dist/styles.css">
+
+    <!-- Vercel Web Analytics (sin cookies) -->
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body class="font-dmsans text-softBlack antialiased selection:bg-gold/30 text-center">
 
@@ -254,6 +258,17 @@
                 <!-- CALCULADORAS -->
                 <span class="w-full text-[10px] font-bold tracking-[3px] text-darkSage/40 uppercase mb-4 block">Calculadoras</span>
                 <div class="space-y-3 mb-10">
+                    <a href="/tarjetas" class="w-full bg-white rounded-2xl p-5 flex items-center justify-between shadow-[0_10px_30px_rgba(52,65,54,0.1)] border border-sage/5 hover:scale-[1.02] active:scale-95 transition-all-custom text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center text-gold flex-shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div>
+                            <div>
+                                <h3 class="font-bold text-darkSage text-base">¿Qué tarjeta de crédito te conviene más?</h3>
+                                <p class="text-[11px] text-darkSage/50 mt-0.5">6 preguntas — Compara 105 tarjetas</p>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 text-darkSage/30 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </a>
+
                     <button onclick="switchView('perfil')" class="w-full bg-white rounded-2xl p-5 flex items-center justify-between shadow-[0_10px_30px_rgba(52,65,54,0.1)] border border-sage/5 hover:scale-[1.02] active:scale-95 transition-all-custom text-left">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center text-gold flex-shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>

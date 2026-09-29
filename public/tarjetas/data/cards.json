@@ -1,0 +1,2094 @@
+{
+ "updated": "2026-09-29",
+ "cards": [
+  {
+   "n": "HSBC 2Now",
+   "i": "HSBC",
+   "d": 2,
+   "cap": 850,
+   "cost": 0,
+   "inc": 15000,
+   "cat": "91.6%",
+   "v": "ok",
+   "why": "2% parejo en todo",
+   "note": "Tope $850 al mes. $186 de comisión en meses con menos de $3,500 de compras. El saldo sólo se usa en tienda física o cajero.",
+   "min": {
+    "amt": 3500,
+    "fee": 2232
+   },
+   "url": "https://www.hsbc.com.mx/content/dam/hsbc/mx/documents/tarjetas/terminos_condiciones_2now.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "HSBC One+",
+   "i": "HSBC",
+   "d": 0,
+   "r": {
+    "rest": 5,
+    "viajes": 5,
+    "farm": 5,
+    "subs": 5
+   },
+   "cap": 1500,
+   "cost": 3364,
+   "inc": 35000,
+   "cat": "—",
+   "v": "warn",
+   "why": "5% en restaurantes, viajes, salud y entretenimiento",
+   "note": "Tope $1,500 al mes entre todas las categorías. El resto no genera.",
+   "url": "https://www.hsbc.com.mx/content/dam/hsbc/mx/documents/tarjetas/terminos-condiciones-one-plus.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Santander LikeU",
+   "i": "Santander",
+   "d": 0,
+   "r": {
+    "farm": 6,
+    "rest": 5,
+    "tel": 4,
+    "super": 1
+   },
+   "cap": 500,
+   "cost": 0,
+   "inc": 7500,
+   "cat": "89.1%",
+   "v": "ok",
+   "why": "6% farmacia, 5% restaurantes, 4% celular",
+   "note": "Tope $500 al mes. Hay que inscribirse a Cashback Baby y tener cuenta Santander.",
+   "url": "https://www.santander.com.mx/cashback.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BBVA Start",
+   "i": "BBVA",
+   "d": 0.63,
+   "r": {
+    "rest": 0.9,
+    "farm": 0.9,
+    "tel": 0.9,
+    "online": 0.9
+   },
+   "lineSpend": true,
+   "cost": 0,
+   "inc": null,
+   "cat": "122.9%",
+   "v": "warn",
+   "why": "9% en Puntos BBVA sin anualidad",
+   "note": "Sin anualidad sólo si la pides en el formulario web como cliente nuevo (vigente al 9 ene 2027). Puntos topados a tu línea.",
+   "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-start.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BBVA Azul",
+   "i": "BBVA",
+   "d": 0.63,
+   "r": {
+    "rest": 0.9,
+    "farm": 0.9,
+    "tel": 0.9,
+    "online": 0.9
+   },
+   "lineSpend": true,
+   "cost": 868,
+   "inc": 6000,
+   "cat": "89.4%",
+   "v": "warn",
+   "why": "9% en Puntos BBVA",
+   "note": "Anualidad $748 + IVA.",
+   "url": "https://www.bbva.mx/content/dam/public-web/mexico/documents/personas/tarjetas/TCR-Azul.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BBVA Oro",
+   "i": "BBVA",
+   "d": 0.77,
+   "r": {
+    "rest": 1.1,
+    "farm": 1.1,
+    "tel": 1.1,
+    "online": 1.1
+   },
+   "lineSpend": true,
+   "cost": 1335,
+   "inc": 20000,
+   "cat": "66.5%",
+   "v": "warn",
+   "why": "11% en Puntos BBVA",
+   "note": "",
+   "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BBVA Platinum",
+   "i": "BBVA",
+   "d": 1.05,
+   "r": {
+    "rest": 1.5,
+    "farm": 1.5,
+    "tel": 1.5,
+    "online": 1.5
+   },
+   "lineSpend": true,
+   "cost": 2992,
+   "inc": 50000,
+   "cat": "47.9%",
+   "v": "warn",
+   "why": "15% en Puntos BBVA",
+   "note": "Sin anualidad desde el año 2 con $750,000 de compras al año.",
+   "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-platinum.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banamex Clásica",
+   "i": "Banamex",
+   "d": 0.5,
+   "r": {
+    "gas": 1
+   },
+   "cost": 945,
+   "inc": 7000,
+   "cat": "No publicado",
+   "v": "ok",
+   "why": "0.5% en Puntos Premia",
+   "note": "Comisión de $67.92 + IVA al mes. Gasolina doble hasta 1,000 puntos por semana.",
+   "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-clasica/tarifas-comisiones.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banamex Oro",
+   "i": "Banamex",
+   "d": 0.7,
+   "r": {
+    "gas": 1.4
+   },
+   "cost": 1427,
+   "inc": 7000,
+   "cat": "No publicado",
+   "v": "warn",
+   "why": "0.7% en Puntos Premia",
+   "note": "Comisión de $102.50 + IVA al mes.",
+   "url": "https://www.banamex.com/premia/index.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banamex Platinum",
+   "i": "Banamex",
+   "d": 1,
+   "cost": 3161,
+   "inc": 50000,
+   "cat": "No publicado",
+   "v": "ok",
+   "why": "1% en Puntos Premia",
+   "note": "Promoción: primeros 12 meses sin comisión.",
+   "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-platinum.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Costco Banamex",
+   "i": "Banamex",
+   "d": 1,
+   "r": {
+    "rest": 2,
+    "subs": 2,
+    "tel": 2
+   },
+   "sup": {
+    "walmart": 1,
+    "sams": 1,
+    "costco": 3,
+    "soriana": 1,
+    "heb": 1,
+    "chedraui": 1,
+    "lacomer": 1,
+    "otro": 1
+   },
+   "cost": 754,
+   "inc": 7000,
+   "cat": "Vencido",
+   "v": "warn",
+   "why": "3% en Costco y 2% en restaurantes",
+   "note": "Se paga una vez al año y sólo se usa en Costco.",
+   "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-costco.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "RappiCard",
+   "i": "Banorte",
+   "d": 1,
+   "r": {
+    "deliv": 3
+   },
+   "capLife": 1500,
+   "cost": 0,
+   "inc": null,
+   "cat": "101.4%",
+   "v": "ok",
+   "why": "1% general y 3% en Rappi",
+   "note": "Tope de $1,500 por toda la vida del contrato (Rappi puede subirlo hasta $5,000). Al llegar deja de pagar.",
+   "url": "https://rappicard.mx/condiciones-cashback/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banorte One Up",
+   "i": "Banorte",
+   "d": 0.8,
+   "r": {
+    "online": 1.6,
+    "subs": 1.6,
+    "deliv": 1.6
+   },
+   "cost": 0,
+   "inc": 7000,
+   "cat": "87.8%",
+   "v": "est",
+   "why": "Puntos dobles en compras digitales",
+   "note": "$450 por trimestre si compras menos de $7,500. Valor del punto de blogs.",
+   "url": "https://www.banorte.com/dam/jcr:c35262c6-a2b9-468a-b432-89a8cf6473fe/Folleto_One_Up_may26.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banorte Clásica",
+   "i": "Banorte",
+   "d": 0.8,
+   "cost": 835,
+   "inc": 7000,
+   "cat": "121.4%",
+   "v": "est",
+   "why": "Puntos canjeados en vuelos",
+   "note": "En catálogo valen la mitad. Posible tope de 67 puntos por compra.",
+   "url": "https://www.banorte.com/cms/archivos/COMISIONES-TDC-PF.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "DiDi Card",
+   "i": "DiDi",
+   "d": 0,
+   "r": {
+    "super": 2,
+    "gas": 2,
+    "movil": 2
+   },
+   "six": [
+    "farm",
+    "tel",
+    "viajes"
+   ],
+   "sixCap": 300,
+   "cap": 500,
+   "cost": 0,
+   "inc": null,
+   "cat": "133.9%",
+   "v": "ok",
+   "why": "2% súper y gasolina, 6% en una categoría que eliges",
+   "note": "Tope $500 al mes; el 6% topa en $300. Caduca a los 365 días.",
+   "url": "https://web.didiglobal.com/mx/tarjeta-de-credito/tc-cashback.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Hey Banco",
+   "i": "Banregio",
+   "d": 1,
+   "r": {
+    "online": 2,
+    "subs": 2,
+    "deliv": 2,
+    "movil": 2
+   },
+   "linePct": 1,
+   "cost": 696,
+   "inc": null,
+   "cat": "Sin dato vigente",
+   "v": "warn",
+   "why": "1% general y 2% en apps",
+   "note": "Sólo con anualidad opcional ($600 + IVA) y perfil Hey Pro. Tope: 1% de tu línea al mes.",
+   "url": "https://banco.hey.inc/content/dam/heybanco/terminos-condiciones/beneficios/recompensas.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Win Banregio",
+   "i": "Banregio",
+   "d": 1,
+   "r": {
+    "online": 2
+   },
+   "cap": 6000,
+   "cost": 0,
+   "inc": 50000,
+   "cat": "40.6%",
+   "v": "ok",
+   "why": "2% en línea, 1% en tienda",
+   "note": "Tope $6,000 al mes. Se usa como saldo en la tarjeta.",
+   "url": "https://recompensas.banregio.com/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banregio Platinum",
+   "i": "Banregio",
+   "d": 1.25,
+   "r": {
+    "online": 1.5
+   },
+   "cap": 6000,
+   "cost": 0,
+   "inc": 75000,
+   "cat": "34.1%",
+   "v": "ok",
+   "why": "1.25% en todo",
+   "note": "Tope $6,000 al mes.",
+   "url": "https://recompensas.banregio.com/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banregio MÁS",
+   "i": "Banregio",
+   "d": 1,
+   "cap": 6000,
+   "cost": 0,
+   "inc": 25000,
+   "cat": "32.8%",
+   "v": "ok",
+   "why": "1% en todo sin anualidad",
+   "note": "Tope $6,000 al mes.",
+   "url": "https://recompensas.banregio.com/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banregio Clásica",
+   "i": "Banregio",
+   "d": 0.75,
+   "cap": 6000,
+   "cost": 0,
+   "inc": 10000,
+   "cat": "68.2%",
+   "v": "ok",
+   "why": "0.75% en todo sin anualidad",
+   "note": "",
+   "url": "https://recompensas.banregio.com/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Scotia IDEAL",
+   "i": "Scotiabank",
+   "d": 0.5,
+   "cost": 0,
+   "inc": 7500,
+   "cat": "132.3%",
+   "v": "warn",
+   "why": "0.5% en ScotiaPesos",
+   "note": "Hay que inscribirse. $165 al mes si compras menos de $900. Tope 50,000 ScotiaPesos al año.",
+   "min": {
+    "amt": 900,
+    "fee": 1980
+   },
+   "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/scotiarewards/scotiapesos.aspx",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Scotia Travel Platinum",
+   "i": "Scotiabank",
+   "d": 0.75,
+   "r": {
+    "viajes": 1.5
+   },
+   "cost": 3220,
+   "inc": 20000,
+   "cat": "66.9%",
+   "v": "ok",
+   "why": "1.5% en viajes",
+   "note": "",
+   "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/scotiarewards/scotiapesos.aspx",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Scotia Singular Infinite",
+   "i": "Scotiabank",
+   "d": 1.5,
+   "r": {
+    "viajes": 3
+   },
+   "cost": 7440,
+   "inc": null,
+   "cat": "42.6%",
+   "v": "ok",
+   "why": "1.5% en todo, 3% en viajes",
+   "note": "Sin anualidad con $500,000 de gasto al año.",
+   "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/scotiarewards.aspx",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Afirme Clásica",
+   "i": "Afirme",
+   "d": 0.6,
+   "cost": 870,
+   "inc": 8500,
+   "cat": "103.9%",
+   "v": "ok",
+   "why": "0.6% en Puntos Bonus",
+   "note": "Anualidad desde el segundo año.",
+   "url": "https://www.afirme.com/Personas/TDC/Recompensas-Bonus.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Afirme Oro",
+   "i": "Afirme",
+   "d": 0.8,
+   "cost": 1276,
+   "inc": 20000,
+   "cat": "92.2%",
+   "v": "ok",
+   "why": "0.8% en Puntos Bonus",
+   "note": "Anualidad desde el segundo año.",
+   "url": "https://www.afirme.com/Personas/TDC/Recompensas-Bonus.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Afirme Platinum",
+   "i": "Afirme",
+   "d": 1,
+   "cost": 2900,
+   "inc": 50000,
+   "cat": "59.1%",
+   "v": "ok",
+   "why": "1% en Puntos Bonus",
+   "note": "Anualidad desde el segundo año.",
+   "url": "https://www.afirme.com/Personas/TDC/Recompensas-Bonus.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "HEB Afirme",
+   "i": "Afirme",
+   "d": 0,
+   "sup": {
+    "walmart": 0,
+    "sams": 0,
+    "costco": 0,
+    "soriana": 0,
+    "heb": 4,
+    "chedraui": 0,
+    "lacomer": 0,
+    "otro": 0
+   },
+   "cap": 1000,
+   "cost": 0,
+   "inc": 12000,
+   "cat": "135.3%",
+   "v": "ok",
+   "why": "4% en HEB",
+   "note": "Tope $1,000 al mes. $150 en meses con menos de $2,000 de compras.",
+   "min": {
+    "amt": 2000,
+    "fee": 1800
+   },
+   "url": "https://www.afirme.com/Personas/TDC/tarjetaheb.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Súper Crédito Inbursa",
+   "i": "Inbursa",
+   "d": 0,
+   "sup": {
+    "walmart": 3,
+    "sams": 5,
+    "costco": 0,
+    "soriana": 0,
+    "heb": 0,
+    "chedraui": 0,
+    "lacomer": 0,
+    "otro": 0
+   },
+   "linePct": 5,
+   "cost": 870,
+   "inc": null,
+   "cat": "91.2%",
+   "v": "ok",
+   "why": "3% en Walmart, 5% en Sam's",
+   "note": "Se abona al estado de cuenta. Pide $1,500 al mes de compras fuera de Walmart. Tope: 5% de tu línea.",
+   "min": {
+    "amt": 1500,
+    "zero": false
+   },
+   "url": "https://www.inbursa.com/sites/gfi/document/tdc-supercredito-folleto.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Telcel Oro Inbursa",
+   "i": "Inbursa",
+   "d": 1,
+   "cost": 626,
+   "inc": null,
+   "cat": "88.2%",
+   "v": "ok",
+   "why": "1% en todo",
+   "note": "Sólo paga si compras $4,000 o más al mes.",
+   "min": {
+    "amt": 4000,
+    "zero": true
+   },
+   "url": "https://www.inbursa.com/sites/gfi/document/tdc-telcel-oro-folleto.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Walmart INVEX",
+   "i": "Invex",
+   "d": 1,
+   "sup": {
+    "walmart": 3.5,
+    "sams": 3.5,
+    "costco": 1,
+    "soriana": 1,
+    "heb": 1,
+    "chedraui": 1,
+    "lacomer": 1,
+    "otro": 1
+   },
+   "linePct": 3.5,
+   "cost": 0,
+   "inc": null,
+   "cat": "—",
+   "v": "warn",
+   "why": "3.5% en Walmart y Sam's",
+   "note": "La bonificación va a Cashi y sólo se gasta en Walmart México. Penalización si compras menos de $1,200 al mes.",
+   "url": "https://www.invextarjetas.com.mx/invex/Documentos/Landings/WalmartTyC.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Invex Volaris 0",
+   "i": "Invex",
+   "d": 0.875,
+   "cost": 0,
+   "inc": 10000,
+   "cat": "29.5%",
+   "v": "est",
+   "why": "Puntos para vuelos Volaris",
+   "note": "Sin anualidad si compras $500 al mes. Valor del punto estimado.",
+   "url": "https://www.invextarjetas.com.mx/invex/Documentos/CONDUSEF/FolletoVolaris0.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Invex Volaris 2.0",
+   "i": "Invex",
+   "d": 1.75,
+   "cost": 5558,
+   "inc": 10000,
+   "cat": "38.7%",
+   "v": "est",
+   "why": "Puntos dobles para Volaris",
+   "note": "Primer año sin anualidad. Valor del punto estimado.",
+   "url": "https://www.invextarjetas.com.mx/invex/Documentos/CONDUSEF/FolletoVolaris2.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Inbursa Aeroméxico Ascend",
+   "i": "Inbursa",
+   "d": 0.84,
+   "r": {
+    "viajes": 1.68
+   },
+   "cost": 1914,
+   "inc": null,
+   "cat": "64.8%",
+   "v": "est",
+   "why": "Puntos Aeroméxico",
+   "note": "Valor del punto estimado en vuelos nacionales.",
+   "url": "https://www.inbursa.com/sites/gfi/document/tyc-tarjetas-aeromexico.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Inbursa Aeroméxico Elevate",
+   "i": "Inbursa",
+   "d": 1.01,
+   "r": {
+    "viajes": 2.02
+   },
+   "cost": 3828,
+   "inc": null,
+   "cat": "48.0%",
+   "v": "est",
+   "why": "Puntos Aeroméxico",
+   "note": "Valor del punto estimado.",
+   "url": "https://www.inbursa.com/sites/gfi/document/tyc-tarjetas-aeromexico.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Inbursa Aeroméxico Horizon",
+   "i": "Inbursa",
+   "d": 1.68,
+   "r": {
+    "viajes": 2.53
+   },
+   "cost": 9396,
+   "inc": null,
+   "cat": "51.2%",
+   "v": "est",
+   "why": "Puntos Aeroméxico",
+   "note": "Valor del punto estimado.",
+   "url": "https://www.inbursa.com/sites/gfi/document/tyc-tarjetas-aeromexico.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Amex Verde",
+   "i": "American Express",
+   "d": 0.53,
+   "cost": 4849,
+   "inc": 15000,
+   "cat": "No aplica",
+   "v": "ok",
+   "why": "Membership Rewards",
+   "note": "Tarjeta de servicio: se paga completa cada mes. Primer año sin cuota.",
+   "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/tarjeta-american-express/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Amex Gold",
+   "i": "American Express",
+   "d": 0.53,
+   "r": {
+    "super": 1.05,
+    "rest": 1.05
+   },
+   "gold": true,
+   "cost": 13224,
+   "inc": 40000,
+   "cat": "No aplica",
+   "v": "ok",
+   "why": "Golden Cashbacks en súper, restaurantes y bienestar",
+   "note": "$1,000 por trimestre por categoría si gastas $5,000 en ella (tope $4,000 al año cada una). Vigente al 31 dic 2027.",
+   "url": "https://www.americanexpress.com/es-mx/beneficios/the-gold-card/estilo-de-vida/golden-cashbacks/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Amex Platinum",
+   "i": "American Express",
+   "d": 0.79,
+   "cost": 28652,
+   "inc": 100000,
+   "cat": "No aplica",
+   "v": "warn",
+   "why": "Membership Rewards",
+   "note": "Créditos de hotel, restaurantes y entretenimiento no sumados.",
+   "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/the-platinum-card/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Amex Gold Elite Credit",
+   "i": "American Express",
+   "d": 0.53,
+   "cost": 1972,
+   "inc": 15000,
+   "cat": "90.2%",
+   "v": "warn",
+   "why": "Membership Rewards",
+   "note": "Primer año sin anualidad.",
+   "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/gold-elite-credit-card/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Amex Platinum Credit",
+   "i": "American Express",
+   "d": 0.53,
+   "cost": 4292,
+   "inc": 30000,
+   "cat": "76.8%",
+   "v": "warn",
+   "why": "Membership Rewards",
+   "note": "Anualidad en conflicto: $3,700 o $4,200 + IVA.",
+   "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/the-platinum-credit-card/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Amex Aeroméxico",
+   "i": "American Express",
+   "d": 1.35,
+   "cost": 3526,
+   "inc": 15000,
+   "cat": "—",
+   "v": "est",
+   "why": "Puntos Aeroméxico",
+   "note": "Primer año sin cuota. Valor del punto estimado.",
+   "url": "https://www.americanexpress.com/mx/tarjetas-de-credito/tipos-de-tarjetas/tarjetas-aeromexico/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Nu (con Nu+)",
+   "i": "Nu",
+   "d": 0.3,
+   "cost": 0,
+   "inc": null,
+   "cat": "148.1%",
+   "v": "warn",
+   "why": "0.3% en puntos, sin tope",
+   "note": "El documento oficial de Nu+ es de 2025; confirmar en la app.",
+   "url": "https://cdn.nubank.com.br/MX/terminos-y-condiciones-nu-plus.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Klar Plus",
+   "i": "Klar",
+   "d": 0,
+   "r": {
+    "tel": 3,
+    "movil": 2,
+    "deliv": 2,
+    "subs": 2
+   },
+   "sup": {
+    "walmart": 1,
+    "sams": 1,
+    "costco": 1,
+    "soriana": 1,
+    "heb": 1,
+    "chedraui": 1,
+    "lacomer": 1,
+    "otro": 0
+   },
+   "cap": 1000,
+   "cost": 0,
+   "inc": null,
+   "cat": "187.0%",
+   "v": "warn",
+   "why": "3% celular, 2% apps y streaming",
+   "note": "Gratis. Sólo paga con $2,500 o más al mes. Tope $1,000 al mes. T&C vence el 30 sep.",
+   "min": {
+    "amt": 2500,
+    "zero": true
+   },
+   "url": "https://www.klar.mx/plus",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Klar Platino",
+   "i": "Klar",
+   "d": 0,
+   "r": {
+    "subs": 6,
+    "tel": 3,
+    "deliv": 3,
+    "movil": 3,
+    "viajes": 3
+   },
+   "sup": {
+    "walmart": 6,
+    "sams": 6,
+    "costco": 6,
+    "soriana": 6,
+    "heb": 6,
+    "chedraui": 6,
+    "lacomer": 6,
+    "otro": 0
+   },
+   "catCap": {
+    "super": 1000
+   },
+   "cap": 3000,
+   "cost": 1740,
+   "inc": null,
+   "cat": "—",
+   "v": "warn",
+   "sub": true,
+   "why": "6% súper y streaming",
+   "note": "Sólo por invitación. Súper topado en $1,000 al mes; total $3,000.",
+   "url": "https://www.klar.mx/platino",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Uber Card (Klar)",
+   "i": "Klar",
+   "d": 0,
+   "r": {
+    "movil": 7,
+    "deliv": 2,
+    "tel": 1,
+    "super": 1,
+    "subs": 1
+   },
+   "cap": 1000,
+   "cost": 0,
+   "inc": null,
+   "cat": "187.0%",
+   "v": "warn",
+   "why": "7% en viajes de Uber",
+   "note": "Se paga en créditos Uber, no en efectivo. Tope $1,000 al mes. Incluye Uber One. $79.90 si pasa 3 meses sin uso.",
+   "url": "https://cdn.prod.website-files.com/630e13ca92151d578bc2ed8b/6a15d182ee0af7b14c265215_Te-rminos-y-Condiciones-de-Beneficios-Uber-Card-Powered-by-Klar.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Uber Card Platino (Klar)",
+   "i": "Klar",
+   "d": 0,
+   "r": {
+    "movil": 10,
+    "deliv": 5,
+    "tel": 3,
+    "subs": 3,
+    "super": 2
+   },
+   "cap": 3000,
+   "cost": 1740,
+   "inc": null,
+   "cat": "85.0%",
+   "v": "warn",
+   "why": "10% en Uber, 5% en Uber Eats",
+   "note": "Se paga en créditos Uber. Tope $3,000 al mes. Anualidad $1,500 + IVA, exentable.",
+   "url": "https://cdn.prod.website-files.com/630e13ca92151d578bc2ed8b/6a15d182ee0af7b14c265215_Te-rminos-y-Condiciones-de-Beneficios-Uber-Card-Powered-by-Klar.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Stori Black",
+   "i": "Stori",
+   "d": 1,
+   "r": {
+    "super": 2,
+    "gas": 2,
+    "subs": 4
+   },
+   "cost": 0,
+   "inc": null,
+   "cat": "180.8%",
+   "v": "warn",
+   "why": "1% en todo más extra en súper y gasolina",
+   "note": "Línea y porcentaje (1% a 3%) sujetos a evaluación. Sin tope en el 1%.",
+   "url": "https://www.storicard.com/files/stori-black/programa-redime-tu-cashback.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Stori Green",
+   "i": "Stori",
+   "d": 0,
+   "r": {
+    "super": 1,
+    "gas": 1,
+    "subs": 3
+   },
+   "catCap": {
+    "super": 1000,
+    "gas": 1000,
+    "subs": 500
+   },
+   "cost": 0,
+   "inc": null,
+   "cat": "202.2%",
+   "v": "warn",
+   "why": "Cashback sólo en súper, gasolina y streaming",
+   "note": "Requiere $2,000 al mes de gasto. El súper puede pagar hasta 10%, sin regla publicada.",
+   "min": {
+    "amt": 2000,
+    "zero": true
+   },
+   "url": "https://www.storicard.com/files/stori-cuentamas/tyc-tasa-premium.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Mercado Pago",
+   "i": "Mercado Pago",
+   "d": 0,
+   "r": {
+    "online": 2
+   },
+   "sup": {
+    "walmart": 5,
+    "sams": 0,
+    "costco": 5,
+    "soriana": 5,
+    "heb": 5,
+    "chedraui": 5,
+    "lacomer": 0,
+    "otro": 0
+   },
+   "catCap": {
+    "online": 150
+   },
+   "cost": 599,
+   "inc": null,
+   "cat": "136.0% (vencido)",
+   "v": "est",
+   "sub": true,
+   "why": "5% en súper con Meli+",
+   "note": "Requiere Meli+ (desde $49.90 al mes). 2% sólo en Mercado Libre, topado en $150. Tope del súper no confirmado.",
+   "url": "https://www.digitt.com/blog/cambios-cashback-mercado-pago-2026",
+   "source_type": "secundaria",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Openbank Open",
+   "i": "Openbank",
+   "d": 0,
+   "r": {
+    "online": 3,
+    "subs": 3,
+    "deliv": 3,
+    "viajes": 3,
+    "rest": 3
+   },
+   "cap": 500,
+   "cost": 0,
+   "inc": 7000,
+   "cat": "En conflicto",
+   "v": "est",
+   "why": "3% en compras digitales",
+   "note": "Tope $500 al mes. Restaurantes según prensa. Página oficial bloqueó la consulta.",
+   "url": "https://blog.kardmatch.com.mx/tarjeta-de-credito-openbank",
+   "source_type": "secundaria",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Openbank Cinépolis",
+   "i": "Openbank",
+   "d": 1,
+   "r": {
+    "online": 2
+   },
+   "cost": 0,
+   "inc": null,
+   "cat": "—",
+   "v": "est",
+   "why": "2% en línea, 1% en tienda",
+   "note": "Hasta 16% en Cinépolis (no incluido). Topes no confirmados.",
+   "url": "https://www.elimparcial.com/dinero/2026/07/10/cinepolis-y-openbank-lanzaran-una-tarjeta-de-credito-sin-anualidad-el-30-de-julio-con-hasta-16-de-cashback-y-2x1-semanal-para-integrar-a-los-jovenes-al-sistema-financiero-como-tramitarla/",
+   "source_type": "secundaria",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Revolut Standard",
+   "i": "Revolut",
+   "d": 0.5,
+   "cost": 0,
+   "inc": null,
+   "cat": "99.3%",
+   "v": "est",
+   "why": "RevPoints",
+   "note": "Puntos sin valor oficial en pesos; no se cambian por efectivo.",
+   "url": "https://www.revolut.com/es-MX/credit-cards/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Revolut Premium",
+   "i": "Revolut",
+   "d": 0.86,
+   "cost": 2074,
+   "inc": null,
+   "cat": "99.3%",
+   "v": "est",
+   "sub": true,
+   "why": "RevPoints",
+   "note": "Plan de $149 + IVA al mes.",
+   "url": "https://www.revolut.com/es-MX/our-pricing-plans/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Revolut Metal",
+   "i": "Revolut",
+   "d": 1,
+   "cost": 4858,
+   "inc": null,
+   "cat": "99.3%",
+   "v": "est",
+   "sub": true,
+   "why": "RevPoints",
+   "note": "Plan de $349 + IVA al mes.",
+   "url": "https://www.revolut.com/es-MX/our-pricing-plans/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Revolut Ultra",
+   "i": "Revolut",
+   "d": 1.29,
+   "cost": 20866,
+   "inc": null,
+   "cat": "99.3%",
+   "v": "est",
+   "sub": true,
+   "why": "RevPoints",
+   "note": "Plan de $1,499 + IVA al mes.",
+   "url": "https://www.revolut.com/es-MX/our-pricing-plans/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Plata",
+   "i": "Banco Plata",
+   "d": 0.5,
+   "cap": 1000,
+   "cost": 231,
+   "inc": null,
+   "cat": "169.3%",
+   "v": "warn",
+   "why": "0.5% en todo",
+   "note": "Tope $1,000 al mes. Hasta 15% en comercios que eliges (no incluido).",
+   "url": "https://prime.platacard.mx/file-service/static/cashback_conditions_public.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Plata con Plata Plus",
+   "i": "Banco Plata",
+   "d": 1,
+   "cap": 3000,
+   "cost": 1609,
+   "inc": null,
+   "cat": "169.3%",
+   "v": "warn",
+   "sub": true,
+   "why": "1% en todo",
+   "note": "Plata Plus cuesta hasta $99 + IVA al mes y no quita la anualidad.",
+   "url": "https://prime.platacard.mx/file-service/static/eula/terms_and_conditions_plata_plus.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Ualá",
+   "i": "Ualá",
+   "d": 0.4,
+   "cost": 0,
+   "inc": null,
+   "cat": "172.1%",
+   "v": "est",
+   "why": "Puntos Ualá+",
+   "note": "Valor del punto de $0.02 a $0.06; se usa el bajo.",
+   "url": "https://blog.kardmatch.com.mx/tarjeta-uala",
+   "source_type": "secundaria",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Vexi Avanzado",
+   "i": "Vexi",
+   "d": 1,
+   "r": {
+    "subs": 5,
+    "rest": 3
+   },
+   "cap": 3000,
+   "cost": 0,
+   "inc": null,
+   "cat": "71.4%",
+   "v": "warn",
+   "why": "5% streaming, 3% restaurantes",
+   "note": "Tope $3,000 al mes. Sólo en comercios participantes. Apertura hasta $350.",
+   "url": "https://www.vexi.mx/beneficios/tarjetas-credito-cashback",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "NOVACARD",
+   "i": "Unitron",
+   "d": 0.5,
+   "r": {
+    "super": 5
+   },
+   "cap": 1083,
+   "cost": 0,
+   "inc": null,
+   "cat": "—",
+   "v": "est",
+   "why": "5% en súper",
+   "note": "Tope $500 por corte de 14 días. Vigencia del programa por confirmar.",
+   "url": "https://novacard.mx/nuestra-tarjeta/",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Liverpool Visa",
+   "i": "Liverpool",
+   "d": 1,
+   "cost": 579,
+   "inc": null,
+   "cat": "27.4%",
+   "v": "warn",
+   "why": "1% en Puntos Rosas (2% en Liverpool)",
+   "note": "Los puntos se usan en Liverpool. Anualidad en conflicto.",
+   "url": "https://assetsmcproa.liverpool.com.mx/pdf/CAT_Tarjetas_Liverpool_TyC.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Suburbia Visa",
+   "i": "Bradescard",
+   "d": 1,
+   "cost": 463,
+   "inc": null,
+   "cat": "34.8% (2024)",
+   "v": "warn",
+   "why": "1% en monedero Suburbia",
+   "note": "Primer año sin anualidad.",
+   "url": "https://assetsmcprob.suburbia.com.mx/pdf/Terminos_y_Condiciones_Visa_feb.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Falabella Soriana",
+   "i": "Falabella",
+   "d": 0,
+   "r": {
+    "gas": 3,
+    "rest": 3,
+    "viajes": 3,
+    "online": 4
+   },
+   "sup": {
+    "walmart": 0,
+    "sams": 0,
+    "costco": 0,
+    "soriana": 3,
+    "heb": 0,
+    "chedraui": 0,
+    "lacomer": 0,
+    "otro": 0
+   },
+   "cost": 945,
+   "inc": null,
+   "cat": "—",
+   "v": "est",
+   "why": "3% en Soriana, gasolina y restaurantes",
+   "note": "Dinero electrónico. Topes no confirmados.",
+   "url": "https://blog.kardmatch.com.mx/tarjeta-falabella-soriana",
+   "source_type": "secundaria",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BBVA Crea",
+   "i": "BBVA",
+   "d": 0.35,
+   "r": {
+    "rest": 0.5,
+    "farm": 0.5,
+    "tel": 0.5,
+    "online": 0.5
+   },
+   "lineSpend": true,
+   "cost": 398,
+   "inc": 6000,
+   "cat": "120.0%",
+   "v": "warn",
+   "why": "5% en Puntos BBVA",
+   "note": "Comisión $343 + IVA; la página anuncia \"sin anualidad\" sin condiciones visibles.",
+   "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-crea.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BBVA Educación",
+   "i": "BBVA",
+   "d": 0.63,
+   "r": {
+    "rest": 0.9,
+    "farm": 0.9,
+    "tel": 0.9,
+    "online": 0.9
+   },
+   "lineSpend": true,
+   "cost": 868,
+   "inc": 6000,
+   "cat": "89.4%",
+   "v": "warn",
+   "why": "9% en Puntos BBVA",
+   "note": "Comisión $748 + IVA; anuncia \"sin anualidad\" sin condiciones visibles.",
+   "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-educacion.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BBVA Vive",
+   "i": "BBVA",
+   "d": 0.63,
+   "r": {
+    "rest": 0.9,
+    "farm": 0.9,
+    "tel": 0.9,
+    "online": 0.9
+   },
+   "lineSpend": true,
+   "cost": 868,
+   "inc": 6000,
+   "cat": "87.5%",
+   "v": "warn",
+   "why": "9% en Puntos BBVA",
+   "note": "Comisión $748 + IVA; anuncia \"sin anualidad\" sin condiciones visibles.",
+   "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-vive.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BBVA Rayados",
+   "i": "BBVA",
+   "d": 0.63,
+   "r": {
+    "rest": 0.9,
+    "farm": 0.9,
+    "tel": 0.9,
+    "online": 0.9
+   },
+   "lineSpend": true,
+   "cost": 868,
+   "inc": 6000,
+   "cat": "90.5%",
+   "v": "warn",
+   "why": "9% en Puntos BBVA",
+   "note": "Comisión $748 + IVA.",
+   "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-rayados.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BBVA IPN",
+   "i": "BBVA",
+   "d": 0.77,
+   "r": {
+    "rest": 1.1,
+    "farm": 1.1,
+    "tel": 1.1,
+    "online": 1.1
+   },
+   "lineSpend": true,
+   "cost": 868,
+   "inc": 6000,
+   "cat": "91.4%",
+   "v": "warn",
+   "why": "11% en Puntos BBVA",
+   "note": "Comisión $748 + IVA. Parte del gasto se dona al IPN.",
+   "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-ipn.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BBVA Afinidad UNAM",
+   "i": "BBVA",
+   "d": 0.77,
+   "r": {
+    "rest": 1.1,
+    "farm": 1.1,
+    "tel": 1.1,
+    "online": 1.1
+   },
+   "lineSpend": true,
+   "cost": 1335,
+   "inc": 20000,
+   "cat": "71.3%",
+   "v": "warn",
+   "why": "11% en Puntos BBVA",
+   "note": "Comisión $1,151 + IVA.",
+   "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-afinidad-unam.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banorte Mujer",
+   "i": "Banorte",
+   "d": 0.92,
+   "cost": 1334,
+   "inc": 7000,
+   "cat": "96.6%",
+   "v": "est",
+   "why": "Puntos canjeados en vuelos",
+   "note": "Anualidad $1,150 + IVA. Valor del punto de blogs.",
+   "url": "https://www.banorte.com/dam/jcr:114cb73f-7844-4748-8ee8-28471244ba02/Folleto_Mujer_Banorte_mar26.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banorte Oro",
+   "i": "Banorte",
+   "d": 0.92,
+   "cost": 1334,
+   "inc": 7000,
+   "cat": "96.7%",
+   "v": "est",
+   "why": "Puntos canjeados en vuelos",
+   "note": "Anualidad $1,150 + IVA. Valor del punto de blogs.",
+   "url": "https://www.banorte.com/dam/jcr:aead4fb1-96fb-4583-8e1b-2fc6ac6bebc6/FI-Oro.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banorte Platinum",
+   "i": "Banorte",
+   "d": 1,
+   "cost": 3074,
+   "inc": 7000,
+   "cat": "56.5%",
+   "v": "est",
+   "why": "Puntos canjeados en vuelos",
+   "note": "Anualidad $2,650 + IVA. Valor del punto de blogs.",
+   "url": "https://www.banorte.com/dam/jcr:9278a373-9ee3-45dd-af4a-ae3caab8d2ec/Folleto_Platinum_may26.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banorte Infinite",
+   "i": "Banorte",
+   "d": 1.36,
+   "cost": 7192,
+   "inc": 100000,
+   "cat": "33.5%",
+   "v": "est",
+   "why": "Puntos canjeados en vuelos",
+   "note": "Anualidad $6,200 + IVA.",
+   "url": "https://www.banorte.com/dam/jcr:f3f96614-763f-415d-a09a-5b3384dcbde0/Folleto_Infinite_may26.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banorte Por Ti",
+   "i": "Banorte",
+   "d": 1,
+   "capYear": 5000,
+   "cost": 1334,
+   "inc": 7000,
+   "cat": "96.2%",
+   "v": "ok",
+   "why": "1% en todo (+1% en tus compras preferidas)",
+   "note": "Sólo paga con $4,000 al mes. Tope $5,000 al año. El 1% extra en compras preferidas no se incluye.",
+   "min": {
+    "amt": 4000,
+    "zero": true
+   },
+   "url": "https://www.banorte.com/dam/jcr:30b4d4b8-fb5e-49b1-84f2-e13f7f6b90fd/Folleto_POR_Ti_may26.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Scotia Tasa Baja Clásica",
+   "i": "Scotiabank",
+   "d": 0.5,
+   "cost": 0,
+   "inc": 7500,
+   "cat": "58.7%",
+   "v": "ok",
+   "why": "0.5% en ScotiaPesos y CAT bajo",
+   "note": "Sin costo de administración de por vida. CAT vence 30 sep.",
+   "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Scotia Tasa Baja Oro",
+   "i": "Scotiabank",
+   "d": 0.5,
+   "cost": 0,
+   "inc": 15000,
+   "cat": "59.0%",
+   "v": "warn",
+   "why": "0.5% en ScotiaPesos y CAT bajo",
+   "note": "Tasa en conflicto (0.5% o 0.75%).",
+   "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Scotia Travel Clásica",
+   "i": "Scotiabank",
+   "d": 0.5,
+   "r": {
+    "viajes": 1
+   },
+   "cost": 927,
+   "inc": 7500,
+   "cat": "111.9%",
+   "v": "warn",
+   "why": "0.5% en ScotiaPesos",
+   "note": "",
+   "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-clasica.aspx",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Scotia Travel Oro",
+   "i": "Scotiabank",
+   "d": 0.5,
+   "r": {
+    "viajes": 1
+   },
+   "cost": 1402,
+   "inc": 8000,
+   "cat": "104.2%",
+   "v": "warn",
+   "why": "0.5% en ScotiaPesos",
+   "note": "Tasa en conflicto (0.5% o 0.75%). Primera anualidad bonificada.",
+   "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-oro.aspx",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Scotia Singular Signature",
+   "i": "Scotiabank",
+   "d": 1,
+   "r": {
+    "viajes": 2
+   },
+   "cost": 5916,
+   "inc": 125000,
+   "cat": "45.6%",
+   "v": "warn",
+   "why": "1% en todo, 2% en viajes",
+   "note": "Tasa en conflicto (1% o 1.5%).",
+   "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/signature.aspx",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Scotia Singular World Elite",
+   "i": "Scotiabank",
+   "d": 1,
+   "r": {
+    "viajes": 2
+   },
+   "cost": 7317,
+   "inc": 70000,
+   "cat": "57.0%",
+   "v": "ok",
+   "why": "1% en todo, 2% en viajes",
+   "note": "Primeros 12 meses sin anualidad.",
+   "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/world-elite.aspx",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Afirme Blanc",
+   "i": "Afirme",
+   "d": 1,
+   "cost": 6380,
+   "inc": 150000,
+   "cat": "44.0%",
+   "v": "warn",
+   "why": "10% en Puntos Bonus",
+   "note": "Primer año sin anualidad; después $5,500 + IVA.",
+   "url": "https://www.afirme.com/Personas/TDC/Tarjeta-Afirme-Blanc",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "La Comer Banamex",
+   "i": "Banamex",
+   "d": 1,
+   "sup": {
+    "walmart": 1,
+    "sams": 1,
+    "costco": 1,
+    "soriana": 1,
+    "heb": 1,
+    "chedraui": 1,
+    "lacomer": 3,
+    "otro": 1
+   },
+   "capYear": 10000,
+   "cost": 1427,
+   "inc": 7000,
+   "cat": "87.5%",
+   "v": "warn",
+   "why": "3% en La Comer y City Market",
+   "note": "Se paga en Monedero Naranja, sólo usable en La Comer. Primeros 12 meses sin comisión si gastas $300 al mes.",
+   "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-lacomer.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Home Depot Banamex",
+   "i": "Banamex",
+   "d": 1,
+   "cost": 898,
+   "inc": 7000,
+   "cat": "85.5%",
+   "v": "warn",
+   "why": "3% en Home Depot, 1% fuera",
+   "note": "Pesos Haz Más sólo se usan en Home Depot. Comisión en conflicto.",
+   "url": "https://www.homedepot.com.mx/banamex",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Affinity Banamex (Inditex)",
+   "i": "Banamex",
+   "d": 0.5,
+   "cost": 945,
+   "inc": 7000,
+   "cat": "No publicado",
+   "v": "warn",
+   "why": "1% en Zara y marcas Inditex, 0.5% fuera",
+   "note": "El 1% en tiendas Inditex no se incluye.",
+   "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-affinity.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banamex Descubre",
+   "i": "Banamex",
+   "d": 0.26,
+   "cost": 1427,
+   "inc": 7500,
+   "cat": "No publicado",
+   "v": "est",
+   "why": "Puntos Momentos",
+   "note": "Valor del punto estimado por blogs ($0.05).",
+   "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-recompensas-descubre.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banamex Explora",
+   "i": "Banamex",
+   "d": 0.3,
+   "cost": 3161,
+   "inc": 30000,
+   "cat": "No publicado",
+   "v": "est",
+   "why": "Puntos Momentos y vuelos 2x1",
+   "note": "Valor del punto estimado; el 2x1 no se incluye.",
+   "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-viajes-explora.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Banamex Conquista",
+   "i": "Banamex",
+   "d": 0.39,
+   "cost": 7888,
+   "inc": 100000,
+   "cat": "No publicado",
+   "v": "est",
+   "why": "Puntos Momentos y vuelos 2x1",
+   "note": "Valor del punto estimado; el 2x1 no se incluye.",
+   "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-experiencias-conquista.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Vexi Campeón",
+   "i": "Vexi",
+   "d": 2,
+   "r": {
+    "subs": 5,
+    "rest": 3
+   },
+   "cost": 0,
+   "inc": null,
+   "cat": "48.2%",
+   "v": "warn",
+   "sub": true,
+   "why": "2% general, 5% streaming",
+   "note": "Sólo por invitación. Sólo en comercios participantes.",
+   "url": "https://www.vexi.mx/beneficios/vexi-niveles",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Stori SHEIN",
+   "i": "Stori",
+   "d": 1,
+   "cap": 300,
+   "cost": 0,
+   "inc": null,
+   "cat": "201.4%",
+   "v": "est",
+   "why": "Puntos SHEIN",
+   "note": "Puntos que sólo se usan en SHEIN; valor del punto en conflicto. Caducan en 90 días.",
+   "url": "https://www.storicard.com/shein",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Invex Voyage",
+   "i": "Invex",
+   "d": 1,
+   "r": {
+    "viajes": 2
+   },
+   "cost": 3367,
+   "inc": 5000,
+   "cat": "37.1%",
+   "v": "warn",
+   "why": "1% en Travel Cash",
+   "note": "Travel Cash sólo se usa en la plataforma de viajes de Invex. Primer año sin anualidad.",
+   "url": "https://www.invextarjetas.com.mx/invex/Documentos/CONDUSEF/FolletoVoyage.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Invex Voyage Platinum",
+   "i": "Invex",
+   "d": 1,
+   "r": {
+    "viajes": 2,
+    "rest": 2.5,
+    "deliv": 2.5
+   },
+   "cost": 4690,
+   "inc": 5000,
+   "cat": "37.3%",
+   "v": "warn",
+   "why": "1% en Travel Cash, 2.5% en restaurantes",
+   "note": "Travel Cash sólo se usa en la plataforma de viajes de Invex. Primer año sin anualidad.",
+   "url": "https://www.invextarjetas.com.mx/invex/Documentos/CONDUSEF/FolletoVoyagePlatinum.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Santander Unique Rewards Gold",
+   "i": "Santander",
+   "d": 0.32,
+   "r": {
+    "viajes": 0.63
+   },
+   "cost": 731,
+   "inc": 7500,
+   "cat": "65.6% (vencido)",
+   "v": "est",
+   "why": "Puntos Unique",
+   "note": "Valor del punto estimado por blogs ($0.06).",
+   "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:d1ebeb3e-38a5-4105-a4be-b644b0629402/original/as/Loyalty_FolletoGold_Visa_Unique.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Santander Unique Rewards Platinum",
+   "i": "Santander",
+   "d": 0.63,
+   "r": {
+    "viajes": 0.95
+   },
+   "cost": 2900,
+   "inc": 50000,
+   "cat": "81.3%",
+   "v": "est",
+   "why": "Puntos Unique",
+   "note": "Valor del punto estimado por blogs.",
+   "url": "https://www.santander.com.mx/personas/credito-y-financiamiento/tarjetas-de-credito/unique-rewards-platinum",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Inbursa Clásica",
+   "i": "Inbursa",
+   "d": 0.53,
+   "cost": 452,
+   "inc": null,
+   "cat": "82.3%",
+   "v": "ok",
+   "why": "Puntos Inbursa (10 = $1)",
+   "note": "Primer año sin anualidad.",
+   "url": "https://www.inbursa.com.mx/sites/gfi/document/tdc-clasica-folleto.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Inbursa Óptima",
+   "i": "Inbursa",
+   "d": 0.53,
+   "r": {
+    "rest": 0.79,
+    "viajes": 1.05
+   },
+   "cost": 754,
+   "inc": null,
+   "cat": "48.4%",
+   "v": "warn",
+   "why": "Puntos Inbursa y 20% de intereses de regreso",
+   "note": "Valor del punto tomado de la Clásica.",
+   "url": "https://www.inbursa.com/sites/gfi/document/tdc-optima-folleto.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Inbursa Black Amex",
+   "i": "Inbursa",
+   "d": 0.53,
+   "r": {
+    "rest": 1.05,
+    "viajes": 1.58
+   },
+   "cost": 2900,
+   "inc": null,
+   "cat": "31.9%",
+   "v": "warn",
+   "why": "Puntos Inbursa",
+   "note": "Valor del punto tomado de la Clásica.",
+   "url": "https://www.inbursa.com/sites/gfi/document/tdc-black-amex-folleto.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Mifel Mexicana",
+   "i": "Mifel",
+   "d": 0.4,
+   "cost": 347,
+   "inc": 7500,
+   "cat": "~75%",
+   "v": "est",
+   "why": "Mifel Rewards",
+   "note": "Valor del punto estimado. Sin anualidad con $35,000 al año.",
+   "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Mifel Oro",
+   "i": "Mifel",
+   "d": 0.4,
+   "cost": 1043,
+   "inc": 12500,
+   "cat": "No disponible",
+   "v": "est",
+   "why": "Mifel Rewards",
+   "note": "Valor del punto estimado. Sin anualidad con $100,000 al año.",
+   "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Mifel Platino",
+   "i": "Mifel",
+   "d": 0.8,
+   "cost": 2899,
+   "inc": 25000,
+   "cat": "No disponible",
+   "v": "est",
+   "why": "Mifel Rewards",
+   "note": "Valor del punto estimado. Sin anualidad con $300,000 al año.",
+   "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BanBajío Clásica",
+   "i": "BanBajío",
+   "d": 0,
+   "r": {
+    "super": 2,
+    "gas": 2,
+    "rest": 1,
+    "farm": 1,
+    "viajes": 1
+   },
+   "capYear": 65000,
+   "cost": 812,
+   "inc": 7000,
+   "cat": "83.9%",
+   "v": "est",
+   "why": "Hasta 3% en comercios participantes",
+   "note": "Tasas por categoría de blogs.",
+   "url": "https://www.bb.com.mx/cs/BanBajio/personas/tarjetas-de-credito/cashback/Documentos/Terminos-Condiciones-Cash-Back.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BanBajío Oro",
+   "i": "BanBajío",
+   "d": 0,
+   "r": {
+    "super": 2,
+    "gas": 2,
+    "rest": 1,
+    "farm": 1,
+    "viajes": 1
+   },
+   "cost": 1160,
+   "inc": 15000,
+   "cat": "66.2%",
+   "v": "est",
+   "why": "Hasta 3% en comercios participantes",
+   "note": "Tasas por categoría de blogs.",
+   "url": "https://www.bb.com.mx/cs/BanBajio/personas/tarjetas-de-credito/cashback/Documentos/Terminos-Condiciones-Cash-Back.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BanBajío Platinum",
+   "i": "BanBajío",
+   "d": 0,
+   "r": {
+    "super": 2,
+    "gas": 2,
+    "rest": 1,
+    "farm": 1,
+    "viajes": 1
+   },
+   "cost": 2610,
+   "inc": 40000,
+   "cat": "42.8%",
+   "v": "est",
+   "why": "Hasta 3% en comercios participantes",
+   "note": "Tasas por categoría de blogs.",
+   "url": "https://www.bb.com.mx/cs/BanBajio/personas/tarjetas-de-credito/cashback/Documentos/Terminos-Condiciones-Cash-Back.pdf",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "Sears Visa",
+   "i": "Sears",
+   "d": 1,
+   "r": {
+    "gas": 3,
+    "super": 3,
+    "rest": 2,
+    "farm": 2
+   },
+   "cost": 0,
+   "inc": null,
+   "cat": "No disponible",
+   "v": "est",
+   "why": "3% súper y gasolina",
+   "note": "Tasas de prensa, en conflicto.",
+   "url": "https://blog.kardmatch.com.mx/tarjeta-de-credito-sears",
+   "source_type": "secundaria",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BanCoppel Visa",
+   "i": "BanCoppel",
+   "d": 1,
+   "cost": 0,
+   "inc": null,
+   "cat": "86.6%",
+   "v": "est",
+   "why": "1% en dinero electrónico",
+   "note": "Requiere $500 por corte. Datos de blogs.",
+   "min": {
+    "amt": 500,
+    "zero": true
+   },
+   "url": "https://finmart.mx/tarjetas-de-credito/mejores-tarjetas-de-credito/",
+   "source_type": "secundaria",
+   "verified_at": "2026-09-29"
+  },
+  {
+   "n": "BanCoppel Oro",
+   "i": "BanCoppel",
+   "d": 2,
+   "cost": 522,
+   "inc": null,
+   "cat": "77.0%",
+   "v": "est",
+   "why": "2% en dinero electrónico",
+   "note": "Tasa de blogs; topes no encontrados.",
+   "url": "https://www.bancoppel.com/credito_bcopp/tdco.html",
+   "source_type": "oficial",
+   "verified_at": "2026-09-29"
+  }
+ ],
+ "inventory": {
+  "nocalc": [
+   {
+    "n": "HSBC VIVA y VIVA Plus",
+    "why": "Doters sin valor oficial en pesos."
+   },
+   {
+    "n": "Santander Fiesta Rewards Oro y Platino",
+    "why": "Valor del punto no publicado."
+   },
+   {
+    "n": "Banamex Beyond y LineUp",
+    "why": "Puntos sin valor en pesos publicado."
+   },
+   {
+    "n": "BBVA Mi Primera Tarjeta",
+    "why": "No publica cuántos puntos da."
+   },
+   {
+    "n": "Hilton Honors INVEX y Premium",
+    "why": "Puntos Hilton sin valor en pesos."
+   },
+   {
+    "n": "INVEX AAdvantage Platinum y World Elite",
+    "why": "Millas de American Airlines; anualidad en conflicto."
+   },
+   {
+    "n": "INVEX SíCard Plus y Platinum",
+    "why": "Valor del punto no publicado."
+   },
+   {
+    "n": "VA de Banorte",
+    "why": "VA Coins sin valor publicado."
+   },
+   {
+    "n": "Ualá",
+    "why": "Sus T&C dicen que los puntos no tienen valor monetario."
+   },
+   {
+    "n": "Amex Gold y Platinum Aeroméxico",
+    "why": "Tasa base no confirmada."
+   },
+   {
+    "n": "Scotia Infinite Wealth Management",
+    "why": "Ingreso y CAT no publicados."
+   },
+   {
+    "n": "Banregio Acceso Gold",
+    "why": "Sin ficha completa."
+   }
+  ],
+  "store": [
+   {
+    "n": "Liverpool Departamental",
+    "why": "sólo se usa en Liverpool"
+   },
+   {
+    "n": "Palacio de Hierro, Socio y Total Palacio",
+    "why": "sólo en Palacio"
+   },
+   {
+    "n": "Sears Oro y Black",
+    "why": "puntos para Sears"
+   },
+   {
+    "n": "Sanborns",
+    "why": "sólo en Sanborns"
+   },
+   {
+    "n": "Stori Farmacias Similares",
+    "why": "2% sólo en el ecosistema Simi"
+   },
+   {
+    "n": "IKEA INVEX",
+    "why": "sólo 5% en la primera compra"
+   },
+   {
+    "n": "Farmacias Guadalajara INVEX",
+    "why": "ya no se ofrece al público"
+   },
+   {
+    "n": "Suburbia (Dilisa)",
+    "why": "sólo en Suburbia"
+   }
+  ],
+  "norew": [
+   {
+    "n": "Banco Azteca Oro y Oro Garantizada"
+   },
+   {
+    "n": "Banamex Joy"
+   },
+   {
+    "n": "Banamex Teletón"
+   },
+   {
+    "n": "Santander Básica y Zero"
+   },
+   {
+    "n": "Santander Access"
+   },
+   {
+    "n": "Scotia Básica"
+   },
+   {
+    "n": "Afirme Básica"
+   },
+   {
+    "n": "HSBC Air"
+   },
+   {
+    "n": "BanBajío Básica"
+   },
+   {
+    "n": "Mifel Básica"
+   },
+   {
+    "n": "Banorte Básica"
+   },
+   {
+    "n": "Banorte Conmigo"
+   },
+   {
+    "n": "INVEX SíCard Básica"
+   },
+   {
+    "n": "Klar estándar (sin Plus)"
+   },
+   {
+    "n": "Stori Green Garantizada"
+   },
+   {
+    "n": "Coppel"
+   },
+   {
+    "n": "C&A (Bradescard)"
+   }
+  ],
+  "disc": [
+   {
+    "n": "Santander Aeroméxico",
+    "why": "dejó de acumular el 30 jun 2026"
+   },
+   {
+    "n": "Santander Free",
+    "why": "migrada a LikeU"
+   },
+   {
+    "n": "Banamex Simplicity",
+    "why": "reemplazada por Joy"
+   },
+   {
+    "n": "Banamex B·smart",
+    "why": "ya no se comercializa"
+   },
+   {
+    "n": "Bineo",
+    "why": "vendido a Klar"
+   },
+   {
+    "n": "Fondeadora F_Credit",
+    "why": "ya no aparece en su sitio"
+   },
+   {
+    "n": "Walmart Inbursa original",
+    "why": "reemplazada por Súper Crédito"
+   },
+   {
+    "n": "Spin by OXXO",
+    "why": "sin tarjeta de crédito"
+   },
+   {
+    "n": "albo y Cashi",
+    "why": "no emiten tarjeta de crédito"
+   }
+  ]
+ }
+}

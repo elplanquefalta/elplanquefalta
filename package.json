@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./public/dist/styles.css --minify",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "build": "npm test && tailwindcss -i ./src/input.css -o ./public/dist/styles.css --minify",
     "watch": "tailwindcss -i ./src/input.css -o ./public/dist/styles.css --watch"
   },
   "repository": {
