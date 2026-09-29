@@ -54,11 +54,10 @@ p{margin:0;max-width:72ch}
 /* Barra superior y encabezado, igual que las herramientas de la página principal */
 .nav{background:var(--surface);color:var(--sage);border-bottom:1px solid var(--line);padding:16px;display:flex;justify-content:space-between;align-items:center}
 .nav .logo{font-family:var(--display);font-weight:700;font-size:16px;text-decoration:none}
-.nav .logo em,.hero em{color:var(--gold)}
-.nav .back{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:4px;min-height:44px}
+.nav .logo em{color:var(--gold)}
+.nav .back{font-size:14px;font-weight:700;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:4px;min-height:44px}
 .hero{background:var(--surface);color:var(--fg);padding:28px 16px 64px;text-align:center;position:relative}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:40px;background:var(--bg);clip-path:ellipse(60% 100% at 50% 100%)}
-.hero .badge{display:inline-block;padding:6px 14px;border-radius:99px;background:rgba(154,112,32,.08);border:1px solid rgba(154,112,32,.3);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
 .hero h1{color:var(--sage);font-size:clamp(30px,6vw,46px);line-height:1.08;max-width:760px;margin:0 auto 14px}
 .hero p{color:var(--muted);margin:0 auto;max-width:560px}
 .hero .date{margin-top:14px;font-size:13px;color:var(--muted)}
@@ -66,20 +65,18 @@ p{margin:0;max-width:72ch}
 .wrap{max-width:1100px;margin:0 auto;padding:8px 16px 56px;display:grid;grid-template-columns:minmax(0,1fr);gap:36px}
 .narrow{max-width:780px;width:100%;margin-inline:auto}
 .stack{display:grid;gap:12px;min-width:0}
-.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
 
 /* Cuestionario */
 .quiz{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:24px;box-shadow:0 10px 30px rgba(52,65,54,.08)}
 .progress{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px;color:var(--muted);font-weight:500}
-.bar{flex:1;height:6px;border-radius:99px;background:var(--chip);overflow:hidden;max-width:220px}
-.bar span{display:block;height:100%;width:0;background:var(--goldbright);border-radius:99px;transition:width .3s ease}
+.bar{flex:1;height:6px;border-radius:3px;background:var(--chip);overflow:hidden;max-width:220px}
+.bar span{display:block;height:100%;width:0;background:var(--goldbright);border-radius:3px;transition:width .3s ease}
 .q{display:grid;gap:10px;border:0;margin:0;padding:0;min-width:0}
 .q legend{padding:0;font-weight:700;font-size:16px;margin-bottom:10px}
-.q legend span{color:var(--muted);font-weight:500;margin-right:6px;font-variant-numeric:tabular-nums}
 .q .h{font-size:13px;color:var(--muted)}
 .q.off{opacity:.45}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font:inherit;font-size:14.5px;border:1.5px solid var(--line);background:var(--bg);color:var(--fg);border-radius:99px;padding:9px 15px;min-height:44px;cursor:pointer;transition:background .15s,border-color .15s;-webkit-tap-highlight-color:transparent}
+.chip{font:inherit;font-size:14.5px;border:1.5px solid var(--line);background:var(--bg);color:var(--fg);border-radius:8px;padding:9px 15px;min-height:44px;cursor:pointer;transition:background .15s,border-color .15s;-webkit-tap-highlight-color:transparent}
 .chip:hover{border-color:var(--sage)}
 .chip[aria-pressed="true"]{background:var(--sage);border-color:var(--sage);color:var(--onsage);font-weight:700}
 .chip:disabled{cursor:not-allowed}
@@ -96,7 +93,7 @@ p{margin:0;max-width:72ch}
 .podium{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
 .pod{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:8px;align-content:start;min-width:0}
 .pod.first{background:#4A5D4C;color:#F7F5EF;border-color:#4A5D4C;box-shadow:0 14px 40px rgba(45,56,46,.25)}
-.pod .k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.8;font-weight:700}
+.pod .k{font-size:13px;opacity:.8;font-weight:700}
 .pod .n{font-family:var(--display);font-size:22px;font-weight:700;line-height:1.15}
 .pod .v{font-family:var(--display);font-size:32px;font-weight:700;color:var(--gold);line-height:1.1}
 .pod.first .v{color:var(--goldbright)}
@@ -115,12 +112,12 @@ p{margin:0;max-width:72ch}
 .flabel{font-size:13px;color:var(--muted);font-weight:500;margin-right:2px}
 .chip.sm{font-size:13.5px;padding:7px 13px;min-height:40px}
 .legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--muted)}
-.pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--chip);white-space:nowrap}
+.pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;background:var(--chip);white-space:nowrap}
 .ok{color:var(--sage)} .warn{color:var(--gold)} .est{color:var(--red)}
 .tbl{border:1px solid var(--line);border-radius:10px;background:var(--surface)}
 table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:13.5px}
 th,td{padding:10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
-thead th{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--surface);line-height:1.3;vertical-align:bottom}
+thead th{font-size:12px;color:var(--muted);background:var(--surface);line-height:1.3;vertical-align:bottom}
 tbody tr:nth-child(even){background:var(--rowalt)}
 tbody tr:last-child td{border-bottom:0}
 td.card b{display:block} td.card small{color:var(--muted)}
@@ -133,14 +130,14 @@ td.card,td.note{overflow-wrap:anywhere}
 td a{color:var(--sage);font-weight:500}
 tr.dim td{opacity:.55} tr.dim td.note{opacity:.85}
 .capflag{font-weight:700;color:var(--red)}
-.more{font:inherit;font-weight:700;font-size:14px;color:var(--sage);background:var(--surface);border:1.5px solid var(--sage);border-radius:99px;padding:10px 18px;min-height:44px;cursor:pointer;justify-self:center}
+.more{font:inherit;font-weight:700;font-size:14px;color:var(--sage);background:var(--surface);border:1.5px solid var(--sage);border-radius:8px;padding:10px 18px;min-height:44px;cursor:pointer;justify-self:center}
 
 /* Celular y tablet: un renglón por tarjeta con nombre, CAT, costo y neto */
 .mhead,td.catc{display:none}
 @media (max-width:999px){
   thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
   .mhead,tbody tr{display:grid;grid-template-columns:minmax(0,1fr) 52px 60px 70px;align-items:center;gap:2px 10px;padding:10px 12px}
-  .mhead{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--surface);z-index:1;border-radius:10px 10px 0 0}
+  .mhead{font-size:12px;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--surface);z-index:1;border-radius:10px 10px 0 0}
   .mhead span:not(:first-child){text-align:right}
   tbody tr{border-bottom:1px solid var(--line)}
   tbody tr:last-child{border-bottom:0}
@@ -158,7 +155,7 @@ tr.dim td{opacity:.55} tr.dim td.note{opacity:.85}
   thead th{position:sticky;top:0;z-index:1;box-shadow:inset 0 -1px 0 var(--line)}
   th,td{padding:10px 8px}
   thead th.num,td.num{white-space:normal}
-  thead th{letter-spacing:.02em;font-size:10px}
+  thead th{font-size:11.5px}
   td.ver .pill{white-space:normal;text-align:center}
   .rk{display:none}
 }
@@ -173,10 +170,10 @@ ul.plain li{font-size:13.5px}
 .follow{background:var(--surface);border:1px solid var(--line);color:var(--fg);border-radius:16px;padding:24px 20px;display:grid;gap:12px;justify-items:center;text-align:center}
 .follow h2{color:var(--sage)}
 .follow p{color:var(--muted)}
-.follow a{display:inline-flex;align-items:center;gap:10px;background:var(--sage);color:var(--onsage);font-weight:700;text-decoration:none;border-radius:99px;padding:12px 22px;min-height:48px}
+.follow a{display:inline-flex;align-items:center;gap:10px;background:var(--sage);color:var(--onsage);font-weight:700;text-decoration:none;border-radius:8px;padding:12px 22px;min-height:48px}
 .follow a:hover{filter:brightness(1.05)}
 footer{text-align:center;padding:8px 16px 40px;color:var(--muted);font-size:12.5px;display:grid;gap:6px}
-footer .logo{font-family:var(--display);font-weight:700;color:var(--sage);text-transform:uppercase;letter-spacing:-.01em}
+footer .logo{font-family:var(--display);font-weight:700;color:var(--sage)}
 footer .logo em{color:var(--gold)}
 .error{color:var(--red);font-weight:500}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -191,12 +188,11 @@ footer .logo em{color:var(--gold)}
 
 <nav class="nav" aria-label="Principal">
   <a class="logo" href="/">El Plan<em>QueFalta</em></a>
-  <a class="back" href="/"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M10 4l-4 4 4 4"/></svg> INICIO</a>
+  <a class="back" href="/">Volver al inicio</a>
 </nav>
 
 <header class="hero">
-  <span class="badge">Comparador de tarjetas</span>
-  <h1>¿Qué tarjeta de crédito te conviene <em>más</em>?</h1>
+  <h1>¿Qué tarjeta de crédito te conviene más?</h1>
   <p>Contesta 6 preguntas. Estimamos cuánto te regresaría cada tarjeta en un año, con topes, anualidades y membresías ya descontados.</p>
   <p class="date" id="updated">Se actualiza cada mes</p>
 </header>
@@ -205,14 +201,14 @@ footer .logo em{color:var(--gold)}
 <section class="quiz narrow" aria-label="Cuestionario">
   <div class="progress"><span id="progress-txt">Contestaste 0 de 6</span><div class="bar" aria-hidden="true"><span id="progress-bar"></span></div></div>
 
-  <fieldset class="q"><legend><span>1</span>¿Pagas el total de tu tarjeta cada mes?</legend>
+  <fieldset class="q"><legend>¿Pagas el total de tu tarjeta cada mes?</legend>
     <div class="chips" data-q="total" data-single>
       <button class="chip" type="button" data-v="si" aria-pressed="false">Sí, siempre</button>
       <button class="chip" type="button" data-v="no" aria-pressed="false">A veces dejo saldo</button>
     </div></fieldset>
   <div id="alert" aria-live="polite"></div>
 
-  <fieldset class="q"><legend><span>2</span>¿Cuánto ganas al mes?</legend>
+  <fieldset class="q"><legend>¿Cuánto ganas al mes?</legend>
     <div class="chips" data-q="inc" data-single>
       <button class="chip" type="button" data-v="0" aria-pressed="false">Menos de $10,000</button>
       <button class="chip" type="button" data-v="1" aria-pressed="false">$10,000 a $15,000</button>
@@ -222,14 +218,14 @@ footer .logo em{color:var(--gold)}
       <button class="chip" type="button" data-v="5" aria-pressed="false">Más de $75,000</button>
     </div><p class="h">Sirve para mostrarte sólo las tarjetas que te pueden aprobar y estimar tu gasto. No se guarda.</p></fieldset>
 
-  <fieldset class="q"><legend><span>3</span>¿Cuánto de tu gasto pasa por la tarjeta?</legend>
+  <fieldset class="q"><legend>¿Cuánto de tu gasto pasa por la tarjeta?</legend>
     <div class="chips" data-q="share" data-single>
       <button class="chip" type="button" data-v="0.3" aria-pressed="false">Poco</button>
       <button class="chip" type="button" data-v="0.5" aria-pressed="false">Como la mitad</button>
       <button class="chip" type="button" data-v="0.75" aria-pressed="false">Casi todo</button>
     </div></fieldset>
 
-  <fieldset class="q"><legend><span>4</span>¿Qué de esto pagas con tarjeta?</legend>
+  <fieldset class="q"><legend>¿Qué de esto pagas con tarjeta?</legend>
     <div class="chips" data-q="cats">
       <button class="chip" type="button" data-v="super" aria-pressed="false">Súper</button>
       <button class="chip" type="button" data-v="rest" aria-pressed="false">Restaurantes y bares</button>
@@ -243,7 +239,7 @@ footer .logo em{color:var(--gold)}
       <button class="chip" type="button" data-v="none" aria-pressed="false">Ninguna de estas</button>
     </div><p class="h">Marca todas las que apliquen.</p></fieldset>
 
-  <fieldset class="q" id="q-chain"><legend><span>5</span>¿Dónde haces el súper?</legend>
+  <fieldset class="q" id="q-chain"><legend>¿Dónde haces el súper?</legend>
     <div class="chips" data-q="chains">
       <button class="chip" type="button" data-v="walmart" aria-pressed="false">Walmart o Bodega</button>
       <button class="chip" type="button" data-v="sams" aria-pressed="false">Sam's</button>
@@ -255,7 +251,7 @@ footer .logo em{color:var(--gold)}
       <button class="chip" type="button" data-v="otro" aria-pressed="false">Otro</button>
     </div><p class="h" id="chain-h">Marca todas donde compras. Algunas tarjetas pagan más en una cadena específica.</p></fieldset>
 
-  <fieldset class="q"><legend><span>6</span>¿Pagarías anualidad o membresía si al final te regresa más?</legend>
+  <fieldset class="q"><legend>¿Pagarías anualidad o membresía si al final te regresa más?</legend>
     <div class="chips" data-q="fee" data-single>
       <button class="chip" type="button" data-v="si" aria-pressed="false">Sí, si sale a cuenta</button>
       <button class="chip" type="button" data-v="no" aria-pressed="false">No, sólo sin costo</button>
@@ -334,7 +330,6 @@ footer .logo em{color:var(--gold)}
   <h2>Esta herramienta se actualiza cada mes</h2>
   <p>Revisamos cambios en términos y condiciones, anualidades y topes de cada tarjeta, y agregamos las nuevas que salen al mercado. En Instagram te aviso cuando algo importante cambia.</p>
   <a href="https://instagram.com/elplanquefalta" target="_blank" rel="noopener" id="ig">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
     Sígueme en @elplanquefalta</a>
 </section>
 </main>
