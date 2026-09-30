@@ -2721,62 +2721,6 @@
    "verified_at": "2026-09-29"
   },
   {
-   "n": "Scotia Tasa Baja Clásica",
-   "i": "Scotiabank",
-   "d": 0.5,
-   "cost": 0,
-   "inc": 7500,
-   "cat": "58.7%",
-   "v": "ok",
-   "why": "0.5% en ScotiaPesos y CAT bajo",
-   "note": "Sin costo de administración de por vida. CAT vence 30 sep.",
-   "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx",
-   "perks": [
-    {
-     "t": "proteccion",
-     "d": "Compras hasta USD 2,000 (ya no se ofrece; migra a IDEAL)",
-     "v": "warn",
-     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx"
-    },
-    {
-     "t": "proteccion",
-     "d": "Garantía extendida hasta USD 2,000 (ya no se ofrece; migra a IDEAL)",
-     "v": "warn",
-     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx"
-    }
-   ],
-   "source_type": "oficial",
-   "verified_at": "2026-09-29"
-  },
-  {
-   "n": "Scotia Tasa Baja Oro",
-   "i": "Scotiabank",
-   "d": 0.5,
-   "cost": 0,
-   "inc": 15000,
-   "cat": "59.0%",
-   "v": "warn",
-   "why": "0.5% en ScotiaPesos y CAT bajo",
-   "note": "Tasa en conflicto (0.5% o 0.75%).",
-   "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx",
-   "perks": [
-    {
-     "t": "proteccion",
-     "d": "Compras hasta USD 2,000 (ya no se ofrece; migra a IDEAL)",
-     "v": "warn",
-     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx"
-    },
-    {
-     "t": "proteccion",
-     "d": "Garantía extendida hasta USD 2,000 (ya no se ofrece; migra a IDEAL)",
-     "v": "warn",
-     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx"
-    }
-   ],
-   "source_type": "oficial",
-   "verified_at": "2026-09-29"
-  },
-  {
    "n": "Scotia Travel Clásica",
    "i": "Scotiabank",
    "d": 0.5,
@@ -3975,6 +3919,10 @@
    }
   ],
   "disc": [
+   {
+    "n": "Scotia Tasa Baja Clásica y Oro",
+    "why": "Scotiabank dejó de ofrecerlas el 16 jul 2026; pasan a Scotia IDEAL"
+   },
    {
     "n": "Santander Aeroméxico",
     "why": "dejó de acumular el 30 jun 2026"
