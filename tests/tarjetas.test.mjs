@@ -136,3 +136,11 @@ test("beneficios bien formados en los datos", () => {
       assert.ok(/^https:\/\//.test(p.url), `${c.n}: fuente`);
     }
 });
+
+test("la página, app.mjs y calc.mjs piden la misma versión (evita mezclar archivos viejos en caché)", () => {
+  const html = fs.readFileSync(new URL("../public/tarjetas/index.html", import.meta.url), "utf8");
+  const app = fs.readFileSync(new URL("../public/tarjetas/app.mjs", import.meta.url), "utf8");
+  const vs = [...html.matchAll(/\/tarjetas\/(?:app|calc)\.mjs\?v=([\w-]+)/g), ...app.matchAll(/\/tarjetas\/calc\.mjs\?v=([\w-]+)/g)].map((m) => m[1]);
+  assert.equal(vs.length, 3, "faltan referencias con ?v=");
+  assert.equal(new Set(vs).size, 1, `versiones distintas: ${vs.join(", ")}`);
+});

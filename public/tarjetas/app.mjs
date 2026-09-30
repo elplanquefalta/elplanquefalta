@@ -1,5 +1,5 @@
 // Comparador de tarjetas — interfaz. El cálculo vive en calc.mjs; los datos en data/cards.json.
-import { CL, fmt, rank, catNum, PERKS } from "/tarjetas/calc.mjs";
+import { CL, fmt, rank, catNum, PERKS } from "/tarjetas/calc.mjs?v=20260929d";
 
 const $ = (id) => document.getElementById(id);
 const esc = (t) => String(t).replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[ch]);
