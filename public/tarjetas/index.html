@@ -74,7 +74,21 @@ p{margin:0;max-width:72ch}
 .q{display:grid;gap:10px;border:0;margin:0;padding:0;min-width:0}
 .q legend{padding:0;font-weight:700;font-size:16px;margin-bottom:10px}
 .q .h{font-size:13px;color:var(--muted)}
-.q.off{opacity:.45}
+.q legend{font-family:var(--display);font-size:clamp(20px,4vw,24px);color:var(--sage);line-height:1.2;margin-bottom:14px;outline:none}
+.q[hidden],.qnav[hidden],.summary[hidden]{display:none}
+#alert:not(:empty){margin-top:6px}
+.qnav{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.btn{font:inherit;font-weight:700;font-size:15px;border-radius:8px;padding:10px 20px;min-height:44px;cursor:pointer;border:1.5px solid var(--sage);background:var(--sage);color:var(--onsage)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.ghost{background:none;border-color:transparent;color:var(--muted);padding-inline:4px}
+.btn[hidden]{display:none}
+.summary{display:grid;gap:0}
+.summary h2{font-size:18px;margin-bottom:6px}
+.srow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.srow:last-child{border-bottom:0}
+.srow span{font-size:13px;color:var(--muted);display:block}
+.srow b{font-weight:500;font-size:14.5px}
+.srow button{font:inherit;font-size:13.5px;font-weight:700;color:var(--sage);background:none;border:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:8px 0;min-height:40px;flex-shrink:0}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{font:inherit;font-size:14.5px;border:1.5px solid var(--line);background:var(--bg);color:var(--fg);border-radius:8px;padding:9px 15px;min-height:44px;cursor:pointer;transition:background .15s,border-color .15s;-webkit-tap-highlight-color:transparent}
 .chip:hover{border-color:var(--sage)}
@@ -199,16 +213,15 @@ footer .logo em{color:var(--gold)}
 
 <main class="wrap">
 <section class="quiz narrow" aria-label="Cuestionario">
-  <div class="progress"><span id="progress-txt">Contestaste 0 de 6</span><div class="bar" aria-hidden="true"><span id="progress-bar"></span></div></div>
+  <div class="progress"><span id="progress-txt" aria-live="polite">1 de 6</span><div class="bar" aria-hidden="true"><span id="progress-bar"></span></div></div>
 
-  <fieldset class="q"><legend>¿Pagas el total de tu tarjeta cada mes?</legend>
+  <fieldset class="q"><legend tabindex="-1">¿Pagas el total de tu tarjeta cada mes?</legend>
     <div class="chips" data-q="total" data-single>
       <button class="chip" type="button" data-v="si" aria-pressed="false">Sí, siempre</button>
       <button class="chip" type="button" data-v="no" aria-pressed="false">A veces dejo saldo</button>
-    </div></fieldset>
-  <div id="alert" aria-live="polite"></div>
+    </div><div id="alert" aria-live="polite"></div></fieldset>
 
-  <fieldset class="q"><legend>¿Cuánto ganas al mes?</legend>
+  <fieldset hidden class="q"><legend tabindex="-1">¿Cuánto ganas al mes?</legend>
     <div class="chips" data-q="inc" data-single>
       <button class="chip" type="button" data-v="0" aria-pressed="false">Menos de $10,000</button>
       <button class="chip" type="button" data-v="1" aria-pressed="false">$10,000 a $15,000</button>
@@ -218,14 +231,14 @@ footer .logo em{color:var(--gold)}
       <button class="chip" type="button" data-v="5" aria-pressed="false">Más de $75,000</button>
     </div><p class="h">Sirve para mostrarte sólo las tarjetas que te pueden aprobar y estimar tu gasto. No se guarda.</p></fieldset>
 
-  <fieldset class="q"><legend>¿Cuánto de tu gasto pasa por la tarjeta?</legend>
+  <fieldset hidden class="q"><legend tabindex="-1">¿Cuánto de tu gasto pasa por la tarjeta?</legend>
     <div class="chips" data-q="share" data-single>
       <button class="chip" type="button" data-v="0.3" aria-pressed="false">Poco</button>
       <button class="chip" type="button" data-v="0.5" aria-pressed="false">Como la mitad</button>
       <button class="chip" type="button" data-v="0.75" aria-pressed="false">Casi todo</button>
     </div></fieldset>
 
-  <fieldset class="q"><legend>¿Qué de esto pagas con tarjeta?</legend>
+  <fieldset hidden class="q"><legend tabindex="-1">¿Qué de esto pagas con tarjeta?</legend>
     <div class="chips" data-q="cats">
       <button class="chip" type="button" data-v="super" aria-pressed="false">Súper</button>
       <button class="chip" type="button" data-v="rest" aria-pressed="false">Restaurantes y bares</button>
@@ -239,7 +252,7 @@ footer .logo em{color:var(--gold)}
       <button class="chip" type="button" data-v="none" aria-pressed="false">Ninguna de estas</button>
     </div><p class="h">Marca todas las que apliquen.</p></fieldset>
 
-  <fieldset class="q" id="q-chain"><legend>¿Dónde haces el súper?</legend>
+  <fieldset hidden class="q" id="q-chain"><legend tabindex="-1">¿Dónde haces el súper?</legend>
     <div class="chips" data-q="chains">
       <button class="chip" type="button" data-v="walmart" aria-pressed="false">Walmart o Bodega</button>
       <button class="chip" type="button" data-v="sams" aria-pressed="false">Sam's</button>
@@ -249,13 +262,19 @@ footer .logo em{color:var(--gold)}
       <button class="chip" type="button" data-v="chedraui" aria-pressed="false">Chedraui</button>
       <button class="chip" type="button" data-v="lacomer" aria-pressed="false">La Comer o City Market</button>
       <button class="chip" type="button" data-v="otro" aria-pressed="false">Otro</button>
-    </div><p class="h" id="chain-h">Marca todas donde compras. Algunas tarjetas pagan más en una cadena específica.</p></fieldset>
+    </div><p class="h">Marca todas donde compras. Algunas tarjetas pagan más en una cadena específica.</p></fieldset>
 
-  <fieldset class="q"><legend>¿Pagarías anualidad o membresía si al final te regresa más?</legend>
+  <fieldset hidden class="q"><legend tabindex="-1">¿Pagarías anualidad o membresía si al final te regresa más?</legend>
     <div class="chips" data-q="fee" data-single>
       <button class="chip" type="button" data-v="si" aria-pressed="false">Sí, si sale a cuenta</button>
       <button class="chip" type="button" data-v="no" aria-pressed="false">No, sólo sin costo</button>
     </div></fieldset>
+
+  <div class="qnav" id="qnav">
+    <button class="btn ghost" type="button" id="prev">Atrás</button>
+    <button class="btn" type="button" id="next">Siguiente</button>
+  </div>
+  <div class="summary" id="summary" hidden></div>
 </section>
 
 <section class="stack" id="result" aria-live="polite" tabindex="-1">

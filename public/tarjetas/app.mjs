@@ -22,20 +22,62 @@ const answered = () => {
 
 const longDate = (iso) => new Date(iso + "T12:00:00").toLocaleDateString("es-MX", { day: "numeric", month: "long", year: "numeric" });
 
-function renderProgress() {
-  const n = answered();
-  $("progress-txt").textContent = n === 6 ? "Listo: tu resultado está abajo" : `Contestaste ${n} de 6`;
-  $("progress-bar").style.width = (n / 6) * 100 + "%";
-  const off = !state.cats.has("super");
-  $("q-chain").classList.toggle("off", off);
-  $("q-chain").querySelectorAll(".chip").forEach((b) => (b.disabled = off));
-  $("chain-h").textContent = off
-    ? "Sólo aplica si marcaste súper."
-    : "Marca todas donde compras. Algunas tarjetas pagan más en una cadena específica.";
+function renderAlert() {
   $("alert").innerHTML = state.total === "no"
     ? `<div class="alert"><b>Antes de buscar recompensas, liquida el saldo.</b><p>Con una tasa típica de 60% anual, $10,000 de saldo te cuestan alrededor de $580 al mes en intereses e IVA. Ninguna tarjeta de esta lista te regresa eso. Estas estimaciones sólo te convienen cuando pagas el total cada mes.</p></div>`
     : "";
-  return n === 6;
+}
+
+// Cuestionario de una pregunta a la vez. La del súper sólo aparece si marcaste súper.
+const STEPS = ["total", "inc", "share", "cats", "chains", "fee"];
+const SHORT = { total: "¿Pagas el total?", inc: "Ingreso al mes", share: "Gasto con tarjeta", cats: "Pagas con tarjeta", chains: "Haces el súper en", fee: "¿Anualidad o membresía?" };
+const MULTI = new Set(["cats", "chains"]);
+const field = (k) => document.querySelector(`[data-q="${k}"]`).closest("fieldset");
+const needed = (k) => k !== "chains" || state.cats.has("super");
+const isAnswered = (k) => (k === "cats" ? state.catsTouched : k === "chains" ? state.chains.size > 0 : state[k] != null);
+const seq = () => STEPS.filter(needed);
+// Para el contador: la del súper cuenta hasta saber que no marcó súper, así no salta de "de 5" a "de 6"
+const counted = () => STEPS.filter((k) => k !== "chains" || !state.catsTouched || state.cats.has("super"));
+let step = "total", editing = false;
+
+function showStep(k, focus = true) {
+  step = k;
+  STEPS.forEach((s) => (field(s).hidden = s !== k));
+  $("summary").hidden = true;
+  $("qnav").hidden = false;
+  const list = counted(), pos = list.indexOf(k) + 1;
+  $("progress-txt").textContent = editing ? "Cambiando una respuesta" : `${pos} de ${list.length}`;
+  $("progress-bar").style.width = ((editing ? list.length : pos - 1) / list.length) * 100 + "%";
+  $("prev").hidden = editing || pos === 1;
+  // Opción única avanza sola; con varias opciones, o si deja saldo (para leer la alerta), se usa el botón
+  const manual = MULTI.has(k) || (k === "total" && state.total === "no");
+  $("next").hidden = !manual;
+  $("next").textContent = editing ? "Listo" : "Siguiente";
+  $("next").disabled = !isAnswered(k);
+  if (focus) field(k).querySelector("legend").focus({ preventScroll: true });
+}
+
+function advance() {
+  if (editing) return needed("chains") && !isAnswered("chains") ? showStep("chains") : finish();
+  const list = seq(), nxt = list[list.indexOf(step) + 1];
+  nxt ? showStep(nxt) : finish();
+}
+
+function chosen(k) {
+  const on = [...field(k).querySelectorAll('.chip[aria-pressed="true"]')].map((b) => b.textContent);
+  return on.join(", ") || "—";
+}
+
+function finish() {
+  editing = false;
+  STEPS.forEach((s) => (field(s).hidden = true));
+  $("qnav").hidden = true;
+  $("progress-txt").textContent = "Listo: tu resultado está abajo";
+  $("progress-bar").style.width = "100%";
+  $("summary").innerHTML = "<h2>Tus respuestas</h2>" + seq().map((k) =>
+    `<div class="srow"><div><span>${SHORT[k]}</span><b>${esc(chosen(k))}</b></div><button type="button" data-edit="${k}">Cambiar</button></div>`).join("");
+  $("summary").hidden = false;
+  if (DATA) render();
 }
 
 function podium(res) {
@@ -120,7 +162,7 @@ function renderTable(res) {
 }
 
 function render() {
-  const done = renderProgress();
+  const done = answered() === 6;
   if (done) {
     lastRes = rank(DATA.cards, { ...state, cats: [...state.cats], chains: [...state.chains] });
     $("result-body").innerHTML = podium(lastRes);
@@ -154,6 +196,8 @@ document.querySelectorAll(".chips").forEach((g) => {
       g.querySelectorAll(".chip").forEach((x) => x.setAttribute("aria-pressed", "false"));
       b.setAttribute("aria-pressed", "true");
       state[q] = b.dataset.v;
+      renderAlert();
+      if (!(q === "total" && state.total === "no")) setTimeout(() => step === q && advance(), 220);
     } else if (q === "chains") {
       toggleMulti(b, b.dataset.v, state.chains);
     } else {
@@ -168,8 +212,18 @@ document.querySelectorAll(".chips").forEach((g) => {
         toggleMulti(b, b.dataset.v, state.cats, () => (state.catsTouched = false));
       }
     }
-    if (DATA) render();
+    $("next").disabled = !isAnswered(step);
+    if (q === "total") showStep("total", false);
+    if (DATA && editing) render();
   });
+});
+$("next").addEventListener("click", advance);
+$("prev").addEventListener("click", () => { const list = seq(); showStep(list[list.indexOf(step) - 1]); });
+$("summary").addEventListener("click", (e) => {
+  const b = e.target.closest("[data-edit]");
+  if (!b) return;
+  editing = true;
+  showStep(b.dataset.edit);
 });
 document.querySelector(".filters").addEventListener("click", (e) => {
   const b = e.target.closest(".chip");
@@ -181,6 +235,8 @@ $("sort").addEventListener("change", (e) => { view.sort = e.target.value; lastRe
 $("q").addEventListener("input", () => lastRes && renderTable(lastRes));
 $("more").addEventListener("click", () => { showAll = true; renderTable(lastRes); });
 $("ig").addEventListener("click", () => track("InstagramClick"));
+
+showStep("total", false);
 
 try {
   const r = await fetch("/tarjetas/data/cards.json");
