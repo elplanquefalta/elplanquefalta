@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>¿Qué tarjeta de crédito te conviene más? | Comparador de tarjetas en México 2026</title>
-<meta name="description" content="Contesta 6 preguntas y ve qué tarjetas de crédito te regresan más dinero al año en México, con topes, anualidades, membresías e IVA ya descontados. 105 tarjetas revisadas.">
+<meta name="description" content="Contesta 7 preguntas y ve qué tarjetas de crédito te regresan más dinero al año en México, con topes, anualidades, membresías e IVA ya descontados. 105 tarjetas revisadas.">
 <link rel="canonical" href="https://elplanquefalta.com/tarjetas">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="El Plan Que Falta">
 <meta property="og:title" content="¿Qué tarjeta de crédito te conviene más?">
-<meta property="og:description" content="Comparador de tarjetas de crédito en México: 6 preguntas, 105 tarjetas, topes y anualidades ya descontados. Se actualiza cada mes.">
+<meta property="og:description" content="Comparador de tarjetas de crédito en México: 7 preguntas, 105 tarjetas, topes y anualidades ya descontados. Se actualiza cada mes.">
 <meta property="og:url" content="https://elplanquefalta.com/tarjetas">
 <meta name="theme-color" content="#F7F5EF">
 <meta name="color-scheme" content="light">
@@ -88,6 +88,8 @@ p{margin:0;max-width:72ch}
 .srow:last-child{border-bottom:0}
 .srow span{font-size:13px;color:var(--muted);display:block}
 .srow b{font-weight:500;font-size:14.5px}
+.perkline{font-weight:700}
+.chip[hidden]{display:none}
 .srow button{font:inherit;font-size:13.5px;font-weight:700;color:var(--sage);background:none;border:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:8px 0;min-height:40px;flex-shrink:0}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{font:inherit;font-size:14.5px;border:1.5px solid var(--line);background:var(--bg);color:var(--fg);border-radius:8px;padding:9px 15px;min-height:44px;cursor:pointer;transition:background .15s,border-color .15s;-webkit-tap-highlight-color:transparent}
@@ -207,19 +209,28 @@ footer .logo em{color:var(--gold)}
 
 <header class="hero">
   <h1>¿Qué tarjeta de crédito te conviene más?</h1>
-  <p>Contesta 6 preguntas. Estimamos cuánto te regresaría cada tarjeta en un año, con topes, anualidades y membresías ya descontados.</p>
+  <p>Contesta 7 preguntas. Estimamos cuánto te regresaría cada tarjeta en un año, con topes, anualidades y membresías ya descontados.</p>
   <p class="date" id="updated">Se actualiza cada mes</p>
 </header>
 
 <main class="wrap">
 <section class="quiz narrow" aria-label="Cuestionario">
-  <div class="progress"><span id="progress-txt" aria-live="polite">1 de 6</span><div class="bar" aria-hidden="true"><span id="progress-bar"></span></div></div>
+  <div class="progress"><span id="progress-txt" aria-live="polite">1 de 7</span><div class="bar" aria-hidden="true"><span id="progress-bar"></span></div></div>
 
   <fieldset class="q"><legend tabindex="-1">¿Pagas el total de tu tarjeta cada mes?</legend>
     <div class="chips" data-q="total" data-single>
       <button class="chip" type="button" data-v="si" aria-pressed="false">Sí, siempre</button>
       <button class="chip" type="button" data-v="no" aria-pressed="false">A veces dejo saldo</button>
     </div><div id="alert" aria-live="polite"></div></fieldset>
+
+  <fieldset hidden class="q"><legend tabindex="-1">¿Qué buscas en una tarjeta?</legend>
+    <div class="chips" data-q="perks">
+      <button class="chip" type="button" data-v="cash" aria-pressed="false">Que me regrese dinero</button>
+      <button class="chip" type="button" data-v="cine" aria-pressed="false">Descuentos en cine</button>
+      <button class="chip" type="button" data-v="viajes" aria-pressed="false">Beneficios de viaje</button>
+      <button class="chip" type="button" data-v="membresias" aria-pressed="false">Membresías incluidas</button>
+      <button class="chip" type="button" data-v="proteccion" aria-pressed="false">Protección de compras</button>
+    </div><p class="h">Marca todas las que te importen. Si eliges algo además de dinero, tu top 3 sólo trae tarjetas que lo incluyen.</p></fieldset>
 
   <fieldset hidden class="q"><legend tabindex="-1">¿Cuánto ganas al mes?</legend>
     <div class="chips" data-q="inc" data-single>
@@ -279,7 +290,7 @@ footer .logo em{color:var(--gold)}
 
 <section class="stack" id="result" aria-live="polite" tabindex="-1">
   <h2>Tus tarjetas ideales</h2>
-  <div id="result-body"><p class="placeholder">Contesta las 6 preguntas y aquí aparecen las 3 tarjetas que más dinero te regresan.</p></div>
+  <div id="result-body"><p class="placeholder">Contesta las preguntas y aquí aparecen las 3 tarjetas que más dinero te regresan.</p></div>
 </section>
 
 <section class="stack" id="all" hidden>
@@ -304,6 +315,7 @@ footer .logo em{color:var(--gold)}
     <button class="chip sm" type="button" data-f="official" aria-pressed="false">Datos oficiales</button>
     <button class="chip sm" type="button" data-f="open" aria-pressed="false">Sin invitación ni membresía</button>
     <button class="chip sm" type="button" data-f="nocap" aria-pressed="false">Sin tope alcanzado</button>
+    <button class="chip sm" type="button" data-f="perk" aria-pressed="false" id="f-perk" hidden>Con los beneficios que buscas</button>
   </div>
   <div class="legend">
     <span><span class="pill ok">Oficial</span> dato de la institución</span>

@@ -17,6 +17,14 @@
     "fee": 2232
    },
    "url": "https://www.hsbc.com.mx/content/dam/hsbc/mx/documents/tarjetas/terminos_condiciones_2now.pdf",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida y protección de compras Mastercard",
+     "v": "ok",
+     "url": "https://www.hsbc.com.mx/tarjetas-de-credito/productos/2now/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -38,6 +46,26 @@
    "why": "5% en restaurantes, viajes, salud y entretenimiento",
    "note": "Tope $1,500 al mes entre todas las categorías. El resto no genera.",
    "url": "https://www.hsbc.com.mx/content/dam/hsbc/mx/documents/tarjetas/terminos-condiciones-one-plus.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "6 accesos al año a Grand Lounge, Lounge 19 y Terraza Elite (AICM/AIFA)",
+     "v": "ok",
+     "url": "https://www.hsbc.com.mx/tarjetas-de-credito/productos/one-plus/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida en tus compras",
+     "v": "ok",
+     "url": "https://www.hsbc.com.mx/tarjetas-de-credito/productos/one-plus/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio",
+     "v": "ok",
+     "url": "https://www.hsbc.com.mx/tarjetas-de-credito/productos/one-plus/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -59,6 +87,26 @@
    "why": "6% farmacia, 5% restaurantes, 4% celular",
    "note": "Tope $500 al mes. Hay que inscribirse a Cashback Baby y tener cuenta Santander.",
    "url": "https://www.santander.com.mx/cashback.html",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de compras Visa: robo o daño en los primeros 45 días",
+     "v": "ok",
+     "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:b6ee8575-5ba1-44c7-8884-df0b29a7c5a0/original/as/Cards_Folleto_TDC_LikeUVisa_Jun2026_V2_0726.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida Visa hasta 1 año (hasta 200 USD por evento)",
+     "v": "ok",
+     "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:b6ee8575-5ba1-44c7-8884-df0b29a7c5a0/original/as/Cards_Folleto_TDC_LikeUVisa_Jun2026_V2_0726.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio Visa por 30 días",
+     "v": "ok",
+     "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:b6ee8575-5ba1-44c7-8884-df0b29a7c5a0/original/as/Cards_Folleto_TDC_LikeUVisa_Jun2026_V2_0726.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -80,6 +128,20 @@
    "why": "9% en Puntos BBVA sin anualidad",
    "note": "Sin anualidad sólo si la pides en el formulario web como cliente nuevo (vigente al 9 ene 2027). Puntos topados a tu línea.",
    "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-start.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro por pérdida o demora de equipaje (hasta $3,000 por maleta)",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-start.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Seguro de compra protegida contra daño o robo por 100 días",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-start.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -101,6 +163,26 @@
    "why": "9% en Puntos BBVA",
    "note": "Anualidad $748 + IVA.",
    "url": "https://www.bbva.mx/content/dam/public-web/mexico/documents/personas/tarjetas/TCR-Azul.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro por pérdida o demora de equipaje (hasta $3,000 por maleta)",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-azul.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Seguro de compra protegida contra daño o robo con violencia",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-azul.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio Visa: hasta 200 USD al año",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-azul.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -122,6 +204,32 @@
    "why": "11% en Puntos BBVA",
    "note": "",
    "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro por pérdida o demora de equipaje (hasta $3,000 por maleta)",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-oro.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras Visa: daño o robo 45 días, hasta 10,000 USD/año",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-oro.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida Visa: hasta 1 año adicional",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-oro.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio Visa: hasta 400 USD al año",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-oro.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -143,6 +251,50 @@
    "why": "15% en Puntos BBVA",
    "note": "Sin anualidad desde el año 2 con $750,000 de compras al año.",
    "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-platinum.html",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinemex",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-platinum.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Gastos médicos en el extranjero hasta 170,000 USD",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-platinum.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro de equipaje y cancelación de viaje",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-platinum.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Hasta 3 traslados al año al AICM o AIFA (hasta $300 cada uno)",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-platinum.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras Visa: daño o robo por 180 días",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-platinum.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida Visa: hasta 1 año adicional",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-platinum.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio Visa: hasta 200 USD al año",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-platinum.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -160,6 +312,20 @@
    "why": "0.5% en Puntos Premia",
    "note": "Comisión de $67.92 + IVA al mes. Gasolina doble hasta 1,000 puntos por semana.",
    "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-clasica/tarifas-comisiones.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro de viaje Mastercard hasta 75,000 USD por accidente",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-clasica.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras hasta 200 USD por incidente",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-clasica.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -177,6 +343,26 @@
    "why": "0.7% en Puntos Premia",
    "note": "Comisión de $102.50 + IVA al mes.",
    "url": "https://www.banamex.com/premia/index.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro de viaje hasta 250,000 USD y auto rentado hasta 50,000 USD",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-oro/seguros.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras hasta 400 USD por incidente",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-oro/seguros.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida: hasta 1 año adicional a la del fabricante",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-oro/seguros.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -191,6 +377,32 @@
    "why": "1% en Puntos Premia",
    "note": "Promoción: primeros 12 meses sin comisión.",
    "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-platinum.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "10 accesos al año a Salones Beyond y 4 a salas LoungeKey",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-platinum.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Gastos médicos en viajes al extranjero hasta 125,000 USD",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-platinum/seguros.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta 5,000 USD por evento",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-platinum/seguros.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio hasta 2,000 USD y de compra hasta 10,000 USD",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-platinum/seguros.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -220,6 +432,14 @@
    "why": "3% en Costco y 2% en restaurantes",
    "note": "Se paga una vez al año y sólo se usa en Costco.",
    "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-costco.html",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida, protección de compra y de precio Visa",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-costco.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -257,6 +477,14 @@
    "why": "Puntos dobles en compras digitales",
    "note": "$450 por trimestre si compras menos de $7,500. Valor del punto de blogs.",
    "url": "https://www.banorte.com/dam/jcr:c35262c6-a2b9-468a-b432-89a8cf6473fe/Folleto_One_Up_may26.pdf",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de precios hasta USD 400 al año",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/One-Up.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -271,6 +499,26 @@
    "why": "Puntos canjeados en vuelos",
    "note": "En catálogo valen la mitad. Posible tope de 67 puntos por compra.",
    "url": "https://www.banorte.com/cms/archivos/COMISIONES-TDC-PF.pdf",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "Cinemex 2x1 en salas Tradicionales, Premium y Platino",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/Clasica.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras hasta USD 200 al año (Mastercard)",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/Clasica.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precios: reembolso si hallas mejor precio (Visa)",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/Clasica.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -297,6 +545,14 @@
    "why": "2% súper y gasolina, 6% en una categoría que eliges",
    "note": "Tope $500 al mes; el 6% topa en $300. Caduca a los 365 días.",
    "url": "https://web.didiglobal.com/mx/tarjeta-de-credito/tc-cashback.pdf",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en boletos de Cinépolis",
+     "v": "ok",
+     "url": "https://didifinance.com/promociones"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -336,6 +592,32 @@
    "why": "2% en línea, 1% en tienda",
    "note": "Tope $6,000 al mes. Se usa como saldo en la tarjeta.",
    "url": "https://recompensas.banregio.com/",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinemex comprando en app o web (beneficio Visa)",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida Visa hasta 1 año adicional",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras por daño o robo a 180 días (Visa)",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio si la diferencia supera US$25 (Visa)",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -354,6 +636,44 @@
    "why": "1.25% en todo",
    "note": "Tope $6,000 al mes.",
    "url": "https://recompensas.banregio.com/",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinemex comprando en app o web (beneficio Visa)",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    },
+    {
+     "t": "viajes",
+     "d": "Emergencia médica internacional, demora y pérdida de equipaje",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    },
+    {
+     "t": "viajes",
+     "d": "3 traslados al AICM o AIFA de hasta $300 cada uno",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida Visa hasta 1 año adicional",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras por daño o robo a 180 días (Visa)",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio si la diferencia supera US$25 (Visa)",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -369,6 +689,20 @@
    "why": "1% en todo sin anualidad",
    "note": "Tope $6,000 al mes.",
    "url": "https://recompensas.banregio.com/",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinemex comprando en app o web (beneficio Visa)",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio si la diferencia supera US$25 (Visa)",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -384,6 +718,20 @@
    "why": "0.75% en todo sin anualidad",
    "note": "",
    "url": "https://recompensas.banregio.com/",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinemex comprando en app o web (beneficio Visa)",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio si la diferencia supera US$25 (Visa)",
+     "v": "ok",
+     "url": "https://cloud.hola.banregio.com/Beneficios"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -402,6 +750,14 @@
     "fee": 1980
    },
    "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/scotiarewards/scotiapesos.aspx",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de precios: reembolso hasta USD 200 en 30 días",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/tarjeta-ideal.aspx"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -419,6 +775,38 @@
    "why": "1.5% en viajes",
    "note": "",
    "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/scotiarewards/scotiapesos.aspx",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "LoungeKey: 5 visitas al año más 1 acompañante por visita",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-platinum.aspx"
+    },
+    {
+     "t": "viajes",
+     "d": "6 accesos al año a The Grand Lounge Elite AICM/AIFA (Mastercard)",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-platinum.aspx"
+    },
+    {
+     "t": "viajes",
+     "d": "Gastos médicos en el extranjero hasta USD 170,000 y cancelación",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-platinum.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compra hasta USD 10,000 por daño o robo (180 días)",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-platinum.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precios hasta USD 400 y garantía extendida USD 5,000",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-platinum.aspx"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -436,6 +824,44 @@
    "why": "1.5% en todo, 3% en viajes",
    "note": "Sin anualidad con $500,000 de gasto al año.",
    "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/scotiarewards.aspx",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "LoungeKey ilimitado para titular y 10 invitados al año sin costo",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/scotiabank-infinite.aspx"
+    },
+    {
+     "t": "viajes",
+     "d": "Visa Infinite Lounge AICM T2 ilimitado más 10 acompañantes",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/scotiabank-infinite.aspx"
+    },
+    {
+     "t": "viajes",
+     "d": "Médico internacional USD 250,000; cancelación de viaje USD 3,000",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/scotiabank-infinite.aspx"
+    },
+    {
+     "t": "viajes",
+     "d": "Reembolso 100% de Global Entry",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/scotiabank-infinite.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compra USD 20,000 y de precios USD 4,000",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/scotiabank-infinite.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta USD 25,000",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/scotiabank-infinite.aspx"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -450,6 +876,14 @@
    "why": "0.6% en Puntos Bonus",
    "note": "Anualidad desde el segundo año.",
    "url": "https://www.afirme.com/Personas/TDC/Recompensas-Bonus.html",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de precio hasta US$200 por cuenta al año (Visa)",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/Beneficios-Visa.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -464,6 +898,26 @@
    "why": "0.8% en Puntos Bonus",
    "note": "Anualidad desde el segundo año.",
    "url": "https://www.afirme.com/Personas/TDC/Recompensas-Bonus.html",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida 1 año más, hasta US$5,000 al año (Visa)",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/Beneficios-Visa.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras contra daño o robo hasta US$1,000 al año",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/Beneficios-Visa.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio hasta US$400 por cuenta al año",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/Beneficios-Visa.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -478,6 +932,32 @@
    "why": "1% en Puntos Bonus",
    "note": "Anualidad desde el segundo año.",
    "url": "https://www.afirme.com/Personas/TDC/Recompensas-Bonus.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Asistencia médica de emergencia internacional hasta US$170,000",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/TDC/Tarjeta-Platinum.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta US$10,000 al año (Visa)",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/Beneficios-Visa.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras hasta US$10,000 al año por 180 días",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/Beneficios-Visa.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio hasta US$2,000 por cuenta al año",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/Beneficios-Visa.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -507,6 +987,32 @@
     "fee": 1800
    },
    "url": "https://www.afirme.com/Personas/TDC/tarjetaheb.html",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida 1 año más, hasta US$5,000 al año (Visa)",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/Beneficios-Visa.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras contra daño o robo hasta US$1,000 al año",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/Beneficios-Visa.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio hasta US$400 por cuenta al año",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/Beneficios-Visa.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro de auto rentado pagado con la tarjeta (Visa)",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/TDC/tarjetaheb.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -536,6 +1042,20 @@
     "zero": false
    },
    "url": "https://www.inbursa.com/sites/gfi/document/tdc-supercredito-folleto.pdf",
+   "perks": [
+    {
+     "t": "membresias",
+     "d": "Membresía familiar MedicallHome (salud) incluida",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-supercredito-folleto.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras Mastercard hasta 100 USD por incidente",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-supercredito-folleto.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -554,6 +1074,20 @@
     "zero": true
    },
    "url": "https://www.inbursa.com/sites/gfi/document/tdc-telcel-oro-folleto.pdf",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de compra Visa por 180 días y protección de precio",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-telcel-oro-folleto.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida Visa hasta 1 año adicional",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-telcel-oro-folleto.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -579,6 +1113,14 @@
    "why": "3.5% en Walmart y Sam's",
    "note": "La bonificación va a Cashi y sólo se gasta en Walmart México. Penalización si compras menos de $1,200 al mes.",
    "url": "https://www.invextarjetas.com.mx/invex/Documentos/Landings/WalmartTyC.pdf",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis (beneficio Mastercard)",
+     "v": "ok",
+     "url": "https://promociones.invextarjetas.com.mx/guia-de-uso-invex-walmart/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -593,6 +1135,20 @@
    "why": "Puntos para vuelos Volaris",
    "note": "Sin anualidad si compras $500 al mes. Valor del punto estimado.",
    "url": "https://www.invextarjetas.com.mx/invex/Documentos/CONDUSEF/FolletoVolaris0.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Equipaje de mano y documentado sin costo 2 veces al año en Volaris",
+     "v": "ok",
+     "url": "https://solicitala.invextarjetas.com.mx/guia-digital/volaris0/"
+    },
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis (beneficio Mastercard)",
+     "v": "ok",
+     "url": "https://solicitala.invextarjetas.com.mx/guia-digital/volaris0/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -607,6 +1163,26 @@
    "why": "Puntos dobles para Volaris",
    "note": "Primer año sin anualidad. Valor del punto estimado.",
    "url": "https://www.invextarjetas.com.mx/invex/Documentos/CONDUSEF/FolletoVolaris2.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Hasta 6 accesos al año a salas VIP LoungeKey",
+     "v": "ok",
+     "url": "https://www.invextarjetas.com.mx/invex/landings/Volaris2CarruselHome/index.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Equipaje de mano y documentado de 25 kg sin costo en Volaris",
+     "v": "ok",
+     "url": "https://www.invextarjetas.com.mx/invex/landings/Volaris2CarruselHome/index.html"
+    },
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis (beneficio Mastercard)",
+     "v": "ok",
+     "url": "https://solicitala.invextarjetas.com.mx/guia-digital/volaris2/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -624,6 +1200,26 @@
    "why": "Puntos Aeroméxico",
    "note": "Valor del punto estimado en vuelos nacionales.",
    "url": "https://www.inbursa.com/sites/gfi/document/tyc-tarjetas-aeromexico.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Priority Pass ilimitado al gastar $7,000 al mes 3 meses seguidos",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tyc-tarjetas-aeromexico.pdf"
+    },
+    {
+     "t": "viajes",
+     "d": "2x1 en vuelos nacionales al gastar $75,000 al año",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-ascend-folleto.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compra hasta 100 USD por evento",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-ascend-folleto.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -641,6 +1237,32 @@
    "why": "Puntos Aeroméxico",
    "note": "Valor del punto estimado.",
    "url": "https://www.inbursa.com/sites/gfi/document/tyc-tarjetas-aeromexico.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Priority Pass ilimitado al gastar $15,000 al mes 3 meses seguidos",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tyc-tarjetas-aeromexico.pdf"
+    },
+    {
+     "t": "viajes",
+     "d": "2x1 en vuelos nacionales al gastar $75,000 al año",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-elevate-folleto.pdf"
+    },
+    {
+     "t": "viajes",
+     "d": "2 accesos al año a Salones Premier Aeroméxico",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-elevate-folleto.pdf"
+    },
+    {
+     "t": "viajes",
+     "d": "Gastos médicos en viajes al extranjero hasta 25,000 USD",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-elevate-folleto.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -658,6 +1280,44 @@
    "why": "Puntos Aeroméxico",
    "note": "Valor del punto estimado.",
    "url": "https://www.inbursa.com/sites/gfi/document/tyc-tarjetas-aeromexico.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Priority Pass ilimitado para ti y 2 acompañantes",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tyc-tarjetas-aeromexico.pdf"
+    },
+    {
+     "t": "viajes",
+     "d": "Salones Premier Aeroméxico ilimitados para ti y 2 invitados",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-horizon-folleto.pdf"
+    },
+    {
+     "t": "viajes",
+     "d": "2x1 en vuelos nacionales, EE.UU. o Canadá al gastar $300,000 al año",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-horizon-folleto.pdf"
+    },
+    {
+     "t": "viajes",
+     "d": "Asistencia médica en viajes hasta 150,000 USD por persona",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-horizon-folleto.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta 2,500 USD por evento",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-horizon-folleto.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio hasta 1,000 USD y de compra hasta 2,500 USD",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-horizon-folleto.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -672,6 +1332,32 @@
    "why": "Membership Rewards",
    "note": "Tarjeta de servicio: se paga completa cada mes. Primer año sin cuota.",
    "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/tarjeta-american-express/",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro de accidentes en viaje hasta US$100,000 y asistencia global",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/tarjeta-american-express/"
+    },
+    {
+     "t": "viajes",
+     "d": "Pérdida o demora de equipaje hasta US$360 y seguro de auto rentado",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/tarjeta-american-express/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía Plus: duplica la garantía original hasta 1 año más",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/tarjeta-american-express/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Compras protegidas contra robo o incendio (artículos de US$50+)",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/tarjeta-american-express/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -691,6 +1377,38 @@
    "why": "Golden Cashbacks en súper, restaurantes y bienestar",
    "note": "$1,000 por trimestre por categoría si gastas $5,000 en ella (tope $4,000 al año cada una). Vigente al 31 dic 2027.",
    "url": "https://www.americanexpress.com/es-mx/beneficios/the-gold-card/estilo-de-vida/golden-cashbacks/",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Priority Pass con 10 visitas sin costo al año a salas VIP",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/gold-card-american-express/"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro de accidentes hasta US$250,000 y asistencia médica US$50,000",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/gold-card-american-express/"
+    },
+    {
+     "t": "viajes",
+     "d": "Equipaje perdido o demorado hasta US$700 y seguro de auto rentado",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/gold-card-american-express/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía Plus: extiende la garantía original hasta 1 año más",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/beneficios/the-gold-card/seguridad-y-proteccion/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Compras protegidas contra robo (artículos de más de US$50)",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/gold-card-american-express/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -705,6 +1423,50 @@
    "why": "Membership Rewards",
    "note": "Créditos de hotel, restaurantes y entretenimiento no sumados.",
    "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/the-platinum-card/",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Acceso a The Centurion Lounge en AICM y Monterrey",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/the-platinum-card/"
+    },
+    {
+     "t": "viajes",
+     "d": "Priority Pass Prestige: más de 1,200 salas VIP para el titular",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/beneficios/the-platinum-card/viajes/centurion-lounge/priority-pass/"
+    },
+    {
+     "t": "viajes",
+     "d": "Hasta 3 boletos de avión 2x1 al año cumpliendo meta de gasto",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-servicio/the-platinum-card/"
+    },
+    {
+     "t": "viajes",
+     "d": "Asistencia en viaje hasta US$100,000; equipaje hasta US$1,500",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/beneficios/the-platinum-card/seguridad-proteccion/"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro de auto rentado hasta US$75,000 fuera de México",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/beneficios/the-platinum-card/seguridad-proteccion/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía Plus: hasta 1 año más de garantía (compras de US$50+)",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/beneficios/the-platinum-card/seguridad-proteccion/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Compras protegidas hasta US$2,000 por artículo, US$3,000 al año",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/beneficios/the-platinum-card/seguridad-proteccion/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -719,6 +1481,32 @@
    "why": "Membership Rewards",
    "note": "Primer año sin anualidad.",
    "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/gold-elite-credit-card/",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro de accidentes en transporte público hasta US$250,000",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/gold-elite-credit-card/"
+    },
+    {
+     "t": "viajes",
+     "d": "Equipaje perdido o demorado hasta US$500; auto rentado US$25,000",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/gold-elite-credit-card/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida: duplica la garantía original hasta 1 año más",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/gold-elite-credit-card/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Compras protegidas hasta US$3,000 por 180 días (artículos US$50+)",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/gold-elite-credit-card/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -733,6 +1521,32 @@
    "why": "Membership Rewards",
    "note": "Anualidad en conflicto: $3,700 o $4,200 + IVA.",
    "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/the-platinum-credit-card/",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Priority Pass con 4 accesos sin costo al año a salas VIP",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/the-platinum-credit-card/"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro de accidentes US$250,000, equipaje US$600, auto US$25,000",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/the-platinum-credit-card/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida: duplica la garantía original hasta 1 año más",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/the-platinum-credit-card/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Compras protegidas hasta US$3,000 por 180 días (artículos US$50+)",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/the-platinum-credit-card/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -747,6 +1561,38 @@
    "why": "Puntos Aeroméxico",
    "note": "Primer año sin cuota. Valor del punto estimado.",
    "url": "https://www.americanexpress.com/mx/tarjetas-de-credito/tipos-de-tarjetas/tarjetas-aeromexico/",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Hasta 2 boletos premio 2x1 al año en vuelos nacionales",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/aeromexico/index.shtml"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro de accidentes US$100,000; auto rentado US$50,000",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/aeromexico/index.shtml"
+    },
+    {
+     "t": "viajes",
+     "d": "Asistencia global en viajes y equipaje perdido hasta US$360",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/aeromexico/index.shtml"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía Plus: duplica la garantía original hasta 1 año más",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/aeromexico/index.shtml"
+    },
+    {
+     "t": "proteccion",
+     "d": "Compras protegidas contra robo o incendio (artículos US$50+)",
+     "v": "ok",
+     "url": "https://www.americanexpress.com/es-mx/tarjetas-de-credito/aeromexico/index.shtml"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -761,6 +1607,14 @@
    "why": "0.3% en puntos, sin tope",
    "note": "El documento oficial de Nu+ es de 2025; confirmar en la app.",
    "url": "https://cdn.nubank.com.br/MX/terminos-y-condiciones-nu-plus.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Sin comisión por uso en el extranjero",
+     "v": "ok",
+     "url": "https://cdn.nubank.com.mx/mex/credito/folleto-informativo.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -796,6 +1650,14 @@
     "zero": true
    },
    "url": "https://www.klar.mx/plus",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis sala tradicional con código Mastercard",
+     "v": "ok",
+     "url": "https://www.klar.mx/plus"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -832,6 +1694,44 @@
    "why": "6% súper y streaming",
    "note": "Sólo por invitación. Súper topado en $1,000 al mes; total $3,000.",
    "url": "https://www.klar.mx/platino",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "5 accesos al año a salas VIP LoungeKey",
+     "v": "ok",
+     "url": "https://www.klar.mx/discounts/salas-vip-en-aeropuertos"
+    },
+    {
+     "t": "viajes",
+     "d": "Asistencia de viaje 24/7 y Concierge Mastercard",
+     "v": "ok",
+     "url": "https://www.klar.mx/platino"
+    },
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis salas VIP con código Mastercard",
+     "v": "ok",
+     "url": "https://www.klar.mx/discounts/2x1-en-boletos-vip"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compra por robo o daño accidental",
+     "v": "ok",
+     "url": "https://www.klar.mx/platino"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida: duplica la del fabricante, máx. 12 meses",
+     "v": "ok",
+     "url": "https://www.klar.mx/platino"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio: te reembolsa la diferencia",
+     "v": "ok",
+     "url": "https://www.klar.mx/platino"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -854,6 +1754,14 @@
    "why": "7% en viajes de Uber",
    "note": "Se paga en créditos Uber, no en efectivo. Tope $1,000 al mes. Incluye Uber One. $79.90 si pasa 3 meses sin uso.",
    "url": "https://cdn.prod.website-files.com/630e13ca92151d578bc2ed8b/6a15d182ee0af7b14c265215_Te-rminos-y-Condiciones-de-Beneficios-Uber-Card-Powered-by-Klar.pdf",
+   "perks": [
+    {
+     "t": "membresias",
+     "d": "Uber One incluido sin costo mientras la tarjeta esté activa",
+     "v": "ok",
+     "url": "https://cdn.prod.website-files.com/630e13ca92151d578bc2ed8b/6a15d182ee0af7b14c265215_Te-rminos-y-Condiciones-de-Beneficios-Uber-Card-Powered-by-Klar.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -876,6 +1784,20 @@
    "why": "10% en Uber, 5% en Uber Eats",
    "note": "Se paga en créditos Uber. Tope $3,000 al mes. Anualidad $1,500 + IVA, exentable.",
    "url": "https://cdn.prod.website-files.com/630e13ca92151d578bc2ed8b/6a15d182ee0af7b14c265215_Te-rminos-y-Condiciones-de-Beneficios-Uber-Card-Powered-by-Klar.pdf",
+   "perks": [
+    {
+     "t": "membresias",
+     "d": "Uber One incluido sin costo mientras la tarjeta esté activa",
+     "v": "ok",
+     "url": "https://cdn.prod.website-files.com/630e13ca92151d578bc2ed8b/6a15d182ee0af7b14c265215_Te-rminos-y-Condiciones-de-Beneficios-Uber-Card-Powered-by-Klar.pdf"
+    },
+    {
+     "t": "viajes",
+     "d": "Acceso a salas VIP LoungeKey (número de visitas no publicado)",
+     "v": "warn",
+     "url": "https://www.klar.mx/press/uber-y-klar-lanzan-tarjeta-de-credito-en-mexico"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -895,6 +1817,20 @@
    "why": "1% en todo más extra en súper y gasolina",
    "note": "Línea y porcentaje (1% a 3%) sujetos a evaluación. Sin tope en el 1%.",
    "url": "https://www.storicard.com/files/stori-black/programa-redime-tu-cashback.pdf",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de compra Mastercard: US$100 por evento, 45 días",
+     "v": "est",
+     "url": "https://www.storicard.com/blog/beneficios-stori-mastercard"
+    },
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis sala tradicional (código Mastercard)",
+     "v": "est",
+     "url": "https://www.storicard.com/blog/beneficios-stori-mastercard"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -923,6 +1859,20 @@
     "zero": true
    },
    "url": "https://www.storicard.com/files/stori-cuentamas/tyc-tasa-premium.pdf",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de compra Mastercard: US$100 por evento, 45 días",
+     "v": "est",
+     "url": "https://www.storicard.com/blog/beneficios-stori-mastercard"
+    },
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis sala tradicional (código Mastercard)",
+     "v": "est",
+     "url": "https://www.storicard.com/blog/beneficios-stori-mastercard"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -971,12 +1921,32 @@
    "cap": 500,
    "cost": 0,
    "inc": 7000,
-   "cat": "En conflicto",
-   "v": "est",
-   "why": "3% en compras digitales",
-   "note": "Tope $500 al mes. Restaurantes según prensa. Página oficial bloqueó la consulta.",
-   "url": "https://blog.kardmatch.com.mx/tarjeta-de-credito-openbank",
-   "source_type": "secundaria",
+   "cat": "153.65%",
+   "v": "warn",
+   "why": "3% en compras en línea y restaurantes",
+   "note": "Tope $500 al mes, sin gasto mínimo. El 3% también aplica en pagos de servicios en la app y en pagos sin contacto; el cálculo no los incluye. No aplica en bares. Programa vigente al 31 dic 2026. CAT calculado al 5 may 2026.",
+   "url": "https://www.openbank.mx/3-cashback",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis, salas tradicionales (vigente a jul 2027)",
+     "v": "ok",
+     "url": "https://www.openbank.mx/cinepolis-2"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras en línea: daño o robo hasta 400 USD",
+     "v": "ok",
+     "url": "https://www.openbank.mx/tarjeta-credito-open"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio por 30 días, hasta 200 USD",
+     "v": "ok",
+     "url": "https://www.openbank.mx/tarjeta-credito-open"
+    }
+   ],
+   "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
   {
@@ -993,6 +1963,26 @@
    "why": "2% en línea, 1% en tienda",
    "note": "Hasta 16% en Cinépolis (no incluido). Topes no confirmados.",
    "url": "https://www.elimparcial.com/dinero/2026/07/10/cinepolis-y-openbank-lanzaran-una-tarjeta-de-credito-sin-anualidad-el-30-de-julio-con-hasta-16-de-cashback-y-2x1-semanal-para-integrar-a-los-jovenes-al-sistema-financiero-como-tramitarla/",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis cada semana",
+     "v": "ok",
+     "url": "https://www.openbank.mx/tarjeta-credito-cinepolis"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras en línea: daño o robo hasta 400 USD",
+     "v": "ok",
+     "url": "https://www.openbank.mx/tarjeta-credito-cinepolis"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio por 30 días, hasta 200 USD",
+     "v": "ok",
+     "url": "https://www.openbank.mx/tarjeta-credito-cinepolis"
+    }
+   ],
    "source_type": "secundaria",
    "verified_at": "2026-09-29"
   },
@@ -1022,6 +2012,32 @@
    "why": "RevPoints",
    "note": "Plan de $149 + IVA al mes.",
    "url": "https://www.revolut.com/es-MX/our-pricing-plans/",
+   "perks": [
+    {
+     "t": "membresias",
+     "d": "10 suscripciones de marca incluidas (NordVPN, Freeletics, etc.)",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    },
+    {
+     "t": "viajes",
+     "d": "Elite Lounge AICM gratis y 25% de descuento en salas VIP",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro médico internacional y de equipaje o vuelo retrasado",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compra, de precio y garantía extendida",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1037,6 +2053,32 @@
    "why": "RevPoints",
    "note": "Plan de $349 + IVA al mes.",
    "url": "https://www.revolut.com/es-MX/our-pricing-plans/",
+   "perks": [
+    {
+     "t": "membresias",
+     "d": "14 suscripciones de marca incluidas (NordVPN, Freeletics, etc.)",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    },
+    {
+     "t": "viajes",
+     "d": "5 accesos a salas VIP al año y Elite Lounge AICM gratis",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro médico internacional y de equipaje o vuelo retrasado",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compra, de precio y garantía extendida",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1052,6 +2094,38 @@
    "why": "RevPoints",
    "note": "Plan de $1,499 + IVA al mes.",
    "url": "https://www.revolut.com/es-MX/our-pricing-plans/",
+   "perks": [
+    {
+     "t": "membresias",
+     "d": "15 suscripciones de marca incluidas (NordVPN, Freeletics, etc.)",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    },
+    {
+     "t": "viajes",
+     "d": "Salas VIP ilimitadas y Elite Lounge AICM gratis",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro médico internacional y de equipaje o vuelo retrasado",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    },
+    {
+     "t": "viajes",
+     "d": "3 GB de datos móviles globales al mes incluidos",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compra, de precio y garantía extendida",
+     "v": "warn",
+     "url": "https://www.revolut.com/es-MX/our-pricing-plans/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1116,6 +2190,20 @@
    "why": "5% streaming, 3% restaurantes",
    "note": "Tope $3,000 al mes. Sólo en comercios participantes. Apertura hasta $350.",
    "url": "https://www.vexi.mx/beneficios/tarjetas-credito-cashback",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de compra por robo o daño hasta US$250 (Vexi Amex)",
+     "v": "warn",
+     "url": "https://www.vexi.mx/"
+    },
+    {
+     "t": "viajes",
+     "d": "Asistencia de viaje referencial y telemedicina (AXA)",
+     "v": "warn",
+     "url": "https://www.vexi.mx/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1162,6 +2250,14 @@
    "why": "1% en monedero Suburbia",
    "note": "Primer año sin anualidad.",
    "url": "https://assetsmcprob.suburbia.com.mx/pdf/Terminos_y_Condiciones_Visa_feb.pdf",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de precio Visa por 30 días, hasta 200 USD (T&C feb 2024)",
+     "v": "warn",
+     "url": "https://assetsmcprob.suburbia.com.mx/pdf/Terminos_y_Condiciones_Visa_feb.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1192,6 +2288,14 @@
    "why": "3% en Soriana, gasolina y restaurantes",
    "note": "Dinero electrónico. Topes no confirmados.",
    "url": "https://blog.kardmatch.com.mx/tarjeta-falabella-soriana",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de compra: US$100 por evento, US$200 al año, 45 días",
+     "v": "ok",
+     "url": "https://assets.ctfassets.net/awjurk6f9seg/121arebdroWUWeUokYcsQm/14f67873d333fbda92c72278d00f2aeb/ProtecciondeCompras.pdf"
+    }
+   ],
    "source_type": "secundaria",
    "verified_at": "2026-09-29"
   },
@@ -1213,6 +2317,26 @@
    "why": "5% en Puntos BBVA",
    "note": "Comisión $343 + IVA; la página anuncia \"sin anualidad\" sin condiciones visibles.",
    "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-crea.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro por pérdida o demora de equipaje",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-crea.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Seguro de compra protegida en bienes duraderos",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-crea.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio Visa: hasta 200 USD al año",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-crea.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1234,6 +2358,20 @@
    "why": "9% en Puntos BBVA",
    "note": "Comisión $748 + IVA; anuncia \"sin anualidad\" sin condiciones visibles.",
    "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-educacion.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro por pérdida o demora de equipaje (hasta $3,000 por maleta)",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-educacion.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Seguro de compra protegida contra daño o robo con violencia",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-educacion.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1255,6 +2393,26 @@
    "why": "9% en Puntos BBVA",
    "note": "Comisión $748 + IVA; anuncia \"sin anualidad\" sin condiciones visibles.",
    "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-vive.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro por pérdida o demora de equipaje (hasta $3,000 por maleta)",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-vive.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Seguro de compra protegida contra daño o robo con violencia",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-vive.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras Mastercard 45 días, hasta 200 USD al año",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-vive.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1276,6 +2434,26 @@
    "why": "9% en Puntos BBVA",
    "note": "Comisión $748 + IVA.",
    "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-rayados.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro por pérdida o demora de equipaje (hasta $3,000 por maleta)",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-rayados.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Seguro de compra protegida contra daño o robo con violencia",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-rayados.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio Visa: hasta 200 USD al año",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-rayados.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1297,6 +2475,26 @@
    "why": "11% en Puntos BBVA",
    "note": "Comisión $748 + IVA. Parte del gasto se dona al IPN.",
    "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-ipn.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro por pérdida o demora de equipaje (hasta $3,000 por maleta)",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-ipn.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Seguro de compra protegida contra daño o robo con violencia",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-ipn.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio Visa: hasta 200 USD al año",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-ipn.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1318,6 +2516,26 @@
    "why": "11% en Puntos BBVA",
    "note": "Comisión $1,151 + IVA.",
    "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-afinidad-unam.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro por pérdida o demora de equipaje (hasta $3,000 por maleta)",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-afinidad-unam.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Seguro de compra protegida contra daño o robo",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-afinidad-unam.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida Mastercard: hasta 1 año, máx. 400 USD al año",
+     "v": "ok",
+     "url": "https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-afinidad-unam.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1332,6 +2550,26 @@
    "why": "Puntos canjeados en vuelos",
    "note": "Anualidad $1,150 + IVA. Valor del punto de blogs.",
    "url": "https://www.banorte.com/dam/jcr:114cb73f-7844-4748-8ee8-28471244ba02/Folleto_Mujer_Banorte_mar26.pdf",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "Cinépolis 2x1 en salas tradicionales de lunes a domingo",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/Mujer-Banorte.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras por robo o daño accidental (Mastercard)",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/Mujer-Banorte.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta 1 año adicional (Mastercard)",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/Mujer-Banorte.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1346,6 +2584,32 @@
    "why": "Puntos canjeados en vuelos",
    "note": "Anualidad $1,150 + IVA. Valor del punto de blogs.",
    "url": "https://www.banorte.com/dam/jcr:aead4fb1-96fb-4583-8e1b-2fc6ac6bebc6/FI-Oro.pdf",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "Cinépolis 2x1 en boletos para salas tradicionales (Mastercard)",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/Oro.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta 1 año adicional",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/Oro.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras hasta USD 1,000 al año (Visa)",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/Oro.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precios hasta USD 400 al año (Mastercard)",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/Oro.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1360,6 +2624,26 @@
    "why": "Puntos canjeados en vuelos",
    "note": "Anualidad $2,650 + IVA. Valor del punto de blogs.",
    "url": "https://www.banorte.com/dam/jcr:9278a373-9ee3-45dd-af4a-ae3caab8d2ec/Folleto_Platinum_may26.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "LoungeKey: hasta 5 accesos individuales sin costo",
+     "v": "ok",
+     "url": "https://www.banorte.com/Preferente/Tarjetas-de-Credito-Preferente/Platinum.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguros y protecciones Visa en viajes nacionales e internacionales",
+     "v": "ok",
+     "url": "https://www.banorte.com/Preferente/Tarjetas-de-Credito-Preferente/Platinum.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Seguros Visa para tus compras (ver guía de beneficios)",
+     "v": "ok",
+     "url": "https://www.banorte.com/Preferente/Tarjetas-de-Credito-Preferente/Platinum.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1374,6 +2658,32 @@
    "why": "Puntos canjeados en vuelos",
    "note": "Anualidad $6,200 + IVA.",
    "url": "https://www.banorte.com/dam/jcr:f3f96614-763f-415d-a09a-5b3384dcbde0/Folleto_Infinite_may26.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "LoungeKey ilimitado para titular y 2 acompañantes sin costo",
+     "v": "ok",
+     "url": "https://www.banorte.com/Preferente/Tarjetas-de-Credito-Preferente/Infinite.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Visa Infinite Lounge AICM T1: 10 accesos más 1 acompañante",
+     "v": "ok",
+     "url": "https://www.banorte.com/Preferente/Tarjetas-de-Credito-Preferente/Infinite.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguros y protecciones Visa en viajes nacionales e internacionales",
+     "v": "ok",
+     "url": "https://www.banorte.com/Preferente/Tarjetas-de-Credito-Preferente/Infinite.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Seguros Visa para tus compras (ver guía de beneficios)",
+     "v": "ok",
+     "url": "https://www.banorte.com/Preferente/Tarjetas-de-Credito-Preferente/Infinite.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1393,6 +2703,20 @@
     "zero": true
    },
    "url": "https://www.banorte.com/dam/jcr:30b4d4b8-fb5e-49b1-84f2-e13f7f6b90fd/Folleto_POR_Ti_may26.pdf",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "Cinépolis 2x1 en boletos para salas tradicionales",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/POR-Ti.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras hasta USD 200 al año por daño o robo",
+     "v": "ok",
+     "url": "https://www.banorte.com/Personal/TDC/POR-Ti.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1407,6 +2731,20 @@
    "why": "0.5% en ScotiaPesos y CAT bajo",
    "note": "Sin costo de administración de por vida. CAT vence 30 sep.",
    "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Compras hasta USD 2,000 (ya no se ofrece; migra a IDEAL)",
+     "v": "warn",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta USD 2,000 (ya no se ofrece; migra a IDEAL)",
+     "v": "warn",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1421,6 +2759,20 @@
    "why": "0.5% en ScotiaPesos y CAT bajo",
    "note": "Tasa en conflicto (0.5% o 0.75%).",
    "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Compras hasta USD 2,000 (ya no se ofrece; migra a IDEAL)",
+     "v": "warn",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta USD 2,000 (ya no se ofrece; migra a IDEAL)",
+     "v": "warn",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/tarjetas-tradicionales/scotiabank-tasa-baja-clasica-y-oro.aspx"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1438,6 +2790,26 @@
    "why": "0.5% en ScotiaPesos",
    "note": "",
    "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-clasica.aspx",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Protección de equipaje perdido hasta USD 500",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-clasica.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras hasta USD 100 por evento (45 días)",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-clasica.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precios hasta USD 200 al año (página mezcla Visa/MC)",
+     "v": "warn",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-clasica.aspx"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1455,6 +2827,32 @@
    "why": "0.5% en ScotiaPesos",
    "note": "Tasa en conflicto (0.5% o 0.75%). Primera anualidad bonificada.",
    "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-oro.aspx",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Protección de equipaje perdido hasta USD 500",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-oro.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras hasta USD 1,000 por daño o robo (180 días)",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-oro.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precios hasta USD 400 en 30 días",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-oro.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida 1 año adicional, hasta USD 5,000",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/travel-oro.aspx"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1472,6 +2870,32 @@
    "why": "1% en todo, 2% en viajes",
    "note": "Tasa en conflicto (1% o 1.5%).",
    "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/signature.aspx",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "LoungeKey ilimitado para titular y 10 invitados al año sin costo",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/signature.aspx"
+    },
+    {
+     "t": "viajes",
+     "d": "Médico internacional hasta USD 200,000; equipaje hasta USD 1,000",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/signature.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compra USD 10,000 y de precios USD 2,000",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/signature.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta USD 10,000",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/signature.aspx"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1489,6 +2913,32 @@
    "why": "1% en todo, 2% en viajes",
    "note": "Primeros 12 meses sin anualidad.",
    "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/world-elite.aspx",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "LoungeKey ilimitado para titular y 10 invitados al año sin costo",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/world-elite.aspx"
+    },
+    {
+     "t": "viajes",
+     "d": "MasterAssist: gastos médicos en el extranjero hasta USD 150,000",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/world-elite.aspx"
+    },
+    {
+     "t": "viajes",
+     "d": "Equipaje hasta USD 3,000; demora de viaje hasta USD 200",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/world-elite.aspx"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compra y garantía extendida hasta USD 2,500",
+     "v": "ok",
+     "url": "https://www.scotiabank.com.mx/personas/tarjetas-de-credito/world-elite.aspx"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1503,6 +2953,44 @@
    "why": "10% en Puntos Bonus",
    "note": "Primer año sin anualidad; después $5,500 + IVA.",
    "url": "https://www.afirme.com/Personas/TDC/Tarjeta-Afirme-Blanc",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Membresía Priority Pass y LoungeKey para salas VIP",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/TDC/Tarjeta-Afirme-Blanc"
+    },
+    {
+     "t": "viajes",
+     "d": "Emergencia médica internacional hasta US$250,000",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/TDC/Tarjeta-Afirme-Blanc"
+    },
+    {
+     "t": "viajes",
+     "d": "Cancelación de viaje hasta US$3,000; demora de vuelo hasta US$300",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/TDC/Tarjeta-Afirme-Blanc"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta US$25,000 al año",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/TDC/Tarjeta-Afirme-Blanc"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras hasta US$20,000 al año por 180 días",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/TDC/Tarjeta-Afirme-Blanc"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio a 30 días, hasta US$4,000 al año",
+     "v": "ok",
+     "url": "https://www.afirme.com/Personas/TDC/Tarjeta-Afirme-Blanc"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1528,6 +3016,26 @@
    "why": "3% en La Comer y City Market",
    "note": "Se paga en Monedero Naranja, sólo usable en La Comer. Primeros 12 meses sin comisión si gastas $300 al mes.",
    "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-lacomer.html",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis comprando en su app o web (sin vigencia publicada)",
+     "v": "warn",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-lacomer.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro de viaje Mastercard hasta 75,000 USD y asistencia en viaje",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-lacomer.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras hasta 400 USD y garantía extendida 1 año",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-lacomer.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1542,6 +3050,20 @@
    "why": "3% en Home Depot, 1% fuera",
    "note": "Pesos Haz Más sólo se usan en Home Depot. Comisión en conflicto.",
    "url": "https://www.homedepot.com.mx/banamex",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Seguro de viaje Mastercard hasta 75,000 USD por accidente",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-homedepot.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras hasta 200 USD por incidente",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-homedepot.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1556,6 +3078,20 @@
    "why": "1% en Zara y marcas Inditex, 0.5% fuera",
    "note": "El 1% en tiendas Inditex no se incluye.",
    "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-affinity.html",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinemex con códigos promocionales (vence 31 dic 2026)",
+     "v": "warn",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-affinity.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio Visa por 30 días después de la compra",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-affinity.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1570,6 +3106,32 @@
    "why": "Puntos Momentos",
    "note": "Valor del punto estimado por blogs ($0.05).",
    "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-recompensas-descubre.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "2x1 en vuelos nacionales a playa con gasto mínimo (vence 31 dic 2026)",
+     "v": "warn",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-recompensas-descubre.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Acceso ilimitado a Elite Lounge Mastercard en AICM Terminal 1",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-recompensas-descubre.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Gastos médicos en viajes al extranjero hasta 50,000 USD",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-recompensas-descubre/seguros.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida, protección de compra y de precio Mastercard",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-recompensas-descubre/seguros.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1584,6 +3146,32 @@
    "why": "Puntos Momentos y vuelos 2x1",
    "note": "Valor del punto estimado; el 2x1 no se incluye.",
    "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-viajes-explora.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "2x1 en vuelos a EE.UU. y nacionales con puntos (vence 31 dic 2026)",
+     "v": "warn",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-viajes-explora.html"
+    },
+    {
+     "t": "viajes",
+     "d": "10 accesos al año a Salones Beyond y 4 a salas LoungeKey",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-viajes-explora.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Gastos médicos en viajes al extranjero hasta 125,000 USD",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-viajes-explora/seguros.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida, protección de compra y de precio Mastercard",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-viajes-explora/seguros.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1598,6 +3186,38 @@
    "why": "Puntos Momentos y vuelos 2x1",
    "note": "Valor del punto estimado; el 2x1 no se incluye.",
    "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-experiencias-conquista.html",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "2x1 en vuelos a Europa, EE.UU. y nacionales (vence 31 dic 2026)",
+     "v": "warn",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-experiencias-conquista.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Salones Beyond ilimitados y 10 accesos al año a salas LoungeKey",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-experiencias-conquista.html"
+    },
+    {
+     "t": "viajes",
+     "d": "Gastos médicos en viajes hasta 200,000 USD",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-experiencias-conquista/seguros.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio hasta 4,000 USD y de compra hasta 20,000 USD",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-experiencias-conquista/seguros.html"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta 5,000 USD por evento",
+     "v": "ok",
+     "url": "https://www.banamex.com/es/personas/tarjetas-credito/tarjeta-de-credito-experiencias-conquista/seguros.html"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1617,6 +3237,20 @@
    "why": "2% general, 5% streaming",
    "note": "Sólo por invitación. Sólo en comercios participantes.",
    "url": "https://www.vexi.mx/beneficios/vexi-niveles",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de compra por robo o daño hasta US$250 (Vexi Amex)",
+     "v": "warn",
+     "url": "https://www.vexi.mx/"
+    },
+    {
+     "t": "viajes",
+     "d": "Asistencia de viaje referencial y telemedicina (AXA)",
+     "v": "warn",
+     "url": "https://www.vexi.mx/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1632,6 +3266,20 @@
    "why": "Puntos SHEIN",
    "note": "Puntos que sólo se usan en SHEIN; valor del punto en conflicto. Caducan en 90 días.",
    "url": "https://www.storicard.com/shein",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de compra Mastercard: US$100 por evento, 45 días",
+     "v": "est",
+     "url": "https://www.storicard.com/blog/beneficios-stori-mastercard"
+    },
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis sala tradicional (código Mastercard)",
+     "v": "est",
+     "url": "https://www.storicard.com/blog/beneficios-stori-mastercard"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1649,6 +3297,26 @@
    "why": "1% en Travel Cash",
    "note": "Travel Cash sólo se usa en la plataforma de viajes de Invex. Primer año sin anualidad.",
    "url": "https://www.invextarjetas.com.mx/invex/Documentos/CONDUSEF/FolletoVoyage.pdf",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis, salas tradicionales (beneficio Mastercard)",
+     "v": "ok",
+     "url": "https://promociones.invextarjetas.com.mx/guia-de-uso-invex-voyage/"
+    },
+    {
+     "t": "viajes",
+     "d": "3 accesos al año a Elite Lounge Mastercard, T1 del AICM",
+     "v": "est",
+     "url": "https://blog.kardmatch.com.mx/invex-voyage"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras y garantía extendida Mastercard",
+     "v": "ok",
+     "url": "https://promociones.invextarjetas.com.mx/guia-de-uso-invex-voyage/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1668,6 +3336,26 @@
    "why": "1% en Travel Cash, 2.5% en restaurantes",
    "note": "Travel Cash sólo se usa en la plataforma de viajes de Invex. Primer año sin anualidad.",
    "url": "https://www.invextarjetas.com.mx/invex/Documentos/CONDUSEF/FolletoVoyagePlatinum.pdf",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinépolis, salas tradicionales y VIP (Mastercard)",
+     "v": "ok",
+     "url": "https://promociones.invextarjetas.com.mx/guia-de-uso-invex-voyage-platinum/"
+    },
+    {
+     "t": "viajes",
+     "d": "6 accesos al año a salas LoungeKey (blogs reportan 4)",
+     "v": "warn",
+     "url": "https://promociones.invextarjetas.com.mx/guia-de-uso-invex-voyage-platinum/"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro de inconveniencia en viaje y protección de equipaje",
+     "v": "ok",
+     "url": "https://promociones.invextarjetas.com.mx/guia-de-uso-invex-voyage-platinum/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1685,6 +3373,32 @@
    "why": "Puntos Unique",
    "note": "Valor del punto estimado por blogs ($0.06).",
    "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:d1ebeb3e-38a5-4105-a4be-b644b0629402/original/as/Loyalty_FolletoGold_Visa_Unique.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "2 accesos al año a salas VIP LoungeKey",
+     "v": "ok",
+     "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:d1ebeb3e-38a5-4105-a4be-b644b0629402/original/as/Loyalty_FolletoGold_Visa_Unique.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras Visa: robo o daño por 180 días",
+     "v": "ok",
+     "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:d1ebeb3e-38a5-4105-a4be-b644b0629402/original/as/Loyalty_FolletoGold_Visa_Unique.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida Visa: 1 año adicional",
+     "v": "ok",
+     "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:d1ebeb3e-38a5-4105-a4be-b644b0629402/original/as/Loyalty_FolletoGold_Visa_Unique.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio Visa por 30 días",
+     "v": "ok",
+     "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:d1ebeb3e-38a5-4105-a4be-b644b0629402/original/as/Loyalty_FolletoGold_Visa_Unique.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1702,6 +3416,38 @@
    "why": "Puntos Unique",
    "note": "Valor del punto estimado por blogs.",
    "url": "https://www.santander.com.mx/personas/credito-y-financiamiento/tarjetas-de-credito/unique-rewards-platinum",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "10 accesos al año a salas VIP LoungeKey",
+     "v": "ok",
+     "url": "https://www.santander.com.mx/personas/credito-y-financiamiento/tarjetas-de-credito/unique-rewards-platinum"
+    },
+    {
+     "t": "viajes",
+     "d": "6 accesos al año a Grand Lounge, Lounge 19 o Terraza Elite (AICM T1)",
+     "v": "ok",
+     "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:2d11595c-c288-440a-b3d4-3487782431a3/original/as/Cards_Folleto_TDC_UniquePlatinum_Visa_0626.pdf"
+    },
+    {
+     "t": "viajes",
+     "d": "Asistencia médica en el extranjero si pagas el boleto con la tarjeta",
+     "v": "ok",
+     "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:2d11595c-c288-440a-b3d4-3487782431a3/original/as/Cards_Folleto_TDC_UniquePlatinum_Visa_0626.pdf"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro de equipaje y cancelación de viaje (versión Visa)",
+     "v": "ok",
+     "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:2d11595c-c288-440a-b3d4-3487782431a3/original/as/Cards_Folleto_TDC_UniquePlatinum_Visa_0626.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras Visa: robo o daño por 180 días",
+     "v": "ok",
+     "url": "https://assets.santandermedia.com/adobe/assets/urn:aaid:aem:2d11595c-c288-440a-b3d4-3487782431a3/original/as/Cards_Folleto_TDC_UniquePlatinum_Visa_0626.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1716,6 +3462,14 @@
    "why": "Puntos Inbursa (10 = $1)",
    "note": "Primer año sin anualidad.",
    "url": "https://www.inbursa.com.mx/sites/gfi/document/tdc-clasica-folleto.pdf",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de precio Visa por 30 días después de la compra",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-clasica-folleto.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1734,6 +3488,32 @@
    "why": "Puntos Inbursa y 20% de intereses de regreso",
    "note": "Valor del punto tomado de la Clásica.",
    "url": "https://www.inbursa.com/sites/gfi/document/tdc-optima-folleto.pdf",
+   "perks": [
+    {
+     "t": "membresias",
+     "d": "Membresía familiar MedicallHome con check up anual sin costo",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-optima-folleto.pdf"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro de accidentes en viaje hasta 250,000 USD",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-optima-folleto.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta 1 año adicional, hasta 5,000 USD",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-optima-folleto.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio 60 días y de compra hasta 500 USD por evento",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-optima-folleto.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1752,6 +3532,32 @@
    "why": "Puntos Inbursa",
    "note": "Valor del punto tomado de la Clásica.",
    "url": "https://www.inbursa.com/sites/gfi/document/tdc-black-amex-folleto.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Priority Pass ilimitado para ti y 2 acompañantes (vuelos int.)",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-black-amex-folleto.pdf"
+    },
+    {
+     "t": "viajes",
+     "d": "Seguro de viaje: accidentes hasta 500,000 USD, equipaje y retrasos",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-black-amex-folleto.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta 12 meses, hasta 5,000 USD por evento",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-black-amex-folleto.pdf"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio 60 días y de compra hasta 1,000 USD",
+     "v": "ok",
+     "url": "https://www.inbursa.com/sites/gfi/document/tdc-black-amex-folleto.pdf"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1766,6 +3572,26 @@
    "why": "Mifel Rewards",
    "note": "Valor del punto estimado. Sin anualidad con $35,000 al año.",
    "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "50% de descuento en boletos de Mexicana (beneficio de bienvenida)",
+     "v": "ok",
+     "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito"
+    },
+    {
+     "t": "viajes",
+     "d": "Asiento asignado, equipaje de mano y 1er cambio sin costo en Mexicana",
+     "v": "ok",
+     "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de compras y garantía extendida Mastercard",
+     "v": "ok",
+     "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1780,6 +3606,14 @@
    "why": "Mifel Rewards",
    "note": "Valor del punto estimado. Sin anualidad con $100,000 al año.",
    "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de compras y garantía extendida Mastercard",
+     "v": "ok",
+     "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1794,6 +3628,32 @@
    "why": "Mifel Rewards",
    "note": "Valor del punto estimado. Sin anualidad con $300,000 al año.",
    "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "LoungeKey: 5 accesos al año (desde 17 jul 2026)",
+     "v": "ok",
+     "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito"
+    },
+    {
+     "t": "viajes",
+     "d": "5 accesos al año a The Gate Priority Club by Mifel, AICM T1",
+     "v": "ok",
+     "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito"
+    },
+    {
+     "t": "viajes",
+     "d": "Master Assist Platinum: médico internacional, cancelación, equipaje",
+     "v": "ok",
+     "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida Mastercard",
+     "v": "ok",
+     "url": "https://www.mifel.com.mx/personas/tarjetas-de-credito"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1816,6 +3676,14 @@
    "why": "Hasta 3% en comercios participantes",
    "note": "Tasas por categoría de blogs.",
    "url": "https://www.bb.com.mx/cs/BanBajio/personas/tarjetas-de-credito/cashback/Documentos/Terminos-Condiciones-Cash-Back.pdf",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de precios si hallas menor precio en 30 días (Visa)",
+     "v": "ok",
+     "url": "https://www.bb.com.mx/webcenter/portal/BanBajio/personas/p-tarjetas-de-credito/p-tarjeta-de-credito-clasica"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1837,6 +3705,20 @@
    "why": "Hasta 3% en comercios participantes",
    "note": "Tasas por categoría de blogs.",
    "url": "https://www.bb.com.mx/cs/BanBajio/personas/tarjetas-de-credito/cashback/Documentos/Terminos-Condiciones-Cash-Back.pdf",
+   "perks": [
+    {
+     "t": "proteccion",
+     "d": "Protección de compras contra robo o daño en 180 días (Visa)",
+     "v": "ok",
+     "url": "https://www.bb.com.mx/webcenter/portal/BanBajio/personas/p-tarjetas-de-credito/p-tarjeta-de-credito-oro"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precios en 30 días y garantía extendida 1 año",
+     "v": "ok",
+     "url": "https://www.bb.com.mx/webcenter/portal/BanBajio/personas/p-tarjetas-de-credito/p-tarjeta-de-credito-oro"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1858,6 +3740,20 @@
    "why": "Hasta 3% en comercios participantes",
    "note": "Tasas por categoría de blogs.",
    "url": "https://www.bb.com.mx/cs/BanBajio/personas/tarjetas-de-credito/cashback/Documentos/Terminos-Condiciones-Cash-Back.pdf",
+   "perks": [
+    {
+     "t": "viajes",
+     "d": "Emergencia médica internacional, cancelación y pérdida de equipaje",
+     "v": "ok",
+     "url": "https://www.bb.com.mx/webcenter/portal/BanBajio/personas/p-tarjetas-de-credito/p-tarjeta-de-credito-platinum"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta 1 año adicional (Visa)",
+     "v": "ok",
+     "url": "https://www.bb.com.mx/webcenter/portal/BanBajio/personas/p-tarjetas-de-credito/p-tarjeta-de-credito-platinum"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   },
@@ -1910,6 +3806,32 @@
    "why": "2% en dinero electrónico",
    "note": "Tasa de blogs; topes no encontrados.",
    "url": "https://www.bancoppel.com/credito_bcopp/tdco.html",
+   "perks": [
+    {
+     "t": "cine",
+     "d": "2x1 en Cinemex salas Tradicional y Market (vence 31 dic 2026)",
+     "v": "warn",
+     "url": "https://www.bancoppel.com/descubre-mas/tarjeta-oro/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Garantía extendida hasta 1 año adicional",
+     "v": "ok",
+     "url": "https://www.bancoppel.com/descubre-mas/tarjeta-oro/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Seguro de compras por robo o accidente hasta US$1,000",
+     "v": "ok",
+     "url": "https://www.bancoppel.com/descubre-mas/tarjeta-oro/"
+    },
+    {
+     "t": "proteccion",
+     "d": "Protección de precio: reembolso hasta US$400",
+     "v": "ok",
+     "url": "https://www.bancoppel.com/descubre-mas/tarjeta-oro/"
+    }
+   ],
    "source_type": "oficial",
    "verified_at": "2026-09-29"
   }

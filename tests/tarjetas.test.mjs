@@ -105,3 +105,34 @@ test("CAT como número para ordenar", async () => {
   assert.equal(catNum("—"), null);
   for (const c of data.cards) assert.ok(catNum(c.cat) === null || catNum(c.cat) > 0, c.n);
 });
+
+test("beneficios: el top 3 sólo trae tarjetas con lo que busca, primero las que cumplen más", () => {
+  const base = { i: "X", d: 1, cost: 0, inc: null, cat: "—", v: "ok", why: "", note: "", url: "https://x" };
+  const cards = [
+    { ...base, n: "Dinero", d: 3 },
+    { ...base, n: "Cine", perks: [{ t: "cine", d: "2x1", v: "ok" }] },
+    { ...base, n: "Cine y viajes", d: 0.5, perks: [{ t: "cine", d: "2x1", v: "ok" }, { t: "viajes", d: "VIP", v: "ok" }] },
+    { ...base, n: "Cine de blog", d: 2, perks: [{ t: "cine", d: "2x1", v: "est" }] },
+  ];
+  const s = { ...BASE, perks: ["cash", "cine", "viajes"] };
+  const res = rank(cards, s);
+  assert.deepEqual(res.top3.map((c) => c.n), ["Cine y viajes", "Cine"]);
+  assert.equal(res.perkMiss, false);
+  // Sólo dinero: orden normal por neto
+  assert.equal(rank(cards, { ...BASE, perks: ["cash"] }).top3[0].n, "Dinero");
+  // Nadie tiene lo que pide: top normal y aviso
+  const miss = rank(cards, { ...BASE, perks: ["proteccion"] });
+  assert.equal(miss.perkMiss, true);
+  assert.equal(miss.top3[0].n, "Dinero");
+});
+
+test("beneficios bien formados en los datos", () => {
+  const T = ["cine", "viajes", "membresias", "proteccion"];
+  for (const c of data.cards)
+    for (const p of c.perks ?? []) {
+      assert.ok(T.includes(p.t), `${c.n}: tipo ${p.t}`);
+      assert.ok(p.d && p.d.length <= 90, `${c.n}: descripción`);
+      assert.ok(["ok", "warn", "est"].includes(p.v), `${c.n}: verificación`);
+      assert.ok(/^https:\/\//.test(p.url), `${c.n}: fuente`);
+    }
+});

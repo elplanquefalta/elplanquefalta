@@ -77,22 +77,32 @@ export function calc(c, P, chains) {
   return { rew, cost, net: rew - cost, eff: tot ? (rew / (tot * 12)) * 100 : 0, capHit, top, lifeMonths };
 }
 
-/** Calcula todas las tarjetas, marca las aprobables y arma el top 3. state.chains: cadena o lista de cadenas. */
+export const PERKS = { cine: "cine", viajes: "viajes", membresias: "membresías incluidas", proteccion: "protección de compras" };
+
+/** Calcula todas las tarjetas, marca las aprobables y arma el top 3. state.chains: cadena o lista de cadenas.
+ *  state.perks: beneficios que busca ("cash" = sólo dinero). Si pide alguno además de dinero, el top 3 sólo
+ *  incluye tarjetas con al menos uno verificado (no "est"), primero las que cumplen más, luego por neto. */
 export function rank(cards, state) {
   const P = profile(state);
   const chains = [...new Set([].concat(state.chains ?? state.chain ?? []))];
+  const wanted = [].concat(state.perks ?? []).filter((p) => p in PERKS);
   const all = cards.map((c) => {
     const r = calc(c, P, chains);
     const tooHigh = c.inc != null && c.inc > P.inc.min;
     const feeOut = state.fee === "no" && (c.cost > 0 || !!c.sub);
-    return { ...c, ...r, ok: !tooHigh && !feeOut, tooHigh, feeOut };
+    const has = new Set((c.perks ?? []).filter((p) => p.v !== "est").map((p) => p.t));
+    const match = wanted.filter((t) => has.has(t)).length;
+    return { ...c, ...r, ok: !tooHigh && !feeOut, tooHigh, feeOut, match };
   });
   const eligible = all.filter((c) => c.ok).sort((a, b) => b.net - a.net);
-  const top3 = eligible.filter((c) => c.v !== "est" && !c.sub).slice(0, 3);
+  const verified = eligible.filter((c) => c.v !== "est" && !c.sub);
+  const withPerks = wanted.length ? verified.filter((c) => c.match > 0).sort((a, b) => b.match - a.match || b.net - a.net) : [];
+  const perkMiss = wanted.length > 0 && !withPerks.length;
+  const top3 = (withPerks.length ? withPerks : verified).slice(0, 3);
   const sorted = all.slice().sort((a, b) => b.ok - a.ok || b.net - a.net);
   let n = 0;
   sorted.forEach((c) => (c.rank = c.ok ? ++n : null));
-  return { P, all: sorted, eligible, top3 };
+  return { P, all: sorted, eligible, top3, wanted, perkMiss };
 }
 
 /** CAT como número para ordenar ("91.6%" → 91.6). Sin dato ("—", "No publicado", "No aplica") → null. */

@@ -1,5 +1,5 @@
 // Comparador de tarjetas — interfaz. El cálculo vive en calc.mjs; los datos en data/cards.json.
-import { CL, fmt, rank, catNum } from "/tarjetas/calc.mjs";
+import { CL, fmt, rank, catNum, PERKS } from "/tarjetas/calc.mjs";
 
 const $ = (id) => document.getElementById(id);
 const esc = (t) => String(t).replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[ch]);
@@ -11,13 +11,13 @@ const VL = { ok: ["ok", "Oficial"], warn: ["warn", "Oficial con dudas"], est: ["
 const LABELS = ["La que más te conviene", "Segunda opción", "Tercera opción"];
 const PAGE = 12;
 
-const state = { total: null, inc: null, share: null, cats: new Set(), catsTouched: false, chains: new Set(), fee: null };
+const state = { total: null, perks: new Set(), inc: null, share: null, cats: new Set(), catsTouched: false, chains: new Set(), fee: null };
 const view = { sort: "net", filters: new Set() };
 let DATA = null, showAll = false, completed = false, lastRes = null;
 
 const answered = () => {
   const chainOk = state.cats.has("super") ? state.chains.size > 0 : state.catsTouched;
-  return [state.total, state.inc, state.share, state.catsTouched, chainOk, state.fee].filter(Boolean).length;
+  return [state.total, state.perks.size > 0, state.inc, state.share, state.catsTouched, chainOk, state.fee].filter(Boolean).length;
 };
 
 const longDate = (iso) => new Date(iso + "T12:00:00").toLocaleDateString("es-MX", { day: "numeric", month: "long", year: "numeric" });
@@ -29,12 +29,12 @@ function renderAlert() {
 }
 
 // Cuestionario de una pregunta a la vez. La del súper sólo aparece si marcaste súper.
-const STEPS = ["total", "inc", "share", "cats", "chains", "fee"];
-const SHORT = { total: "¿Pagas el total?", inc: "Ingreso al mes", share: "Gasto con tarjeta", cats: "Pagas con tarjeta", chains: "Haces el súper en", fee: "¿Anualidad o membresía?" };
-const MULTI = new Set(["cats", "chains"]);
+const STEPS = ["total", "perks", "inc", "share", "cats", "chains", "fee"];
+const SHORT = { total: "¿Pagas el total?", perks: "Buscas", inc: "Ingreso al mes", share: "Gasto con tarjeta", cats: "Pagas con tarjeta", chains: "Haces el súper en", fee: "¿Anualidad o membresía?" };
+const MULTI = new Set(["perks", "cats", "chains"]);
 const field = (k) => document.querySelector(`[data-q="${k}"]`).closest("fieldset");
 const needed = (k) => k !== "chains" || state.cats.has("super");
-const isAnswered = (k) => (k === "cats" ? state.catsTouched : k === "chains" ? state.chains.size > 0 : state[k] != null);
+const isAnswered = (k) => (k === "cats" ? state.catsTouched : k === "chains" || k === "perks" ? state[k].size > 0 : state[k] != null);
 const seq = () => STEPS.filter(needed);
 // Para el contador: la del súper cuenta hasta saber que no marcó súper, así no salta de "de 5" a "de 6"
 const counted = () => STEPS.filter((k) => k !== "chains" || !state.catsTouched || state.cats.has("super"));
@@ -80,8 +80,14 @@ function finish() {
   if (DATA) render();
 }
 
+// Beneficios verificados de una tarjeta; primero los que la persona busca
+function perkList(c, wanted) {
+  const ps = (c.perks ?? []).filter((p) => p.v !== "est");
+  return ps.sort((a, b) => wanted.includes(b.t) - wanted.includes(a.t)).map((p) => p.d);
+}
+
 function podium(res) {
-  const { P, top3 } = res;
+  const { P, top3, wanted, perkMiss } = res;
   const catsTxt = [...state.cats].map((k) => CL[k]).join(", ") || "sin categorías marcadas";
   const cards = top3.length
     ? top3.map((c, ix) => `<article class="pod ${ix === 0 ? "first" : ""}">
@@ -90,10 +96,12 @@ function podium(res) {
         <ul><li>${esc(c.why)}.</li>${c.top.length ? `<li>Lo que más te paga: ${c.top.join(" y ")}.</li>` : ""}
         <li>${c.cost ? `Ya descontamos ${fmt(c.cost)} al año de costo.` : "No cuesta tenerla."}</li>
         ${c.capHit ? `<li><b>${esc(c.capHit)}.</b></li>` : ""}
+        ${perkList(c, wanted).length ? `<li><span class="perkline">Incluye:</span> ${perkList(c, wanted).map(esc).join("; ")}.</li>` : ""}
         <li>${c.inc ? `Pide ingreso de ${fmt(c.inc)}` : "No publica ingreso mínimo"}. CAT ${esc(c.cat)}.</li></ul></article>`).join("")
     : "<p>Ninguna tarjeta verificada cumple con tus respuestas.</p>";
   return `<div class="stack">
-    <p class="profile">Estimación según tus respuestas: ${fmt(P.T)} al mes en tarjeta (${esc(catsTxt)}). El top 3 sólo incluye tarjetas verificadas que piden un ingreso de ${fmt(P.inc.min)} o menos${state.fee === "no" ? " y no cuestan" : ""}.</p>
+    ${perkMiss ? `<p class="alert">Ninguna tarjeta verificada que te aprueben incluye ${wanted.map((t) => PERKS[t]).join(" o ")}. Te mostramos las que más dinero te regresan.</p>` : ""}
+    <p class="profile">Estimación según tus respuestas: ${fmt(P.T)} al mes en tarjeta (${esc(catsTxt)}). El top 3 sólo incluye tarjetas verificadas que piden un ingreso de ${fmt(P.inc.min)} o menos${state.fee === "no" ? " y no cuestan" : ""}${wanted.length && !perkMiss ? ` e incluyen ${wanted.map((t) => PERKS[t]).join(", ")}; primero las que cumplen más` : ""}.</p>
     <div class="podium">${cards}</div>
     <p class="disclaimer">Cálculo ilustrativo. Beneficios sujetos a términos de cada institución y a aprobación de crédito. CAT promedio sin IVA, para fines informativos y de comparación.</p></div>`;
 }
@@ -110,7 +118,7 @@ function row(c, pos) {
     <td class="num" data-l="Ingreso mín.">${c.inc ? fmt(c.inc) : "—"}</td>
     <td class="num c-cat" data-l="CAT">${esc(c.cat)}</td>
     <td class="ver"><span class="pill ${VL[c.v][0]}">${VL[c.v][1]}</span></td>
-    <td class="note">${c.capHit ? `<span class="capflag">${esc(c.capHit)}.</span> ` : ""}${esc(c.note)} <a href="${esc(c.url)}" target="_blank" rel="noopener">Fuente</a></td>
+    <td class="note">${c.capHit ? `<span class="capflag">${esc(c.capHit)}.</span> ` : ""}${esc(c.note)}${c.perks?.length ? ` <b>Beneficios:</b> ${c.perks.map((p) => esc(p.d) + (p.v === "est" ? " (estimado)" : "")).join("; ")}.` : ""} <a href="${esc(c.url)}" target="_blank" rel="noopener">Fuente</a></td>
     <td class="catc">${catNum(c.cat) == null ? "—" : catNum(c.cat) + "%"}</td></tr>`;
 }
 
@@ -131,6 +139,7 @@ const FILTERS = {
   official: (c) => c.v === "ok",
   open: (c) => !c.sub,
   nocap: (c) => !c.capHit,
+  perk: (c) => c.match > 0,
 };
 
 function renderTable(res) {
@@ -162,10 +171,12 @@ function renderTable(res) {
 }
 
 function render() {
-  const done = answered() === 6;
+  const done = answered() === 7;
   if (done) {
-    lastRes = rank(DATA.cards, { ...state, cats: [...state.cats], chains: [...state.chains] });
+    lastRes = rank(DATA.cards, { ...state, cats: [...state.cats], chains: [...state.chains], perks: [...state.perks] });
     $("result-body").innerHTML = podium(lastRes);
+    $("f-perk").hidden = !lastRes.wanted.length;
+    if (!lastRes.wanted.length) { view.filters.delete("perk"); $("f-perk").setAttribute("aria-pressed", "false"); }
   }
   // Si la persona desmarca algo después de ver su resultado, se conserva el último hasta que vuelva a completar.
   if (!lastRes) return;
@@ -198,8 +209,8 @@ document.querySelectorAll(".chips").forEach((g) => {
       state[q] = b.dataset.v;
       renderAlert();
       if (!(q === "total" && state.total === "no")) setTimeout(() => step === q && advance(), 220);
-    } else if (q === "chains") {
-      toggleMulti(b, b.dataset.v, state.chains);
+    } else if (q === "chains" || q === "perks") {
+      toggleMulti(b, b.dataset.v, state[q]);
     } else {
       state.catsTouched = true;
       if (b.dataset.v === "none") {
