@@ -189,3 +189,13 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
 .sesion p{color:var(--texto-suave);font-size:16px}
 .sesion .btn{align-self:flex-start;margin-top:8px}
 .sesion .pildora{background:rgba(212,168,83,.14);color:var(--dorado);border:1px solid rgba(212,168,83,.45)}
+
+/* Carrusel giratorio de recomendaciones */
+.giro{position:relative;height:540px;overflow:hidden}
+.giro .video-card{position:absolute;left:50%;top:14px;width:280px;flex:none;margin:0;transform:translateX(calc(-50% + var(--x,0px))) scale(var(--s,1));opacity:var(--o,1);z-index:var(--z,1);transition:transform .8s cubic-bezier(.2,.7,.2,1),opacity .8s ease;cursor:pointer}
+.giro .video-card.centro{cursor:default;border-color:var(--dorado);box-shadow:0 0 0 1px rgba(212,168,83,.5),0 0 34px rgba(212,168,83,.35),0 24px 48px rgba(0,0,0,.55)}
+.giro .video-card:not(.centro) .play{width:48px;height:48px;box-shadow:none;opacity:.85}
+.puntos{display:flex;justify-content:center;gap:8px;margin-top:14px}
+.puntos span{width:8px;height:8px;border-radius:999px;background:#566B58;transition:background .3s,width .3s}
+.puntos span.on{background:var(--dorado);width:22px}
+@media (max-width:640px){.giro{height:470px}.giro .video-card{width:236px}}

@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
-<link rel="stylesheet" href="/site.css?v=20261110f">
+<link rel="stylesheet" href="/site.css?v=20261110g">
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -75,7 +75,7 @@
 <h2>Lo que dicen quienes ya tuvieron su sesión</h2>
 </div>
 <div class="carrusel-caja">
-<div class="carrusel" id="carrusel">
+<div class="giro" id="carrusel">
 <div class="video-card">
 <video src="/videos/testimonio-1.mp4" poster="/videos/testimonio-1.jpg" preload="none" playsinline></video>
 <div class="pie-video">Cliente de El Plan Que Falta</div>
@@ -92,6 +92,7 @@
 <button class="play" type="button" aria-label="Reproducir recomendación 3"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
 </div>
 </div>
+<div class="puntos" id="car-puntos" aria-hidden="true"></div>
 <div class="flechas">
 <button type="button" id="car-ant" aria-label="Video anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
 <button type="button" id="car-sig" aria-label="Video siguiente"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -230,37 +231,45 @@
 (function () {
   var car = document.getElementById('carrusel');
   var cards = [].slice.call(car.querySelectorAll('.video-card'));
-  var pausado = false;
-  function paso() { return cards[0].getBoundingClientRect().width + 18; }
-  function mover(d) {
-    var max = car.scrollWidth - car.clientWidth;
-    if (max <= 4) return;
-    var x = car.scrollLeft + d * paso();
-    if (x > max + 4) x = 0;
-    if (x < -4) x = max;
-    car.scrollTo({ left: x, behavior: 'smooth' });
-  }
-  function flechas() { document.querySelector('.flechas').style.display = (car.scrollWidth - car.clientWidth > 4) ? '' : 'none'; }
-  flechas(); window.addEventListener('resize', flechas);
-  document.getElementById('car-ant').addEventListener('click', function () { mover(-1); });
-  document.getElementById('car-sig').addEventListener('click', function () { mover(1); });
-  cards.forEach(function (c) {
-    var v = c.querySelector('video');
-    c.querySelector('.play').addEventListener('click', function () {
-      cards.forEach(function (o) { var ov = o.querySelector('video'); if (ov !== v) { ov.pause(); } });
-      v.controls = true;
-      c.classList.add('activo');
-      v.play();
+  var puntos = document.getElementById('car-puntos');
+  var n = cards.length, activo = 0, pausado = false;
+  cards.forEach(function () { puntos.appendChild(document.createElement('span')); });
+  function pinta() {
+    var sep = window.innerWidth <= 640 ? 150 : 250;
+    cards.forEach(function (c, i) {
+      var d = ((i - activo) % n + n) % n;
+      if (d > n / 2) d -= n;
+      var a = Math.abs(d);
+      c.style.setProperty('--x', (d * sep) + 'px');
+      c.style.setProperty('--s', a === 0 ? 1 : (a === 1 ? 0.8 : 0.64));
+      c.style.setProperty('--o', a === 0 ? 1 : (a === 1 ? 0.6 : (a === 2 ? 0.28 : 0)));
+      c.style.setProperty('--z', 10 - a);
+      c.style.pointerEvents = a > 2 ? 'none' : '';
+      c.classList.toggle('centro', a === 0);
+      puntos.children[i].classList.toggle('on', a === 0);
     });
-    v.addEventListener('pause', function () { if (v.ended) { c.classList.remove('activo'); v.controls = false; } });
+  }
+  function detener() {
+    cards.forEach(function (c) { var v = c.querySelector('video'); v.pause(); v.controls = false; c.classList.remove('activo'); });
+  }
+  function ir(i) { detener(); activo = ((i % n) + n) % n; pinta(); }
+  function reproduciendo() { return cards.some(function (c) { var v = c.querySelector('video'); return !v.paused && !v.ended; }); }
+  document.getElementById('car-ant').addEventListener('click', function () { ir(activo - 1); });
+  document.getElementById('car-sig').addEventListener('click', function () { ir(activo + 1); });
+  cards.forEach(function (c, i) {
+    var v = c.querySelector('video');
+    c.addEventListener('click', function (e) {
+      if (i !== activo) { e.preventDefault(); ir(i); return; }
+      if (e.target.closest('.play')) { v.controls = true; c.classList.add('activo'); v.play(); }
+    });
     v.addEventListener('ended', function () { c.classList.remove('activo'); v.controls = false; });
   });
-  function reproduciendo() { return cards.some(function (c) { var v = c.querySelector('video'); return !v.paused && !v.ended; }); }
   car.addEventListener('pointerenter', function () { pausado = true; });
   car.addEventListener('pointerleave', function () { pausado = false; });
-  car.addEventListener('touchstart', function () { pausado = true; setTimeout(function () { pausado = false; }, 6000); }, { passive: true });
+  window.addEventListener('resize', pinta);
+  pinta();
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    setInterval(function () { if (!pausado && !reproduciendo()) mover(1); }, 3500);
+    setInterval(function () { if (!pausado && !reproduciendo() && !document.hidden) ir(activo + 1); }, 3500);
   }
 })();
 </script>
