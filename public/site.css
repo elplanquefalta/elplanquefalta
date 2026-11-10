@@ -351,3 +351,7 @@ dialog.agenda[open]{display:flex;flex-direction:column;animation:agenda-entra .2
 .pag-contacto .aparece{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .pag-contacto .aparece.ya{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.pag-contacto .aparece{opacity:1;transform:none;transition:none}.pag-contacto .resultado:hover,.pag-contacto .lista:hover,.pag-contacto .sesion:hover{transform:none}}
+.pag-contacto #sesiones .rejilla{display:flex;flex-wrap:wrap;justify-content:center}
+.pag-contacto #sesiones .sesion{flex:0 1 400px}
+.pag-contacto #sesiones .nota{text-align:center}
+.pag-contacto .bio .btn{align-self:flex-start;margin-top:6px}
