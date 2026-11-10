@@ -1,5 +1,5 @@
 // Comparador de tarjetas — interfaz. El cálculo vive en calc.mjs; los datos en data/cards.json.
-import { CL, fmt, rank, catNum, PERKS } from "/tarjetas/calc.mjs?v=20260929d";
+import { CL, fmt, rank, catNum, PERKS } from "/tarjetas/calc.mjs?v=20261110a";
 
 const $ = (id) => document.getElementById(id);
 const esc = (t) => String(t).replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[ch]);
@@ -14,6 +14,8 @@ const PAGE = 12;
 const state = { total: null, perks: new Set(), inc: null, share: null, cats: new Set(), catsTouched: false, chains: new Set(), fee: null };
 const view = { sort: "net", filters: new Set() };
 let DATA = null, showAll = false, completed = false, lastRes = null;
+const cmp = new Set(); // nombres de las tarjetas marcadas para comparar (máximo 3)
+const CMP_MAX = 3;
 
 const answered = () => {
   const chainOk = state.cats.has("super") ? state.chains.size > 0 : state.catsTouched;
@@ -110,7 +112,7 @@ function row(c, pos) {
   const tag = c.tooHigh ? `<br><span class="pill">Pide ${fmt(c.inc)}</span>` : c.feeOut ? `<br><span class="pill">Tiene costo</span>` : "";
   return `<tr class="${c.ok ? "" : "dim"}">
     <td class="rank">${pos}</td>
-    <td class="card"><b>${esc(c.n)}</b><small><span class="rk">#${pos} · </span>${esc(c.i)}</small>${tag}</td>
+    <td class="card"><b>${esc(c.n)}</b><small><span class="rk">#${pos} · </span>${esc(c.i)}</small>${tag}<br><label class="cmp"><input type="checkbox" data-cmp="${esc(c.n)}"${cmp.has(c.n) ? " checked" : ""}${!cmp.has(c.n) && cmp.size >= CMP_MAX ? " disabled" : ""}> Comparar</label></td>
     <td class="num" data-l="Regreso">${c.eff.toFixed(2)}%</td>
     <td class="num" data-l="Recompensa">${fmt(c.rew)}</td>
     <td class="num c-cost" data-l="Costo">${fmt(c.cost)}</td>
@@ -142,6 +144,32 @@ const FILTERS = {
   perk: (c) => c.match > 0,
 };
 
+// Comparación lado a lado de las tarjetas marcadas. Resalta el mejor valor de cada renglón.
+function renderCompare(res) {
+  const list = res.all.filter((c) => cmp.has(c.n));
+  $("compare").hidden = list.length < 2;
+  $("cmp-hint").textContent = list.length === 1 ? "Marca una tarjeta más para compararlas lado a lado." : list.length >= CMP_MAX ? "Ya tienes tres. Quita una para agregar otra." : 'Marca "Comparar" en dos o tres tarjetas para verlas lado a lado.';
+  if (list.length < 2) { $("cmp-body").innerHTML = ""; return; }
+  const best = (f, dir) => { const vs = list.map(f).filter((v) => v != null); return vs.length ? (dir > 0 ? Math.max(...vs) : Math.min(...vs)) : null; };
+  const B = { net: best((c) => c.net, 1), rew: best((c) => c.rew, 1), cost: best((c) => c.cost, -1), eff: best((c) => c.eff, 1), cat: best((c) => catNum(c.cat), -1), inc: best((c) => c.inc, -1) };
+  const w = (v, b) => (v != null && v === b ? ' class="win"' : "");
+  $("cmp-body").innerHTML = list.map((c) => `<article class="cmpcard ${c.net === B.net ? "best" : ""}">
+    <h3>${esc(c.n)}</h3><span class="bank">${esc(c.i)} · <span class="pill ${VL[c.v][0]}">${VL[c.v][1]}</span></span>
+    <div class="big ${c.net < 0 ? "neg" : ""}">${fmt(c.net)}</div><span class="bank">neto al año con tu perfil</span>
+    <dl>
+      <dt>Recompensa al año</dt><dd${w(c.rew, B.rew)}>${fmt(c.rew)}</dd>
+      <dt>Costo al año</dt><dd${w(c.cost, B.cost)}>${fmt(c.cost)}</dd>
+      <dt>Regreso sobre tu gasto</dt><dd${w(c.eff, B.eff)}>${c.eff.toFixed(2)}%</dd>
+      <dt>CAT</dt><dd${w(catNum(c.cat), B.cat)}>${esc(c.cat)}</dd>
+      <dt>Ingreso que pide</dt><dd${w(c.inc, B.inc)}>${c.inc ? fmt(c.inc) : "No publicado"}</dd>
+      <dt>¿Te la aprobarían?</dt><dd>${c.ok ? "Sí, por ingreso" : c.tooHigh ? "Pide más ingreso" : "Tiene costo"}</dd>
+    </dl>
+    <p><b>Por qué:</b> ${esc(c.why)}.${c.capHit ? ` <b>${esc(c.capHit)}.</b>` : ""}</p>
+    ${c.perks?.length ? `<p><b>Beneficios:</b> ${c.perks.map((p) => esc(p.d) + (p.v === "est" ? " (estimado)" : "")).join("; ")}.</p>` : ""}
+    <p>${esc(c.note)} <a href="${esc(c.url)}" target="_blank" rel="noopener">Fuente</a></p>
+    <button class="quitar" type="button" data-quitar="${esc(c.n)}">Quitar</button></article>`).join("");
+}
+
 function renderTable(res) {
   const q = norm($("q").value.trim());
   const key = SORTS[view.sort];
@@ -168,6 +196,7 @@ function renderTable(res) {
     else if (!list.length) nf = view.filters.size ? "Ninguna tarjeta cumple con esos filtros." : "No encontramos esa tarjeta en el inventario de este mes.";
   } else if (!list.length) nf = "Ninguna tarjeta cumple con esos filtros.";
   $("notfound").textContent = nf;
+  renderCompare(res);
 }
 
 function render() {
@@ -245,6 +274,15 @@ document.querySelector(".filters").addEventListener("click", (e) => {
 $("sort").addEventListener("change", (e) => { view.sort = e.target.value; lastRes && renderTable(lastRes); });
 $("q").addEventListener("input", () => lastRes && renderTable(lastRes));
 $("more").addEventListener("click", () => { showAll = true; renderTable(lastRes); });
+$("rows").addEventListener("change", (e) => {
+  const n = e.target.dataset?.cmp;
+  if (!n) return;
+  if (e.target.checked) { if (cmp.size < CMP_MAX) cmp.add(n); } else cmp.delete(n);
+  renderTable(lastRes);
+  if (cmp.size >= 2 && e.target.checked) track("Compare", { n: cmp.size });
+});
+$("cmp-body").addEventListener("click", (e) => { const n = e.target.dataset?.quitar; if (n) { cmp.delete(n); renderTable(lastRes); } });
+$("cmp-clear").addEventListener("click", () => { cmp.clear(); renderTable(lastRes); });
 $("ig").addEventListener("click", () => track("InstagramClick"));
 
 showStep("total", false);

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./public/herramientas/libertad/index.html', './public/herramientas/perfil/index.html'],
+  content: ['./public/**/*.html'],
   theme: {
     extend: {
       colors: {

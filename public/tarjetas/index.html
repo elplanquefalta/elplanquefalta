@@ -12,12 +12,12 @@
 <meta property="og:title" content="¿Qué tarjeta de crédito te conviene más?">
 <meta property="og:description" content="Comparador de tarjetas de crédito en México: 7 preguntas, 103 tarjetas, topes y anualidades ya descontados. Se actualiza cada mes.">
 <meta property="og:url" content="https://elplanquefalta.com/tarjetas">
-<meta name="theme-color" content="#F7F5EF">
-<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#1E2620">
+<meta name="color-scheme" content="dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap">
-<link rel="modulepreload" href="/tarjetas/calc.mjs?v=20260929d">
+<link rel="modulepreload" href="/tarjetas/calc.mjs?v=20261110a">
 <link rel="preload" href="/tarjetas/data/cards.json" as="fetch" crossorigin>
 <script type="application/ld+json">
 {
@@ -37,12 +37,12 @@
 </script>
 <style>
 :root{
-  --bg:#E8E5DC; --surface:#F7F5EF; --fg:#243026; --muted:#5d685f; --sage:#4A5D4C; --deep:#2D382E; --gold:#9A7020; --goldbright:#D4A853;
-  --red:#B42D2D; --line:#cfcabd; --chip:#e1ddd1; --rowalt:#f0ede5; --onsage:#F7F5EF; --warnbg:#f3e6e0; --cream:#F5F2EB;
+  --bg:#1E2620; --surface:#2A352D; --fg:#F5F2EB; --muted:#C9D2C7; --sage:#F5F2EB; --deep:#161D18; --gold:#D4A853; --goldbright:#D4A853;
+  --red:#F2978C; --line:#3A4A3C; --chip:#34453A; --rowalt:#253028; --onsage:#F7F5EF; --warnbg:#3A2A24; --cream:#F5F2EB;
   --display:"Fraunces", Georgia, serif; --body:"DM Sans", system-ui, sans-serif;
 }
 /* Siempre en claro, aunque el celular esté en modo oscuro */
-:root{color-scheme:light}
+:root{color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5;overflow-x:hidden}
@@ -194,6 +194,37 @@ footer .logo em{color:var(--gold)}
 .error{color:var(--red);font-weight:500}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.nav{background:var(--bg);border-bottom:1px solid var(--line);padding:14px 20px;flex-wrap:wrap;gap:8px 20px}
+.nav .logo{font-size:20px;color:var(--cream)}
+.nav .links{display:flex;flex-wrap:wrap;align-items:center;gap:4px 22px}
+.nav .links a{color:var(--cream);text-decoration:none;font-weight:500;font-size:15px;padding:10px 0;min-height:44px;display:inline-flex;align-items:center}
+.nav .links a:hover,.nav .links a[aria-current=page]{color:var(--gold)}
+.nav .links a.cta{background:var(--gold);color:#1A1A1A;font-weight:700;padding:10px 18px;border-radius:999px}
+.hero{background:var(--bg)}
+.hero::after{display:none}
+.hero h1{color:var(--cream)}
+.hero .volver{display:inline-block;color:var(--muted);font-weight:700;font-size:14px;text-decoration:none;margin-bottom:14px;padding:8px 0}
+.hero .volver:hover{color:var(--gold)}
+footer a{color:var(--cream)}
+section[hidden]{display:none}
+.cmp{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:13px;font-weight:700;color:var(--gold);cursor:pointer;min-height:32px}
+.cmp input{accent-color:#D4A853;width:17px;height:17px}
+.cmpgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.cmpcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:4px}
+.cmpcard.best{border-color:var(--gold);box-shadow:0 0 26px rgba(212,168,83,.18)}
+.cmpcard h3{margin:0;font-size:19px;line-height:1.2;color:var(--cream)}
+.cmpcard .bank{font-size:13px;color:var(--muted)}
+.cmpcard .big{font-family:var(--display);font-weight:700;font-size:30px;color:var(--gold);margin:8px 0 2px}
+.cmpcard .big.neg{color:var(--red)}
+.cmpcard dl{margin:8px 0 0;display:grid;grid-template-columns:1fr auto;gap:0}
+.cmpcard dt,.cmpcard dd{margin:0;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.cmpcard dt{color:var(--muted)}
+.cmpcard dd{text-align:right;font-weight:700;color:var(--cream)}
+.cmpcard dd.win{color:var(--gold)}
+.cmpcard p{margin:10px 0 0;font-size:13px;line-height:1.5;color:var(--muted)}
+.cmpcard .quitar{align-self:flex-start;margin-top:10px;background:transparent;border:1px solid var(--line);color:var(--cream);border-radius:999px;padding:8px 14px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;min-height:36px}
+.cmpcard .quitar:hover{border-color:var(--gold);color:var(--gold)}
 </style>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -203,11 +234,17 @@ footer .logo em{color:var(--gold)}
 <body>
 
 <nav class="nav" aria-label="Principal">
-  <a class="logo" href="/">El Plan<em>QueFalta</em></a>
-  <a class="back" href="/">Volver al inicio</a>
+  <a class="logo" href="/">El Plan Que Falta</a>
+  <div class="links">
+    <a href="/#ediciones">Ediciones</a>
+    <a href="/herramientas/" aria-current="page">Herramientas</a>
+    <a href="/asesoria/">Asesoría</a>
+    <a class="cta" href="/#suscribirme">Suscribirme</a>
+  </div>
 </nav>
 
 <header class="hero">
+  <a class="volver" href="/herramientas/">← Todas las herramientas</a>
   <h1>¿Qué tarjeta de crédito te conviene más?</h1>
   <p>Contesta 7 preguntas. Estimamos cuánto te regresaría cada tarjeta en un año, con topes, anualidades y membresías ya descontados.</p>
   <p class="date" id="updated">Se actualiza cada mes</p>
@@ -293,6 +330,11 @@ footer .logo em{color:var(--gold)}
   <div id="result-body"><p class="placeholder">Contesta las preguntas y aquí aparecen las 3 tarjetas que más dinero te regresan.</p></div>
 </section>
 
+<section class="stack" id="compare" hidden aria-live="polite">
+  <div class="row-h"><h2>Comparación lado a lado</h2><button class="chip sm" type="button" id="cmp-clear">Quitar todas</button></div>
+  <div class="cmpgrid" id="cmp-body"></div>
+</section>
+
 <section class="stack" id="all" hidden>
   <div class="row-h"><h2>Todas las tarjetas con tu perfil</h2><span class="src" id="count"></span></div>
   <div class="tools">
@@ -308,6 +350,7 @@ footer .logo em{color:var(--gold)}
         <option value="inc">Menor ingreso pedido</option>
       </select></label>
   </div>
+  <p class="h" id="cmp-hint">Marca "Comparar" en dos o tres tarjetas para verlas lado a lado.</p>
   <div class="filters" role="group" aria-label="Filtros">
     <span class="flabel">Mostrar sólo:</span>
     <button class="chip sm" type="button" data-f="ok" aria-pressed="false">Las que me aprueban</button>
@@ -366,10 +409,11 @@ footer .logo em{color:var(--gold)}
 </main>
 
 <footer>
-  <div class="logo">El Plan<em>QueFalta</em></div>
+  <div class="logo">El Plan Que Falta</div>
   <span>Comparador de tarjetas de crédito · <span id="updated-foot"></span></span>
+  <span><a href="/#ediciones">Ediciones</a> · <a href="/herramientas/">Herramientas</a> · <a href="/asesoria/">Asesoría</a></span>
 </footer>
 
-<script type="module" src="/tarjetas/app.mjs?v=20260929d"></script>
+<script type="module" src="/tarjetas/app.mjs?v=20261110a"></script>
 </body>
 </html>
