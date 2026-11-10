@@ -1,0 +1,155 @@
+<main>
+<section class="herr">
+<div class="wrap">
+<a class="volver" href="/herramientas/">← Todas las herramientas</a>
+<div class="cabeza">
+<span class="insignia">Calculadora · Ejercicio 2026</span>
+<h1>¿Cuánto te devuelve <span class="dorado">el SAT?</span></h1>
+<p>Para quien recibe sueldo. Pon lo que ganas y lo que gastaste en 2026 en cosas deducibles, y ve cuánto te tocaría de regreso en tu declaración de abril de 2027.</p>
+</div>
+<div class="dos-col">
+<form class="panel" id="f" onsubmit="return false">
+<h2>1. Tus ingresos</h2>
+<div class="campos">
+<div class="campo"><label for="sueldo">Sueldo bruto mensual</label><input id="sueldo" type="number" inputmode="numeric" min="0" step="1000" value="45000"><small>Antes de impuestos, como viene en tu recibo.</small></div>
+<div class="campo"><label for="dias">Días de aguinaldo</label><input id="dias" type="number" inputmode="numeric" min="0" max="90" value="15"></div>
+</div>
+<details class="mas">
+<summary>Tengo mi constancia de sueldos (más exacto)</summary>
+<div class="campos">
+<div class="campo"><label for="c-acum">Ingresos gravados del año</label><input id="c-acum" type="number" inputmode="numeric" min="0" placeholder="Opcional"></div>
+<div class="campo"><label for="c-exen">Ingresos exentos del año</label><input id="c-exen" type="number" inputmode="numeric" min="0" placeholder="Opcional"></div>
+<div class="campo"><label for="c-ret">ISR que te retuvieron</label><input id="c-ret" type="number" inputmode="numeric" min="0" placeholder="Opcional"></div>
+</div>
+<p class="ayuda">Si llenas estos campos, se usan en lugar del sueldo de arriba.</p>
+</details>
+
+<hr class="sep">
+<h2>2. Deducciones personales</h2>
+<p class="ayuda">Lo que pagaste en 2026 con factura a tu nombre. Estas comparten un mismo tope: el menor entre 15% de tus ingresos y cinco UMA anuales.</p>
+<div class="campos">
+<div class="campo"><label for="medicos">Médicos, dentista, psicólogo, nutriólogo y hospital</label><input id="medicos" type="number" inputmode="numeric" min="0" value="0"></div>
+<div class="campo"><label for="gmm">Seguro de gastos médicos mayores</label><input id="gmm" type="number" inputmode="numeric" min="0" value="0"></div>
+<div class="campo"><label for="lentes">Lentes graduados</label><input id="lentes" type="number" inputmode="numeric" min="0" value="0"><small>Cuenta hasta $2,500.</small></div>
+<div class="campo"><label for="hipoteca">Intereses reales de tu crédito hipotecario</label><input id="hipoteca" type="number" inputmode="numeric" min="0" value="0"><small>El dato viene en la constancia de tu banco.</small></div>
+<div class="campo"><label for="funerarios">Gastos funerarios</label><input id="funerarios" type="number" inputmode="numeric" min="0" value="0"><small>Cuenta hasta una UMA anual.</small></div>
+<div class="campo"><label for="transporte">Transporte escolar obligatorio</label><input id="transporte" type="number" inputmode="numeric" min="0" value="0"></div>
+<div class="campo"><label for="donativos">Donativos</label><input id="donativos" type="number" inputmode="numeric" min="0" value="0"><small>Cuenta hasta 7% de tus ingresos.</small></div>
+</div>
+
+<hr class="sep">
+<h2>3. Colegiaturas</h2>
+<p class="ayuda">Tienen su propio límite por alumno y por nivel, aparte del tope de arriba. La universidad no entra.</p>
+<div class="campos">
+<div class="campo"><label for="n1">Alumno 1: nivel</label><select id="n1"><option value="">Ninguno</option><option value="preescolar">Preescolar</option><option value="primaria">Primaria</option><option value="secundaria">Secundaria</option><option value="tecnico">Profesional técnico</option><option value="bachillerato">Bachillerato</option></select></div>
+<div class="campo"><label for="m1">Alumno 1: pagado en el año</label><input id="m1" type="number" inputmode="numeric" min="0" value="0"></div>
+<div class="campo"><label for="n2">Alumno 2: nivel</label><select id="n2"><option value="">Ninguno</option><option value="preescolar">Preescolar</option><option value="primaria">Primaria</option><option value="secundaria">Secundaria</option><option value="tecnico">Profesional técnico</option><option value="bachillerato">Bachillerato</option></select></div>
+<div class="campo"><label for="m2">Alumno 2: pagado en el año</label><input id="m2" type="number" inputmode="numeric" min="0" value="0"></div>
+</div>
+
+<hr class="sep">
+<h2>4. Ahorro para el retiro</h2>
+<p class="ayuda">Van aparte del tope general y cada una tiene su límite.</p>
+<div class="campos">
+<div class="campo"><label for="retiro151">Plan personal de retiro o aportaciones voluntarias a tu Afore (art. 151)</label><input id="retiro151" type="number" inputmode="numeric" min="0" step="1000" value="0"><small>Hasta 10% de tus ingresos, con máximo de cinco UMA anuales.</small></div>
+<div class="campo"><label for="ahorro185">Cuenta especial para el ahorro o seguro con plan de pensión (art. 185)</label><input id="ahorro185" type="number" inputmode="numeric" min="0" step="1000" value="0"><small>Hasta $152,000 al año. El impuesto se paga cuando retiras.</small></div>
+</div>
+</form>
+
+<div class="resultado-caja" aria-live="polite">
+<div><div class="etiqueta" id="r-tit">Te devolverían</div><div class="res-num" id="r-saldo">$0</div><p class="res-pie" id="r-pie"></p></div>
+<div class="filas">
+<div class="fila"><span>Ingresos que pagan impuesto</span><b id="r-acum">$0</b></div>
+<div class="fila"><span>Deducciones con tope general</span><b id="r-tope">$0</b></div>
+<div class="fila"><span>Colegiaturas</span><b id="r-col">$0</b></div>
+<div class="fila"><span>Retiro, art. 151</span><b id="r-151">$0</b></div>
+<div class="fila"><span>Ahorro, art. 185</span><b id="r-185">$0</b></div>
+<div class="fila total"><span>Total que sí puedes deducir</span><b id="r-total">$0</b></div>
+</div>
+<div class="filas">
+<div class="fila"><span>ISR del año sin deducir</span><b id="r-sin">$0</b></div>
+<div class="fila"><span>ISR del año con tus deducciones</span><b id="r-con">$0</b></div>
+<div class="fila"><span>Cada peso que deduces te regresa</span><b id="r-marg">0%</b></div>
+</div>
+<div id="r-recortes" style="display:flex;flex-direction:column;gap:8px"></div>
+<a class="btn btn-cuadro" href="/contacto/">Revisar si me conviene un plan de retiro</a>
+<p class="legal-h">Estimación educativa con la tarifa anual de ISR 2026 y la UMA 2026. Supone que tu empresa te retuvo el impuesto correcto y que solo tienes ingresos por sueldo. No sustituye tu declaración ni a tu contador.</p>
+</div>
+</div>
+
+<div class="bloque-h">
+<h2>Cómo hacerlo tú, paso a paso</h2>
+<ol class="pasos">
+<li><b>Durante el año, pide factura.</b> A tu nombre y con tu RFC, por cada gasto deducible. Sin factura no cuenta.</li>
+<li><b>Paga con tarjeta, transferencia o cheque a tu nombre.</b> Los gastos médicos, el seguro, las colegiaturas y el transporte escolar pagados en efectivo no son deducibles.</li>
+<li><b>Aporta a tu retiro antes del 31 de diciembre.</b> Lo que aportes después cuenta para el año siguiente.</li>
+<li><b>En abril, entra a sat.gob.mx.</b> Busca la declaración anual de personas físicas y entra con tu RFC y contraseña. Ten tu e.firma vigente por si te la pide para la devolución.</li>
+<li><b>Revisa lo que ya viene cargado.</b> El SAT precarga tus ingresos y las facturas que encontró. Compáralo contra tus comprobantes y agrega lo que falte.</li>
+<li><b>Elige devolución y confirma tu CLABE.</b> La cuenta debe estar a tu nombre.</li>
+<li><b>Envía y guarda el acuse.</b> Ahí viene el saldo a favor que declaraste.</li>
+</ol>
+</div>
+
+<div class="bloque-h">
+<h2>Qué se puede deducir y hasta cuánto</h2>
+<div class="tabla-caja">
+<table class="tabla-h">
+<thead><tr><th>Concepto</th><th>Límite</th><th>¿Entra en el tope general?</th></tr></thead>
+<tbody>
+<tr><td>Médicos, dentista, psicólogo, nutriólogo y hospital</td><td>Sin límite propio</td><td>Sí</td></tr>
+<tr><td>Lentes graduados</td><td>$2,500</td><td>Sí</td></tr>
+<tr><td>Seguro de gastos médicos mayores</td><td>Sin límite propio</td><td>Sí</td></tr>
+<tr><td>Intereses reales de crédito hipotecario</td><td>Créditos de hasta 750,000 UDIS</td><td>Sí</td></tr>
+<tr><td>Gastos funerarios</td><td>Una UMA anual: $42,794.64</td><td>Sí</td></tr>
+<tr><td>Transporte escolar obligatorio</td><td>Sin límite propio</td><td>Sí</td></tr>
+<tr><td>Donativos</td><td>7% de tus ingresos del año anterior</td><td>Sí</td></tr>
+<tr><td>Colegiaturas</td><td>Preescolar $14,200 · Primaria $12,900 · Secundaria $19,900 · Profesional técnico $17,100 · Bachillerato $24,500</td><td>No</td></tr>
+<tr><td>Retiro (art. 151, fracción V)</td><td>10% de tus ingresos, máximo $213,973.20</td><td>No</td></tr>
+<tr><td>Ahorro (art. 185)</td><td>$152,000 al año</td><td>No</td></tr>
+</tbody>
+</table>
+</div>
+<p class="legal-h">El tope general es el menor entre 15% de tus ingresos del año (incluidos los exentos) y cinco UMA anuales, que en 2026 son $213,973.20. Fuentes: Ley del ISR, artículos 151, 152 y 185; Anexo 8 de la Resolución Miscelánea Fiscal 2026; UMA 2026 del INEGI.</p>
+</div>
+</div>
+</section>
+</main>
+<script type="module">
+import { ingresos, calcular } from "./calc.mjs?v=20261110";
+const $ = (id) => document.getElementById(id);
+const num = (id) => { const v = parseFloat($(id).value); return Number.isFinite(v) && v > 0 ? v : 0; };
+const pesos = (x) => (x < 0 ? "−" : "") + "$" + Math.round(Math.abs(x)).toLocaleString("es-MX");
+function aviso(caja, txt) { const p = document.createElement("p"); p.className = "recorte"; p.textContent = txt; caja.appendChild(p); }
+function pinta() {
+  const g = ingresos({ sueldoMensual: num("sueldo"), diasAguinaldo: num("dias") });
+  const usaConst = $("c-acum").value !== "" && num("c-acum") > 0;
+  const acumulable = usaConst ? num("c-acum") : g.acumulable;
+  const exento = usaConst ? num("c-exen") : g.exento;
+  const col = [];
+  if ($("n1").value) col.push({ nivel: $("n1").value, monto: num("m1") });
+  if ($("n2").value) col.push({ nivel: $("n2").value, monto: num("m2") });
+  const r = calcular({
+    acumulable, exento, isrRetenido: $("c-ret").value === "" ? null : num("c-ret"),
+    d: { medicos: num("medicos"), gmm: num("gmm"), lentes: num("lentes"), hipoteca: num("hipoteca"), funerarios: num("funerarios"), transporte: num("transporte"), donativos: num("donativos"), colegiaturas: col, retiro151: num("retiro151"), ahorro185: num("ahorro185") },
+  });
+  const favor = r.saldo >= 0;
+  $("r-tit").textContent = favor ? "Te devolverían" : "Tendrías que pagar";
+  $("r-saldo").textContent = pesos(Math.abs(r.saldo));
+  $("r-pie").textContent = r.total === 0 ? "Agrega tus deducciones para ver cuánto baja tu impuesto." : (favor ? "Saldo a favor estimado en tu declaración anual." : "Con el ISR retenido que capturaste, quedaría un saldo a cargo.");
+  $("r-acum").textContent = pesos(acumulable);
+  $("r-tope").textContent = pesos(r.conTope);
+  $("r-col").textContent = pesos(r.colegiaturas);
+  $("r-151").textContent = pesos(r.retiro);
+  $("r-185").textContent = pesos(r.ahorro185);
+  $("r-total").textContent = pesos(r.total);
+  $("r-sin").textContent = pesos(r.isrSin);
+  $("r-con").textContent = pesos(r.isrCon);
+  $("r-marg").textContent = r.marginal.toFixed(2).replace(/\.?0+$/, "") + "%";
+  const caja = $("r-recortes"); caja.textContent = "";
+  if (r.recorteGlobal > 0.5) aviso(caja, "Tu tope general es " + pesos(r.topeGlobal) + ". De tus gastos con tope, " + pesos(r.recorteGlobal) + " ya no cuentan.");
+  if (r.recorteRetiro > 0.5) aviso(caja, "En retiro (art. 151) solo cuentan " + pesos(r.topeRetiro) + ". Lo demás lo puedes meter por el art. 185.");
+  if (r.recorte185 > 0.5) aviso(caja, "En el art. 185 el máximo es $152,000 al año.");
+}
+document.querySelectorAll("#f input, #f select").forEach((i) => i.addEventListener("input", pinta));
+pinta();
+</script>

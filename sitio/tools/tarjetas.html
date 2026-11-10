@@ -1,0 +1,79 @@
+<main>
+<section class="herr">
+<div class="wrap">
+<a class="volver" href="/herramientas/">← Todas las herramientas</a>
+<div class="cabeza">
+<span class="insignia">Comparador</span>
+<h1>¿Qué tarjeta de crédito <span class="dorado">te conviene?</span></h1>
+<p>Tres datos y ves cuáles te regresan más dinero al año, con anualidad y topes ya descontados.</p>
+</div>
+
+<form class="panel" id="f" onsubmit="return false">
+<div class="tres">
+<div class="campo"><label for="inc">1. ¿Cuánto ganas al mes?</label>
+<select id="inc"></select><small>Para mostrarte solo las que sí te aprobarían.</small></div>
+<div class="campo"><label for="gasto">2. ¿Cuánto pagas con tarjeta al mes?</label>
+<input id="gasto" type="number" inputmode="numeric" min="0" step="500"><small>Solo lo que pasa por la tarjeta.</small></div>
+<div class="campo ancho"><span id="l-cats" style="font-size:15px;font-weight:500">3. ¿En qué gastas más? Marca las que apliquen.</span>
+<div class="chips-h" id="cats" role="group" aria-labelledby="l-cats"></div></div>
+</div>
+<details class="mas">
+<summary>Afinar el resultado (opcional)</summary>
+<div style="display:flex;flex-direction:column;gap:16px">
+<label class="check-h"><input type="checkbox" id="sincosto"> Solo tarjetas sin anualidad ni membresía</label>
+<div class="campo"><span id="l-chains" style="font-size:15px;font-weight:500">¿Dónde haces el súper?</span>
+<div class="chips-h" id="chains" role="group" aria-labelledby="l-chains"></div></div>
+</div>
+</details>
+<p class="ayuda">Esto aplica si pagas el total de tu tarjeta cada mes. Si dejas saldo, los intereses se comen cualquier recompensa: primero liquida.</p>
+</form>
+
+<div class="bloque-h" id="resultado" aria-live="polite">
+<div class="fila-h"><h2>Tus 3 mejores opciones</h2><span class="legal-h" id="resumen"></span></div>
+<div class="tj-grid" id="top"></div>
+</div>
+
+<div class="bloque-h" id="comparar" hidden>
+<div class="fila-h"><h2>Lado a lado</h2><button class="btn-fantasma" type="button" id="cmp-limpiar">Quitar todas</button></div>
+<div class="cmp-grid" id="cmp"></div>
+</div>
+
+<div class="centro" id="caja-mas"><button class="btn-fantasma" type="button" id="ver-mas">Ver más opciones</button></div>
+
+<div class="bloque-h" id="mas" hidden>
+<div class="fila-h"><h2>Más opciones</h2><span class="legal-h" id="cuenta"></span></div>
+<div class="campo" style="max-width:420px"><label for="q">Buscar una tarjeta o banco</label><input id="q" type="search" placeholder="Ej. BBVA, Nu, Openbank" autocomplete="off"></div>
+<div class="tj-grid" id="lista"></div>
+<p class="legal-h" id="nada" hidden>No encontré esa tarjeta.</p>
+<div class="centro"><button class="btn-fantasma" type="button" id="otras">Mostrar más</button></div>
+</div>
+
+<div class="bloque-h">
+<div class="panel">
+<details class="mas" style="border-top:0;padding-top:0">
+<summary>Cómo se calcula</summary>
+<ul class="lista-plana">
+<li>Tu gasto con tarjeta se reparte entre lo que marcaste con pesos típicos (el súper pesa más que el streaming). Siempre se suma celular e internet y "todo lo demás".</li>
+<li>Se aplican todos los topes publicados: mensuales, por categoría, anuales, de por vida y los que dependen de tu línea de crédito, que se supone de 1.5 veces tu ingreso mensual.</li>
+<li>El costo incluye IVA de 16%: anualidades, comisiones mensuales y membresías necesarias para el beneficio. Cuotas en dólares a $19 por dólar.</li>
+<li>Los puntos se convierten a pesos con el valor publicado por cada banco. Cuando el valor sale de blogs o prensa, la tarjeta se marca como "Estimado" y no entra al top 3.</li>
+<li>Compras de contado: casi ninguna tarjeta da recompensa en meses sin intereses. Bonos de bienvenida y créditos de viaje no se suman.</li>
+<li>Tus respuestas no se guardan ni se envían a ningún lado: el cálculo ocurre en tu navegador.</li>
+</ul>
+</details>
+<details class="mas">
+<summary>Tarjetas que no entran en el cálculo y por qué</summary>
+<div style="display:flex;flex-direction:column;gap:18px">
+<div><h3>Tienen recompensa, pero no se puede calcular en pesos</h3><ul class="lista-plana" id="nocalc" style="margin-top:10px"></ul></div>
+<div><h3>Solo sirven en su tienda</h3><ul class="lista-plana" id="store" style="margin-top:10px"></ul></div>
+<div><h3>Sin recompensas</h3><ul class="lista-plana" id="norew" style="margin-top:10px"></ul></div>
+<div><h3>Descontinuadas o sin lanzar</h3><ul class="lista-plana" id="disc" style="margin-top:10px"></ul></div>
+</div>
+</details>
+<p class="legal-h"><span id="updated"></span> Cálculo ilustrativo. Beneficios sujetos a términos de cada institución y a aprobación de crédito. CAT promedio sin IVA, para fines informativos y de comparación.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script type="module" src="/tarjetas/app.mjs?v=20261110b"></script>

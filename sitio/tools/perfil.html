@@ -1,0 +1,92 @@
+<main>
+<section class="herr">
+<div class="wrap">
+<a class="volver" href="/herramientas/">← Todas las herramientas</a>
+<div class="cabeza">
+<span class="insignia">Test · 8 preguntas</span>
+<h1>Tu perfil de <span class="dorado">inversor</span></h1>
+<p>Contesta las ocho preguntas. Al final ves tu perfil y una mezcla de ejemplo para un portafolio como el tuyo.</p>
+</div>
+<div class="lista-preg">
+<div class="avance"><span id="av-txt">0 de 8</span><div class="riel"><span id="av-bar"></span></div></div>
+<form id="test" onsubmit="return false"></form>
+<button class="btn btn-cuadro" id="ver" type="button" style="align-self:flex-start">Ver mi perfil</button>
+<p class="recorte" id="falta" hidden>Te faltan preguntas por contestar. Te llevé a la primera.</p>
+</div>
+
+<div class="bloque-h" id="res" hidden>
+<div class="dos-col">
+<div class="resultado-caja" style="position:static">
+<div><div class="etiqueta">Tu perfil</div><div class="res-num" id="p-nombre"></div><p class="res-pie" id="p-puntos"></p></div>
+<p class="res-pie" id="p-desc" style="font-size:17px"></p>
+<p class="recorte" id="p-limite" hidden></p>
+<button class="btn-linea" id="otra" type="button" style="align-self:flex-start;background:transparent;cursor:pointer;font-family:inherit">Volver a contestar</button>
+</div>
+<div class="panel">
+<h2>Una mezcla de ejemplo para tu perfil</h2>
+<div class="mezcla" id="p-mezcla"></div>
+<p class="legal-h">Es una mezcla ilustrativa por tipo de activo, no una recomendación de inversión personalizada. Tu portafolio real depende de tus metas, tu plazo, tus impuestos y lo que ya tienes. Rendimientos pasados no garantizan rendimientos futuros.</p>
+<hr class="sep">
+<h3>¿Lo aterrizamos a tu caso?</h3>
+<p class="ayuda" style="font-size:16px">En una sesión revisamos tus números y armamos la mezcla que sí va contigo, con instrumentos concretos.</p>
+<a class="btn btn-cuadro" href="/contacto/" style="align-self:flex-start">Agendar mi sesión</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script type="module">
+import { PREGUNTAS, resultado } from "./calc.mjs?v=20261110";
+const $ = (id) => document.getElementById(id);
+const form = $("test");
+PREGUNTAS.forEach((p, i) => {
+  const fs = document.createElement("fieldset");
+  fs.className = "pregunta"; fs.id = "q" + i; fs.style.margin = "0 0 16px";
+  const lg = document.createElement("legend"); lg.className = "oculto"; lg.textContent = p.t; fs.appendChild(lg);
+  const n = document.createElement("div"); n.className = "num"; n.textContent = "Pregunta " + (i + 1) + " de " + PREGUNTAS.length; fs.appendChild(n);
+  const h = document.createElement("h2"); h.textContent = p.t; h.setAttribute("aria-hidden", "true"); fs.appendChild(h);
+  const ops = document.createElement("div"); ops.className = "opciones";
+  p.o.forEach((txt, k) => {
+    const lab = document.createElement("label"); lab.className = "opcion";
+    const inp = document.createElement("input"); inp.type = "radio"; inp.name = "q" + i; inp.value = k + 1;
+    const sp = document.createElement("span"); sp.textContent = txt;
+    lab.appendChild(inp); lab.appendChild(sp); ops.appendChild(lab);
+  });
+  fs.appendChild(ops); form.appendChild(fs);
+});
+function respuestas() { return PREGUNTAS.map((_, i) => { const c = form.querySelector('input[name="q' + i + '"]:checked'); return c ? +c.value : 0; }); }
+function avance() {
+  const r = respuestas(), n = r.filter(Boolean).length;
+  $("av-txt").textContent = n + " de " + PREGUNTAS.length;
+  $("av-bar").style.width = (n / PREGUNTAS.length) * 100 + "%";
+  form.querySelectorAll(".opcion").forEach((l) => l.classList.toggle("sel", l.querySelector("input").checked));
+  if (n === PREGUNTAS.length) $("falta").hidden = true;
+}
+form.addEventListener("change", avance);
+$("ver").addEventListener("click", () => {
+  const r = respuestas(), falta = r.indexOf(0);
+  if (falta !== -1) { $("falta").hidden = false; $("q" + falta).scrollIntoView({ behavior: "smooth", block: "center" }); return; }
+  const x = resultado(r);
+  $("p-nombre").textContent = x.perfil.nombre;
+  $("p-puntos").textContent = x.total + " de 40 puntos";
+  $("p-desc").textContent = x.perfil.desc;
+  $("p-limite").hidden = !x.limitado;
+  $("p-limite").textContent = x.limitado ? "Por tus respuestas saldrías " + x.porPuntos.nombre + ", pero te dejo en " + x.perfil.nombre + ". " + x.motivo : "";
+  const m = $("p-mezcla"); m.textContent = "";
+  x.perfil.mezcla.forEach(([nombre, pct]) => {
+    const r1 = document.createElement("div"); r1.className = "r";
+    const t = document.createElement("div"); t.className = "t";
+    const a = document.createElement("span"); a.textContent = nombre;
+    const b = document.createElement("b"); b.textContent = pct + "%";
+    t.appendChild(a); t.appendChild(b);
+    const bar = document.createElement("div"); bar.className = "b";
+    const fill = document.createElement("span"); fill.style.width = pct + "%";
+    bar.appendChild(fill); r1.appendChild(t); r1.appendChild(bar); m.appendChild(r1);
+  });
+  $("res").hidden = false;
+  $("res").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+$("otra").addEventListener("click", () => { form.reset(); avance(); $("res").hidden = true; window.scrollTo({ top: 0, behavior: "smooth" }); });
+avance();
+</script>

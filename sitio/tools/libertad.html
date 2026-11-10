@@ -1,0 +1,76 @@
+<main>
+<section class="herr">
+<div class="wrap">
+<a class="volver" href="/herramientas/">← Todas las herramientas</a>
+<div class="cabeza">
+<span class="insignia">Calculadora</span>
+<h1>Tu Número de <span class="dorado">Libertad Financiera</span></h1>
+<p>Cuánto necesitas tener junto para vivir de tu dinero, y cuánto apartar al mes para llegar. Todos los supuestos están a la vista y los puedes cambiar.</p>
+</div>
+<div class="dos-col">
+<form class="panel" id="f" onsubmit="return false">
+<h2>Tus datos</h2>
+<div class="campos">
+<div class="campo"><label for="gasto">Con cuánto al mes quieres vivir</label><input id="gasto" type="number" inputmode="numeric" min="0" step="1000" value="30000"><small>En pesos de hoy.</small></div>
+<div class="campo"><label for="ahorro">Lo que ya llevas ahorrado</label><input id="ahorro" type="number" inputmode="numeric" min="0" step="10000" value="0"><small>Solo lo destinado a tu retiro.</small></div>
+<div class="campo"><label for="edad">Tu edad</label><input id="edad" type="number" inputmode="numeric" min="18" max="80" value="30"></div>
+<div class="campo"><label for="objetivo">Edad a la que quieres lograrlo</label><input id="objetivo" type="number" inputmode="numeric" min="19" max="90" value="60"></div>
+</div>
+<details class="mas" open>
+<summary>Supuestos (cámbialos)</summary>
+<div class="campos">
+<div class="campo"><label for="inflacion">Inflación anual (%)</label><input id="inflacion" type="number" inputmode="decimal" min="0" max="20" step="0.5" value="4"></div>
+<div class="campo"><label for="rendimiento">Rendimiento anual de tu inversión (%)</label><input id="rendimiento" type="number" inputmode="decimal" min="0" max="20" step="0.5" value="8"><small>Antes de inflación.</small></div>
+<div class="campo"><label for="retiro">Retiro anual de tu capital (%)</label><input id="retiro" type="number" inputmode="decimal" min="1" max="10" step="0.5" value="4"><small>La "regla del 4%": cuánto sacas cada año sin acabártelo.</small></div>
+</div>
+</details>
+<p class="recorte" id="error" hidden>La edad a la que quieres lograrlo debe ser mayor a tu edad actual.</p>
+</form>
+<div class="resultado-caja" aria-live="polite">
+<div><div class="etiqueta">Tu número</div><div class="res-num" id="r-numero">$0</div><p class="res-pie">En pesos de hoy. Dentro de <span id="r-anios">0</span> años serán <b id="r-futuro">$0</b> por la inflación.</p></div>
+<hr class="sep">
+<div><div class="etiqueta">Aparta cada mes</div><div class="res-num chico" id="r-creciente">$0</div><p class="res-pie">Si subes tu aportación cada año lo mismo que la inflación.</p></div>
+<div class="filas">
+<div class="fila"><span>Si nunca la subes, tendría que ser</span><b id="r-fijo">$0</b></div>
+<div class="fila"><span>Tu gasto mensual de hoy, en ese año</span><b id="r-gasto">$0</b></div>
+<div class="fila"><span>Rendimiento después de inflación</span><b id="r-real">0%</b></div>
+</div>
+<p class="recorte" id="r-cubierto" hidden>Con lo que ya tienes ahorrado y estos supuestos, llegarías sin aportar más. Revisa que el rendimiento que pusiste sea realista.</p>
+<a class="btn btn-cuadro" href="/contacto/">Revisarlo en una sesión</a>
+<p class="legal-h">Estimación educativa, no una promesa de rendimiento ni una recomendación personalizada. No incluye tu Afore ni una pensión del IMSS o ISSSTE.</p>
+</div>
+</div>
+
+<div class="bloque-h">
+<h2>Cómo se calcula</h2>
+<ol class="pasos">
+<li><b>Tu número</b> es tu gasto de un año dividido entre el porcentaje que retiras. Con $30,000 al mes y 4%, son $360,000 entre 0.04: $9,000,000.</li>
+<li><b>La inflación</b> hace que ese mismo nivel de vida cueste más pesos en el futuro. Por eso ves dos cifras: en pesos de hoy y en pesos de ese año.</li>
+<li><b>La aportación</b> sale de cuánto te falta y de cuánto rinde tu dinero cada mes. Lo que ya tienes ahorrado también crece y se descuenta.</li>
+</ol>
+</div>
+</div>
+</section>
+</main>
+<script type="module">
+import { calcular } from "./calc.mjs?v=20261110";
+const $ = (id) => document.getElementById(id);
+const num = (id) => { const v = parseFloat($(id).value); return Number.isFinite(v) && v > 0 ? v : 0; };
+const pesos = (x) => "$" + Math.round(x).toLocaleString("es-MX");
+function pinta() {
+  const edad = num("edad"), objetivo = num("objetivo");
+  const mal = objetivo <= edad;
+  $("error").hidden = !mal;
+  const r = calcular({ gasto: num("gasto"), edad, objetivo: mal ? edad : objetivo, ahorro: num("ahorro"), inflacion: num("inflacion"), rendimiento: num("rendimiento"), retiro: Math.max(num("retiro"), 0.5) });
+  $("r-numero").textContent = pesos(r.numeroHoy);
+  $("r-futuro").textContent = pesos(r.numeroFuturo);
+  $("r-anios").textContent = r.anios;
+  $("r-creciente").textContent = mal ? "$0" : pesos(r.aporteCreciente);
+  $("r-fijo").textContent = mal ? "$0" : pesos(r.aporteFijo);
+  $("r-gasto").textContent = pesos(r.gastoFuturo);
+  $("r-real").textContent = r.real.toFixed(1) + "%";
+  $("r-cubierto").hidden = mal || !r.cubierto || num("ahorro") === 0;
+}
+document.querySelectorAll("#f input").forEach((i) => i.addEventListener("input", pinta));
+pinta();
+</script>
