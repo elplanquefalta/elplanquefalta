@@ -127,7 +127,7 @@ END = "</body>\n</html>\n"
 
 # ---------- Inicio ----------
 # Ediciones del newsletter. Para agregar una: guarda el cuerpo del correo (de <!-- ENCABEZADO --> a antes de
-# <!-- PIE -->, sin merge tags) en site/ediciones/<fecha>.html, la portada en assets/portada-<fecha>.png y añade su entrada aquí.
+# <!-- PIE -->, sin merge tags) en site/ediciones/<fecha>.html, la portada en assets/portada-<fecha>.jpg y añade su entrada aquí.
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 EDICIONES = [
     dict(fecha="2026-11-10", titulo="Aguinaldo, ISR y lo que aún cuenta para tu anual",
@@ -161,7 +161,7 @@ def fecha_larga(iso):
 
 def tarjeta_edicion(x):
     return f"""<a class="tarjeta" href="/ediciones/{x['fecha']}/">
-<img src="/img/portada-{x['fecha']}.png" alt="{x['alt']}" width="676" height="376">
+<img src="/img/portada-{x['fecha']}.jpg" alt="{x['alt']}" width="1600" height="893">
 <div class="cuerpo">
 <h3>{x['titulo']}</h3>
 <p>Además: {x['ademas']}</p>
@@ -211,7 +211,7 @@ inicio = head("El Plan Que Falta · Newsletter de finanzas personales en México
 def hcard(href, cat, tag, img, alt, title, desc, cta, ext=False, k=''):
     extra = ' target="_blank" rel="noopener noreferrer"' if ext else ""
     return f"""<a class="tarjeta" href="{href}" data-cat="{cat}" data-k="{k}"{extra}>
-<div class="img"><img src="/img/{img}" alt="{alt}" width="676" height="376"><span class="tag">{tag}</span></div>
+<div class="img"><img src="/img/{img}" alt="{alt}" width="1600" height="893"><span class="tag">{tag}</span></div>
 <div class="cuerpo">
 <h3>{title}</h3>
 <p>{desc}</p>
@@ -221,15 +221,15 @@ def hcard(href, cat, tag, img, alt, title, desc, cta, ext=False, k=''):
 
 
 HCARDS = "\n".join([
-    hcard("/herramientas/sat/", "calc", "Calculadora", "h-sat.png", "Pila de hojas color crema con un clip dorado y monedas",
+    hcard("/herramientas/sat/", "calc", "Calculadora", "h-sat.jpg", "Pila de hojas color crema con un clip dorado y monedas",
           "¿Cuánto te devuelve el SAT?", "Tu devolución de 2026 con deducciones personales, colegiaturas y ahorro para el retiro (art. 151 y 185).", "Abrir calculadora", k="sat impuestos isr devolucion deducciones declaracion anual ppr 151 185"),
-    hcard("/tarjetas/", "calc", "Comparador", "h-tarjetas.png", "Tres tarjetas en abanico: crema, dorada y verde",
+    hcard("/tarjetas/", "calc", "Comparador", "h-tarjetas.jpg", "Tres tarjetas en abanico: crema, dorada y verde",
           "¿Qué tarjeta de crédito te conviene?", "7 preguntas y 103 tarjetas comparadas, con topes, anualidades e IVA ya descontados.", "Abrir comparador", k="tarjeta credito cashback puntos anualidad"),
-    hcard("/herramientas/libertad/", "calc", "Calculadora", "h-libertad.png", "Reloj de arena junto a pilas de monedas doradas",
+    hcard("/herramientas/libertad/", "calc", "Calculadora", "h-libertad.jpg", "Reloj de arena junto a pilas de monedas doradas",
           "Tu Número de Libertad Financiera", "Cuánto capital necesitas y cuánto apartar al mes para retirarte a la edad que quieres.", "Abrir calculadora", k="retiro jubilacion ahorro libertad financiera pension"),
-    hcard("/herramientas/perfil/", "calc", "Test", "h-perfil.png", "Brújula de latón abierta junto a una moneda dorada",
+    hcard("/herramientas/perfil/", "calc", "Test", "h-perfil.jpg", "Brújula de latón abierta junto a una moneda dorada",
           "Tu perfil de inversor", "8 preguntas para saber qué tipo de inversionista eres.", "Hacer el test", k="inversion invertir riesgo perfil"),
-    hcard("https://forms.gle/LDvbtsaUaYV4GFVPA", "rec", "Reto", "h-reto.png", "Cuaderno abierto con una pluma dorada",
+    hcard("https://forms.gle/LDvbtsaUaYV4GFVPA", "rec", "Reto", "h-reto.jpg", "Cuaderno abierto con una pluma dorada",
           "Reto Claridad Financiera", "Regístrate en el formulario para participar.", "Ir al registro", ext=True, k="reto presupuesto gastos claridad"),
 ])
 
@@ -551,7 +551,7 @@ def pagina_edicion(x):
 <h1>{x['titulo']}</h1>
 <div class="fecha">Publicado: {largo}</div>
 </div>
-<img class="portada" src="/img/portada-{x['fecha']}.png" alt="{x['alt']}" width="676" height="376">
+<img class="portada" src="/img/portada-{x['fecha']}.jpg" alt="{x['alt']}" width="1600" height="893">
 <div class="correo">
 {correo}
 </div>
@@ -605,10 +605,10 @@ for rel, content in [("aviso-de-privacidad/index.html", aviso), ("index.html", i
 shutil.copy(HERE / "site.css", PUB / "site.css")
 (PUB / "img").mkdir(exist_ok=True)
 for x in EDICIONES:
-    shutil.copy(HERE / "assets" / f"portada-{x['fecha']}.png", PUB / "img" / f"portada-{x['fecha']}.png")
+    shutil.copy(HERE / "assets" / f"portada-{x['fecha']}.jpg", PUB / "img" / f"portada-{x['fecha']}.jpg")
 (PUB / "videos").mkdir(exist_ok=True)
 for f in (HERE / "videos").glob("testimonio-*"):
     shutil.copy(f, PUB / "videos" / f.name)
 for n in ("h-tarjetas", "h-libertad", "h-perfil", "h-reto", "h-sat"):
-    shutil.copy(HERE / "assets" / f"{n}.png", PUB / "img" / f"{n}.png")
+    shutil.copy(HERE / "assets" / f"{n}.jpg", PUB / "img" / f"{n}.jpg")
 print("listo")

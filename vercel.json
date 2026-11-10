@@ -16,6 +16,11 @@
       "source": "/aviso_privacidad.pdf",
       "destination": "/aviso-de-privacidad",
       "permanent": false
+    },
+    {
+      "source": "/img/(.*)\\.png",
+      "destination": "/img/$1.jpg",
+      "permanent": false
     }
   ]
 }
