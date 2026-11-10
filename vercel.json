@@ -11,6 +11,11 @@
       "source": "/sobre-mi",
       "destination": "/contacto#sobre-mi",
       "permanent": false
+    },
+    {
+      "source": "/aviso_privacidad.pdf",
+      "destination": "/aviso-de-privacidad",
+      "permanent": false
     }
   ]
 }
