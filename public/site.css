@@ -1,0 +1,99 @@
+:root{--oscuro:#1E2620;--salvia:#4A5D4C;--salvia-prof:#3A4A3C;--tarjeta:#2C3A2F;--crema:#F5F2EB;--papel:#FFFDF8;--dorado:#D4A853;--negro:#1A1A1A;--gris:#E8E5DC;--texto-suave:#C9D2C7;--texto-claro:#DCE3DA}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'DM Sans',Helvetica,Arial,sans-serif;font-size:17px;line-height:1.6;color:var(--negro);background:var(--oscuro)}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;margin:0;letter-spacing:-.02em}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.oculto{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.etiqueta{font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--dorado)}
+.dorado{color:var(--dorado)}
+
+.nav{background:var(--oscuro);padding:16px 0}
+.nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px}
+.marca{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px;color:var(--crema);text-decoration:none}
+.nav nav{display:flex;flex-wrap:wrap;align-items:center;gap:4px 26px}
+.nav nav a{color:var(--crema);text-decoration:none;font-weight:500;font-size:16px;padding:10px 0}
+.nav nav a:hover,.nav nav a[aria-current=page]{color:var(--dorado)}
+.nav nav a.btn{color:var(--negro);padding:12px 20px}
+.btn{display:inline-block;background:var(--dorado);color:var(--negro);text-decoration:none;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{background:#E0B968}
+.btn-cuadro{border-radius:10px;font-size:16px;padding:14px 22px}
+
+.hero{background:var(--oscuro);padding:88px 0 80px;text-align:center}
+.hero .wrap{display:flex;flex-direction:column;align-items:center;gap:22px}
+.hero h1{font-size:clamp(40px,6.4vw,74px);line-height:1.04;color:var(--crema);font-weight:700}
+.hero p.sub{max-width:620px;font-size:19px;color:var(--texto-claro)}
+.hero-izq{text-align:left;padding:64px 0 72px}
+.hero-izq .wrap{align-items:flex-start}
+.hero-izq h1{font-size:clamp(36px,5.4vw,62px)}
+
+.suscribir{width:100%;max-width:540px;display:flex;flex-wrap:wrap;gap:8px;background:var(--papel);border-radius:16px;padding:8px;margin:6px auto 0}
+.suscribir input{flex:1 1 220px;min-width:0;border:0;background:transparent;font-family:inherit;font-size:16px;color:var(--negro);padding:14px 16px;min-height:48px;border-radius:10px}
+.suscribir button{flex:0 0 auto;min-height:48px}
+.nota{font-size:14px;color:var(--texto-suave)}
+.aviso{display:none;background:var(--salvia-prof);color:var(--crema);font-size:15px;padding:12px 18px;border-radius:10px;max-width:540px}
+.aviso.ver{display:block}
+
+.ediciones{background:var(--oscuro);padding:0 0 104px}
+.ediciones .cab{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;border-top:1px solid var(--salvia-prof);padding:40px 0 28px}
+.ediciones h2{font-size:clamp(26px,3.2vw,34px);color:var(--crema)}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.tarjeta{background:var(--tarjeta);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--crema);transition:transform .2s ease,background .2s ease}
+a.tarjeta:hover{transform:translateY(-4px);background:#34453A}
+.tarjeta img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.tarjeta .cuerpo{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px}
+.tarjeta h3{font-family:'DM Sans',Helvetica,Arial,sans-serif;font-weight:700;font-size:20px;line-height:1.3;letter-spacing:0}
+.tarjeta p{font-size:15px;line-height:1.5;color:var(--texto-suave)}
+.tarjeta .fecha{font-size:13px;font-weight:700;color:var(--crema);margin-top:4px}
+
+.sobre{background:var(--salvia);color:var(--crema);padding:96px 0}
+.sobre .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:56px}
+.sobre .foto{flex:0 1 320px;min-width:220px;aspect-ratio:1/1;border-radius:20px;overflow:hidden;background:var(--salvia-prof)}
+.sobre .foto img{width:100%;height:100%;object-fit:cover}
+.sobre .txt{flex:1 1 420px;display:flex;flex-direction:column;gap:18px}
+.sobre .etiqueta{color:var(--crema)}
+.sobre h2{font-size:clamp(32px,4vw,46px);line-height:1.1}
+.sobre p{font-size:18px;line-height:1.65}
+.chips{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.chips li{background:var(--salvia-prof);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:500}
+
+.cierre{background:var(--oscuro);padding:96px 0;text-align:center}
+.cierre .wrap{display:flex;flex-direction:column;align-items:center;gap:22px}
+.cierre h2{font-size:clamp(32px,4.5vw,50px);line-height:1.1;color:var(--crema)}
+
+.claro{background:var(--crema);padding:72px 0 88px}
+.claro h2{font-size:clamp(26px,3.4vw,36px);line-height:1.15}
+.claro .intro{color:#3D3D3A;font-size:16px;margin-top:8px}
+.bloque{display:flex;flex-direction:column;gap:28px}
+.bloque+.bloque{margin-top:64px}
+.ficha{background:var(--papel);border:1px solid var(--gris);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:12px;text-decoration:none;color:var(--negro);transition:transform .2s ease,box-shadow .2s ease}
+a.ficha:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(30,38,32,.12)}
+.ficha h3{font-weight:600;font-size:24px;line-height:1.2}
+.ficha p{font-size:16px;line-height:1.55;color:#3D3D3A}
+.ficha .ir{margin-top:auto;padding-top:8px;font-weight:700;font-size:15px;color:var(--salvia)}
+.ficha.pronto{background:transparent;border:1px dashed #7A8B7A}
+.pildora{align-self:flex-start;background:#E0E5DC;color:var(--salvia-prof);font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.pildora.oro{background:var(--dorado);color:var(--negro)}
+.ficha .btn{align-self:flex-start;margin-top:8px}
+
+.edicion{background:var(--oscuro);padding:8px 0 72px}
+.edicion .volver{display:inline-block;color:var(--crema);font-weight:700;font-size:15px;padding:10px 0}
+.edicion h1{color:var(--crema);font-size:clamp(30px,4.6vw,48px);line-height:1.1;margin:14px 0 10px}
+.edicion .fecha{color:var(--texto-suave);font-size:15px;font-weight:700;margin-bottom:28px}
+.edicion .portada{border-radius:16px;margin:0 auto 20px;width:100%;max-width:600px;height:auto;aspect-ratio:16/9;object-fit:cover}
+.edicion .cab{max-width:600px;margin:0 auto}
+.correo{max-width:600px;margin:0 auto}
+.correo table{max-width:100%}
+
+.pie{background:var(--oscuro);border-top:1px solid var(--salvia-prof);padding:56px 0 40px;color:var(--texto-claro)}
+.pie .cols{display:flex;flex-wrap:wrap;gap:36px 40px;justify-content:space-between}
+.pie .col{display:flex;flex-direction:column;gap:4px;flex:0 1 190px}
+.pie .col.ancha{flex:1 1 300px;gap:8px}
+.pie .col a{color:var(--crema);font-size:15px;padding:6px 0}
+.pie .col .etiqueta{font-size:12px;margin-bottom:6px}
+.pie .legal{font-size:13px;line-height:1.6;color:var(--texto-suave);max-width:820px;margin-top:36px}
+.pie .copy{font-size:13px;color:var(--texto-suave);margin-top:16px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--dorado);outline-offset:2px}
+@media (max-width:640px){.hero{padding:56px 0 56px}.sobre,.cierre{padding:64px 0}.nav nav{gap:0 18px}.nav nav a{font-size:15px}}

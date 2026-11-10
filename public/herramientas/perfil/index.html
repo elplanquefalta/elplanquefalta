@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test: tu perfil de inversor · El Plan Que Falta</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (compiled) -->
+    <link rel="stylesheet" href="/dist/styles.css">
+
+    <!-- Vercel Web Analytics (sin cookies) -->
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body class="font-dmsans text-softBlack antialiased selection:bg-gold/30 text-center">
+
+    <div id="app-container" class="min-h-screen">
+        
+        <!-- SECTION: BIO LINKS -->
+        <section id="view-links" class="view block px-6 py-12 max-w-md mx-auto text-cream">
+            <div class="flex flex-col items-center">
+                <!-- Avatar Sticker with subtle glow -->
+                <div class="relative mb-8">
+                    <div class="absolute inset-0 bg-gold/20 blur-2xl rounded-full"></div>
+                    <div class="relative w-36 h-36 rounded-full border-4 border-gold/60 overflow-hidden bg-warmGrey shadow-2xl mx-auto">
+                        <!-- Updated profile image (Verde is default for brand consistency) -->
+                        <!-- To use Verde, change the src to "imagen-perfil-verde.png" -->
+                        <img src="/foto-perfil.png" alt="Chris" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <h1 class="font-fraunces text-3xl font-bold mb-2 tracking-tight">El Plan Que Falta</h1>
+                <p class="text-center text-sm text-cream/70 mb-2 max-w-[280px] leading-relaxed mx-auto">
+                    Finanzas con estrategia. Para quien quiere que su dinero tenga un destino claro.
+                </p>
+                <span class="text-xs font-bold text-gold tracking-[3px] uppercase mb-10 block">@elplanquefalta</span>
+
+                <!-- Socials -->
+                <div class="flex gap-4 mb-10 justify-center">
+                    <a href="https://instagram.com/elplanquefalta" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-gold hover:text-sage transition-all-custom">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.threads.net/@elplanquefalta" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-gold hover:text-sage transition-all-custom">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 192 192"><path d="M141.537 88.9883C140.71 88.5919 139.87 88.2437 139.019 87.9451C137.263 60.5544 121.856 42.1436 100.22 42.1436C91.9546 42.1436 84.7001 44.5098 78.6508 49.1837C72.6015 53.8575 68.3242 60.5921 65.9404 69.1172C64.6738 73.6517 64.0415 78.4312 64.0415 83.3333V92.2039C64.0415 112.54 75.3121 127.34 94.7554 133.003C97.1065 133.689 99.5249 134.184 102.001 134.484C102.502 134.544 102.936 134.908 103.111 135.38C103.286 135.852 103.167 136.381 102.805 136.735C91.4363 147.854 74.4514 150.36 59.5064 142.923C44.5614 135.485 34.6186 119.554 34.6186 101.442C34.6186 63.6062 65.1848 32.9463 102.815 32.9463C140.445 32.9463 171.011 63.6062 171.011 101.442C171.011 110.155 169.399 118.69 166.273 126.56C163.147 134.431 158.583 141.439 152.83 147.234C141.323 158.825 125.754 165.254 109.123 165.254C92.4921 165.254 76.9229 158.825 65.4163 147.234C64.9926 146.808 64.3168 146.745 63.8189 147.086C63.3211 147.426 63.0903 148.106 63.2721 148.679C65.5133 155.742 69.5828 162.062 74.9654 167.127C84.3414 175.949 96.4842 180.825 109.123 180.825C121.761 180.825 133.904 175.949 143.28 167.127C150.985 159.876 157.066 150.842 161.168 140.718C165.271 130.594 167.289 119.643 167.289 108.442C167.289 72.8465 138.443 44.0001 102.848 44.0001C67.2519 44.0001 38.4055 72.8465 38.4055 108.442C38.4055 125.109 46.5415 140.548 60.1873 148.972C73.8331 157.397 90.7335 157.481 104.469 149.198C104.912 148.932 105.106 148.375 104.919 147.904C104.733 147.433 104.214 147.168 103.715 147.291C101.401 147.863 99.0145 148.151 96.6115 148.151C81.332 148.151 68.8953 135.714 68.8953 120.435V106.842C68.8953 106.331 69.3094 105.917 69.8197 105.917C70.33 105.917 70.7441 106.331 70.7441 106.842V120.435C70.7441 134.693 82.3533 146.302 96.6115 146.302C98.4877 146.302 100.347 146.1 102.164 145.702C118.069 142.221 129.569 128.115 129.569 111.879V91.2039C129.569 77.2023 118.217 65.8504 104.216 65.8504C90.214 65.8504 78.8621 77.2023 78.8621 91.2039V101.842C78.8621 102.353 78.4481 102.767 77.9377 102.767C77.4274 102.767 77.0133 102.353 77.0133 101.842V91.2039C77.0133 76.1802 89.192 63.9996 104.216 63.9996C119.239 63.9996 131.419 76.1802 131.419 91.2039V111.879C131.419 129.083 119.167 144.027 102.443 147.534C100.518 147.938 98.5539 148.15 96.5707 148.163C82.5298 155.659 65.556 155.409 51.724 147.481C37.892 139.553 29.5691 125.132 29.5691 109.442C29.5691 74.4925 57.9254 46.1362 92.875 46.1362C127.825 46.1362 156.181 74.4925 156.181 109.442C156.181 117.502 154.689 125.399 151.797 132.682C148.906 139.965 144.685 146.452 139.358 151.815C131.258 159.98 120.536 164.55 109.123 164.55C97.7107 164.55 86.9881 159.98 78.8884 151.815C78.4871 151.41 77.8306 151.41 77.4293 151.815C77.028 152.22 77.028 152.877 77.4293 153.278C85.8369 161.758 97.1651 166.55 109.123 166.55C121.082 166.55 132.41 161.758 140.817 153.278C146.438 147.618 150.88 140.781 153.931 133.102C156.983 125.424 158.554 117.106 158.554 108.592C158.554 71.7408 128.694 41.881 91.843 41.881C54.992 41.881 25.1322 71.7408 25.1322 108.592C25.1322 126.685 34.6936 143.256 49.9192 151.968C65.1448 160.679 83.6938 160.138 98.396 150.551C102.164 150.627 105.86 150.144 109.432 149.124C128.006 143.818 141.056 126.852 142.146 107.568V106.842C142.146 106.331 141.732 105.917 141.222 105.917C140.711 105.917 140.297 106.331 140.297 106.842V107.568C139.3 125.962 126.864 142.131 108.91 147.256C105.613 148.196 102.193 148.653 98.749 148.618C94.597 151.042 89.8732 152.28 85.068 152.23C73.4912 152.128 62.4338 146.887 54.896 137.915C47.3582 128.943 44.0205 117.026 45.4851 104.305C46.9497 91.5838 53.0768 79.2559 62.774 70.1786C72.4711 61.1013 84.8436 56.126 97.4337 56.126C112.441 56.126 126.395 62.5936 136.603 74.2494C137.604 75.3934 138.455 76.6508 139.155 77.9946C139.854 79.3384 140.384 80.7496 140.741 82.2219C141.098 83.6941 141.275 85.2078 141.27 86.7324C141.266 88.257 141.079 89.7622 140.71 91.2185V106.842C140.71 107.353 140.296 107.767 139.785 107.767C139.275 107.767 138.861 107.353 138.861 106.842V91.2185C139.191 89.9197 139.359 88.5772 139.362 87.2185C139.366 85.8598 139.204 84.5105 138.882 83.1945C138.561 81.8784 138.087 80.6171 137.471 79.4206C136.855 78.2241 136.104 77.1066 135.219 76.0945C125.882 65.4326 113.111 59.508 99.394 59.508C87.8767 59.508 76.5592 64.0583 67.6891 72.3619C58.8189 80.6655 53.2144 91.9427 51.8746 103.58C50.5348 115.216 53.5878 126.118 60.482 134.324C67.3762 142.531 77.4912 147.325 88.0805 147.418C92.4764 147.464 96.797 146.332 100.601 144.116L102.164 143.204C102.607 142.938 103.164 143.131 103.411 143.602C103.658 144.072 103.491 144.629 103.048 144.895C102.605 145.161 102.162 145.427 101.72 145.693C102.162 145.959 102.605 146.225 103.048 146.491C103.491 146.757 103.658 147.314 103.411 147.785C103.164 148.255 102.607 148.448 102.164 148.182L100.601 147.27C96.797 149.486 92.4764 150.618 88.0805 150.572C77.4912 150.479 67.3762 145.685 60.482 137.479C53.5878 129.273 50.5348 118.371 51.8746 106.735C53.2144 95.0984 58.8189 83.8211 67.6891 75.5175C76.5592 67.2139 87.8767 62.6636 99.394 62.6636C113.111 62.6636 125.882 68.5882 135.219 79.2501C136.104 80.2622 136.855 81.3797 137.471 82.5762C138.087 83.7727 138.561 85.034 138.882 86.3501C139.204 87.6661 139.366 89.0154 139.362 90.3741C139.359 91.7328 139.191 93.0753 138.861 94.3741V106.842C138.861 107.353 139.275 107.767 139.785 107.767C140.296 107.767 140.71 107.353 140.71 106.842V94.3741C141.079 92.9178 141.266 91.4126 141.27 89.8939C141.275 88.3693 141.098 86.8556 140.741 85.3833C140.384 83.9111 139.854 82.5 139.155 81.1562C138.455 79.8124 137.604 78.555 136.603 77.4111C126.395 65.7553 112.441 59.2877 97.4337 59.2877C84.8436 59.2877 72.4711 64.2629 62.774 73.3402C53.0768 82.4175 46.9497 94.7454 45.4851 107.467C44.0205 120.188 47.3582 132.105 54.896 141.077C62.4338 150.049 73.4912 155.29 85.068 155.391C89.8732 155.442 94.597 154.204 98.749 151.779C102.193 151.815 105.613 151.358 108.91 150.418C126.864 145.293 139.3 129.124 140.297 110.73V106.842C140.297 106.331 140.711 105.917 141.222 105.917C141.732 105.917 142.146 106.331 142.146 106.842V110.73C141.056 130.014 128.006 146.98 109.432 152.286C105.86 153.305 102.164 153.789 98.396 153.712C83.6938 163.299 65.1448 163.84 49.9192 155.129C34.6936 146.417 25.1322 129.847 25.1322 111.753C25.1322 74.9025 54.992 45.0426 91.843 45.0426C128.694 45.0426 158.554 74.9025 158.554 111.753C158.554 120.267 156.983 128.585 153.931 136.264C150.88 143.943 146.438 150.78 140.817 156.44C132.41 164.92 121.082 169.712 109.123 169.712C97.1651 169.712 85.8369 164.92 77.4293 156.44C77.028 156.035 77.028 155.378 77.4293 154.973C77.8306 154.568 78.4871 154.568 78.8884 154.973C86.9881 163.138 97.7107 167.708 109.123 167.708C120.536 167.708 131.258 163.138 139.358 154.973C144.685 149.61 148.906 143.123 151.797 135.84C154.689 128.557 156.181 120.66 156.181 112.601C156.181 77.6508 127.825 49.2946 92.875 49.2946C57.9254 49.2946 29.5691 77.6508 29.5691 112.601C29.5691 128.291 37.892 142.712 51.724 150.64C65.556 158.568 82.5298 158.818 96.5707 151.321C98.5539 151.308 100.518 151.096 102.443 150.692C119.167 147.185 131.419 132.241 131.419 115.037V94.3621C131.419 79.3384 119.239 67.1578 104.216 67.1578C89.192 67.1578 77.0133 79.3384 77.0133 94.3621V105.000C77.0133 105.511 77.4274 105.925 77.9377 105.925C78.4481 105.925 78.8621 105.511 78.8621 105.000V94.3621C78.8621 80.3605 90.214 69.0086 104.216 69.0086C118.217 69.0086 129.569 80.3605 129.569 94.3621V115.037C129.569 131.273 118.069 145.379 102.164 148.86C100.347 149.258 98.4877 149.46 96.6115 149.46C82.3533 149.46 70.7441 137.851 70.7441 123.593V110.000C70.7441 109.489 70.33 109.075 69.8197 109.075C69.3094 109.075 68.8953 109.489 68.8953 110.000V123.593C68.8953 138.872 81.332 151.309 96.6115 151.309C99.0145 151.309 101.401 151.021 103.715 150.449C104.214 150.326 104.733 150.591 104.919 151.062C105.106 151.533 104.912 152.09 104.469 152.356C90.7335 160.639 73.8331 160.555 60.1873 152.13C46.5415 143.706 38.4055 128.267 38.4055 111.600C38.4055 75.9996 67.2519 47.1531 102.848 47.1531C138.443 47.1531 167.289 75.9996 167.289 111.600C167.289 122.801 165.271 133.752 161.168 143.876C157.066 154 150.985 163.034 143.28 170.285C133.904 179.107 121.761 183.983 109.123 183.983C96.4842 183.983 84.3414 179.107 74.9654 170.285C69.5828 165.22 65.5133 158.9 63.2721 151.837C63.0903 151.264 63.3211 150.584 63.8189 150.244C64.3168 149.903 64.9926 149.966 65.4163 150.392C76.9229 161.983 92.4921 168.412 109.123 168.412C125.754 168.412 141.323 161.983 152.83 150.392C158.583 144.597 163.147 137.589 166.273 129.718C169.399 121.848 171.011 113.313 171.011 104.600C171.011 66.7641 140.445 36.1042 102.815 36.1042C65.1848 36.1042 34.6186 66.7641 34.6186 104.600C34.6186 122.712 44.5614 138.643 59.5064 146.081C74.4514 153.518 91.4363 151.012 102.805 139.893C103.167 139.539 103.286 139.01 103.111 138.538C102.936 138.066 102.502 137.702 102.001 137.642C99.5249 137.342 97.1065 136.847 94.7554 136.161C75.3121 130.498 64.0415 115.698 64.0415 95.3621V86.4915C64.0415 81.5894 64.6738 76.8099 65.9404 72.2754C68.3242 63.7503 72.6015 57.0157 78.6508 52.3419C84.7001 47.668 91.9546 45.3018 100.22 45.3018C121.856 45.3018 137.263 63.7126 139.019 91.1033C139.87 91.4019 140.71 91.7501 141.537 92.1465C141.98 92.3614 142.235 92.8687 142.141 93.3533C142.047 93.8379 141.636 94.1687 141.164 94.1319L141.537 93.3533L141.537 88.9883Z"/></svg>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="https://tiktok.com/@elplanquefalta" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full glass-card flex items-center justify-center hover:bg-gold hover:text-sage transition-all-custom">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.31 6.31 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+                    </a>
+                </div>
+
+                <!-- AGENDA SECTION -->
+                <span class="w-full text-[10px] font-bold tracking-[3px] text-cream/40 uppercase mb-5 text-center">Agenda tu sesión</span>
+                <div class="w-full space-y-4 mb-12 text-darkSage text-left">
+                    <a href="https://calendar.app.google/b12dcLWdyYB7BiMg7" target="_blank" rel="noopener noreferrer" class="session-card group w-full bg-cream rounded-2xl flex items-stretch overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.2)] active:scale-95 transition-all-custom">
+                        <div class="w-2 bg-gold"></div>
+                        <div class="flex-1 py-5 px-6 flex items-center justify-between">
+                            <div><h3 class="font-bold text-base">Diagnóstico Financiero</h3><p class="text-[11px] opacity-60">60 min — Revisamos tu estado real</p></div>
+                            <div class="arrow-icon w-10 h-10 rounded-full bg-warmGrey flex items-center justify-center transition-all-custom"><svg class="w-4 h-4 stroke-sage fill-none stroke-[2.5]" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://calendar.app.google/PqH7RBjH1YqH94T39" target="_blank" rel="noopener noreferrer" class="session-card group w-full bg-cream rounded-2xl flex items-stretch overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.2)] active:scale-95 transition-all-custom">
+                        <div class="w-2 bg-sageLight"></div>
+                        <div class="flex-1 py-5 px-6 flex items-center justify-between">
+                            <div><h3 class="font-bold text-base">Retiro Inteligente</h3><p class="text-[11px] opacity-60">60 min — Estrategia de largo plazo</p></div>
+                            <div class="arrow-icon w-10 h-10 rounded-full bg-warmGrey flex items-center justify-center transition-all-custom"><svg class="w-4 h-4 stroke-sage fill-none stroke-[2.5]" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/message/V7LQAXFK254EH1" target="_blank" rel="noopener noreferrer" class="session-card group w-full bg-cream rounded-2xl flex items-stretch overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.2)] active:scale-95 transition-all-custom">
+                        <div class="w-2 bg-darkSage"></div>
+                        <div class="flex-1 py-5 px-6 flex items-center justify-between">
+                            <div><h3 class="font-bold text-base">Talleres/Conferencias</h3><p class="text-[11px] opacity-60">Llamada 15 min — Coordinamos tu evento</p></div>
+                            <div class="arrow-icon w-10 h-10 rounded-full bg-warmGrey flex items-center justify-center transition-all-custom"><svg class="w-4 h-4 stroke-sage fill-none stroke-[2.5]" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- RESOURCES SECTION -->
+                <span class="w-full text-[10px] font-bold tracking-[3px] text-cream/40 uppercase mb-5 text-center">Herramientas y Recursos</span>
+                <div class="w-full space-y-3 mb-12 text-left">
+                    <button onclick="location.href='/herramientas/'" class="w-full bg-cream rounded-2xl p-5 flex items-center justify-between shadow-[0_10px_40px_rgba(245,242,235,0.15)] hover:scale-[1.02] active:scale-95 transition-all-custom text-darkSage">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold/15 flex items-center justify-center text-gold"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.6 5.6L3 18l3 3 6.1-6.1a4 4 0 005.6-5.6l-2.8 2.8-2.8-2.8 2.8-2.8z"/></svg></div>
+                            <span class="text-base font-bold">Herramientas</span>
+                        </div>
+                        <svg class="w-5 h-5 opacity-50" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </button>
+
+                    <a href="https://forms.gle/LDvbtsaUaYV4GFVPA" target="_blank" rel="noopener noreferrer" class="w-full bg-sageDeep rounded-2xl p-5 flex items-center justify-between shadow-[0_10px_40px_rgba(45,56,46,0.4)] hover:scale-[1.02] active:scale-95 transition-all-custom text-cream border border-gold/30">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold/20 flex items-center justify-center text-gold"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 21V4a1 1 0 011-1h13l-2 4 2 4H5"/></svg></div>
+                            <span class="text-base font-bold">Reto Claridad Financiera</span>
+                        </div>
+                        <svg class="w-5 h-5 text-gold opacity-70" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </a>
+
+                    <a href="https://tiktok.com/@elplanquefalta" target="_blank" rel="noopener noreferrer" class="w-full glass-card rounded-2xl p-5 flex items-center justify-between hover:bg-cream/10 transition-all-custom text-cream/90 text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-cream/10 flex items-center justify-center">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.31 6.31 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+                            </div>
+                            <span class="text-sm font-medium tracking-wide">Sígueme en TikTok</span>
+                        </div>
+                        <svg class="w-4 h-4 opacity-30" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </a>
+                </div>
+
+                <footer class="text-center opacity-40">
+                    <div class="font-fraunces text-sm font-bold tracking-tight mb-2 uppercase text-center mx-auto">El Plan<span class="text-gold italic">QueFalta</span></div>
+                    <a href="aviso_privacidad.pdf" class="text-[10px] underline decoration-gold/30">Aviso de privacidad</a>
+                </footer>
+            </div>
+        </section>
+
+        <!-- SECTION: CALCULATOR -->
+        <section id="view-calculator" class="view hidden bg-cream min-h-screen text-softBlack">
+            <nav class="bg-sageDeep px-6 py-5 flex justify-between items-center text-cream shadow-xl">
+                <div class="font-fraunces font-bold text-base tracking-tight">El Plan<span class="text-gold italic">QueFalta</span></div>
+                <button onclick="location.href='/herramientas/'" class="text-xs font-bold text-gold flex items-center gap-1 hover:text-cream transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 16 16"><path d="M10 4l-4 4 4 4"/></svg> VOLVER
+                </button>
+            </nav>
+
+            <header class="bg-sageDeep px-8 pt-10 pb-20 text-center text-cream relative overflow-hidden">
+                <div class="relative z-10 mx-auto text-center">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-[10px] font-bold text-gold uppercase tracking-[3px] mb-6 mx-auto text-center">Herramienta Gratuita</span>
+                    <h2 class="font-fraunces text-4xl font-bold leading-tight mb-4 text-center mx-auto">Tu Número de<br><em>Libertad Financiera</em></h2>
+                    <p class="text-cream/60 text-sm max-w-xs mx-auto leading-relaxed text-center">Descubre cuánto necesitas acumulado para que tu dinero trabaje por ti.</p>
+                </div>
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-gold/5 rounded-full blur-3xl text-center"></div>
+                <div class="absolute bottom-0 left-0 right-0 h-12 bg-cream" style="clip-path: ellipse(55% 100% at 50% 100%);"></div>
+            </header>
+
+            <div class="max-w-md mx-auto px-6 -mt-12 pb-24 relative z-20">
+                <div class="flex justify-center gap-2.5 mb-8" id="calc-dots">
+                    <div class="dot w-3 h-3 rounded-full bg-gold transition-all duration-300 scale-125 shadow-[0_0_10px_rgba(212,168,83,0.5)]"></div>
+                    <div class="dot w-3 h-3 rounded-full bg-warmGrey transition-all duration-300"></div>
+                    <div class="dot w-3 h-3 rounded-full bg-warmGrey transition-all duration-300"></div>
+                </div>
+
+                <div class="bg-white rounded-[32px] p-10 shadow-[0_20px_60px_rgba(52,65,54,0.15)] border border-sage/5">
+                    
+                    <div id="calc-step-1" class="calc-step block text-left">
+                        <span class="text-[11px] font-bold text-gold uppercase tracking-[3px] block mb-2">Paso 1 de 3</span>
+                        <h3 class="font-fraunces text-2xl font-bold text-darkSage mb-8 leading-tight">¿Cuánto gastas<br><em>al mes hoy?</em></h3>
+                        <div class="space-y-6 text-left">
+                            <label class="block">
+                                <span class="text-xs font-bold text-darkSage/40 mb-3 block uppercase tracking-wide">Gasto mensual actual (MXN)</span>
+                                <div class="relative">
+                                    <span class="absolute left-5 top-1/2 -translate-y-1/2 text-gold font-bold text-xl">$</span>
+                                    <input type="number" id="input-gastos" inputmode="numeric" min="1000" step="1" placeholder="25000" class="w-full bg-warmGrey/30 rounded-2xl py-5 pl-10 pr-6 font-bold text-xl outline-none focus:ring-4 focus:ring-gold/10 border-2 border-transparent focus:border-gold/30 transition-all text-darkSage">
+                                </div>
+                                <p id="error-gastos" class="text-error text-[11px] mt-3 hidden font-medium text-center">Ingresa un monto válido mayor a $1,000</p>
+                            </label>
+                            <button onclick="nextStep(1)" class="w-full bg-sageDeep text-cream font-bold py-5 rounded-2xl shadow-xl hover:bg-darkSage active:scale-95 transition-all flex items-center justify-center gap-3 mt-6">
+                                SIGUIENTE <svg class="w-5 h-5 stroke-current fill-none stroke-[2.5]" viewBox="0 0 16 16"><path d="M4 8h8M9 5l3 3-3 3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="calc-step-2" class="calc-step hidden text-center">
+                        <span class="text-[11px] font-bold text-gold uppercase tracking-[3px] block mb-2">Paso 2 de 3</span>
+                        <h3 class="font-fraunces text-2xl font-bold text-darkSage mb-8 leading-tight">¿Cuántos años<br><em>tienes hoy?</em></h3>
+                        <div class="space-y-8">
+                            <div class="text-center bg-warmGrey/20 py-8 rounded-[24px]">
+                                <span class="font-fraunces text-6xl font-bold text-gold text-center" id="val-edad">28</span>
+                                <span class="text-darkSage opacity-40 font-bold text-sm ml-1 uppercase tracking-widest text-center">años</span>
+                            </div>
+                            <input type="range" id="input-edad" min="18" max="65" value="28" oninput="document.getElementById('val-edad').innerText = this.value" class="w-full">
+                            <button onclick="nextStep(2)" class="w-full bg-sageDeep text-cream font-bold py-5 rounded-2xl shadow-xl hover:bg-darkSage active:scale-95 transition-all flex items-center justify-center gap-3 text-center mx-auto">
+                                SIGUIENTE <svg class="w-5 h-5 stroke-current fill-none stroke-[2.5]" viewBox="0 0 16 16"><path d="M4 8h8M9 5l3 3-3 3"/></svg>
+                            </button>
+                            <button onclick="prevStep(2)" class="w-full text-darkSage/40 font-bold text-[10px] uppercase tracking-[3px] mt-2 text-center mx-auto">Volver atrás</button>
+                        </div>
+                    </div>
+
+                    <div id="calc-step-3" class="calc-step hidden text-center">
+                        <span class="text-[11px] font-bold text-gold uppercase tracking-[3px] block mb-2">Paso 3 de 3</span>
+                        <h3 class="font-fraunces text-2xl font-bold text-darkSage mb-8 leading-tight">¿A qué edad quieres<br><em>tu libertad?</em></h3>
+                        <div class="space-y-8">
+                            <div class="text-center bg-warmGrey/20 py-8 rounded-[24px]">
+                                <span class="font-fraunces text-6xl font-bold text-gold text-center" id="val-objetivo">55</span>
+                                <span class="text-darkSage opacity-40 font-bold text-sm ml-1 uppercase tracking-widest text-center">años</span>
+                            </div>
+                            <input type="range" id="input-objetivo" min="30" max="75" value="55" oninput="document.getElementById('val-objetivo').innerText = this.value" class="w-full">
+                            <p id="error-objetivo" class="text-error text-[11px] text-center hidden font-medium">La edad objetivo debe ser mayor a tu edad actual</p>
+                            <button onclick="calculateResult()" class="w-full bg-gold text-darkSage font-bold py-5 rounded-2xl shadow-xl hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-3 text-center mx-auto">
+                                CALCULAR MI NÚMERO <svg class="w-5 h-5 stroke-current fill-none stroke-[2.5]" viewBox="0 0 16 16"><path d="M4 8h8M9 5l3 3-3 3"/></svg>
+                            </button>
+                            <button onclick="prevStep(3)" class="w-full text-darkSage/40 font-bold text-[10px] uppercase tracking-[3px] mt-2 text-center mx-auto">Volver atrás</button>
+                        </div>
+                    </div>
+
+                    <div id="calc-result" class="calc-step hidden text-center">
+                        <div class="mb-10 text-center mx-auto">
+                            <span class="text-[11px] font-bold text-gold uppercase tracking-[4px] text-center mx-auto">Tu Número Maestro</span>
+                            <div id="result-number" class="font-fraunces text-5xl font-bold text-darkSage my-4 tracking-tighter leading-none text-center">$0</div>
+                            <p class="text-xs text-darkSage/40 max-w-[200px] mx-auto leading-relaxed text-center">Capital necesario para no depender de un sueldo.</p>
+                        </div>
+                        <div class="grid grid-cols-1 gap-4 mb-10 text-left">
+                            <div class="bg-warmGrey/20 p-5 rounded-3xl flex justify-between items-center border border-sage/5">
+                                <div class="text-left">
+                                    <span class="text-[10px] font-bold text-darkSage/40 uppercase tracking-widest block mb-1">Ahorro Mensual</span>
+                                    <span id="result-save" class="font-bold text-darkSage text-lg">$0</span>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center text-gold"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 8v8m-4-4h8"/></svg></div>
+                            </div>
+                            <div class="bg-warmGrey/20 p-5 rounded-3xl flex justify-between items-center border border-sage/5">
+                                <div class="text-left">
+                                    <span class="text-[10px] font-bold text-darkSage/40 uppercase tracking-widest block mb-1">Tiempo de Espera</span>
+                                    <span id="result-years" class="font-bold text-darkSage text-lg">0 años</span>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-sageDeep/10 flex items-center justify-center text-sageDeep"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+                            </div>
+                        </div>
+                        <div class="bg-sageDeep p-6 rounded-[28px] mb-10 shadow-lg text-left relative overflow-hidden">
+                            <h4 class="text-gold text-[10px] font-bold uppercase tracking-[3px] mb-3 text-left">Diagnóstico Estratégico</h4>
+                            <p id="result-insight" class="text-cream text-[13px] leading-relaxed opacity-90 relative z-10 text-left"></p>
+                        </div>
+                        <div class="bg-gold p-8 rounded-[32px] text-center space-y-5 shadow-2xl mx-auto">
+                            <h5 class="font-fraunces font-bold text-darkSage text-xl text-center">¿Tienes el vehículo correcto?</h5>
+                            <p class="text-[12px] text-darkSage/70 leading-relaxed mx-auto text-center">El 95% restante es la ejecución. Vamos a trazar tu ruta.</p>
+                            <a href="https://calendar.app.google/b12dcLWdyYB7BiMg7" target="_blank" rel="noopener noreferrer" class="block w-full bg-darkSage text-cream py-4 rounded-2xl text-sm font-bold shadow-xl hover:scale-[1.02] active:scale-95 transition-all text-center">Agendar Sesión Gratuita</a>
+                        </div>
+                        <button onclick="resetCalc()" class="w-full text-[10px] font-bold text-darkSage/30 uppercase tracking-[3px] mt-10 underline underline-offset-8 text-center mx-auto">Volver a calcular</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: TOOLS HUB -->
+        <section id="view-tools" class="view hidden bg-cream min-h-screen text-softBlack">
+            <nav class="bg-sageDeep px-6 py-5 flex justify-between items-center text-cream shadow-xl">
+                <div class="font-fraunces font-bold text-base tracking-tight">El Plan<span class="text-gold italic">QueFalta</span></div>
+                <button onclick="location.href='/herramientas/'" class="text-xs font-bold text-gold flex items-center gap-1 hover:text-cream transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 16 16"><path d="M10 4l-4 4 4 4"/></svg> VOLVER
+                </button>
+            </nav>
+
+            <header class="bg-sageDeep px-8 pt-10 pb-20 text-center text-cream relative overflow-hidden">
+                <div class="relative z-10 mx-auto text-center">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-[10px] font-bold text-gold uppercase tracking-[3px] mb-6">Recursos Gratuitos</span>
+                    <h2 class="font-fraunces text-4xl font-bold leading-tight mb-4">Herramientas<br><em>para tu plan</em></h2>
+                    <p class="text-cream/60 text-sm max-w-xs mx-auto leading-relaxed">Calculadoras y recursos para tomar mejores decisiones financieras.</p>
+                </div>
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-gold/5 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 right-0 h-12 bg-cream" style="clip-path: ellipse(55% 100% at 50% 100%);"></div>
+            </header>
+
+            <div class="max-w-md mx-auto px-6 -mt-12 pb-24 relative z-20">
+                <!-- CALCULADORAS -->
+                <span class="w-full text-[10px] font-bold tracking-[3px] text-darkSage/40 uppercase mb-4 block">Calculadoras</span>
+                <div class="space-y-3 mb-10">
+                    <a href="/tarjetas" class="w-full bg-white rounded-2xl p-5 flex items-center justify-between shadow-[0_10px_30px_rgba(52,65,54,0.1)] border border-sage/5 hover:scale-[1.02] active:scale-95 transition-all-custom text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center text-gold flex-shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div>
+                            <div>
+                                <h3 class="font-bold text-darkSage text-base">¿Qué tarjeta de crédito te conviene más?</h3>
+                                <p class="text-[11px] text-darkSage/50 mt-0.5">7 preguntas — Compara 103 tarjetas</p>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 text-darkSage/30 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </a>
+
+                    <button onclick="switchView('perfil')" class="w-full bg-white rounded-2xl p-5 flex items-center justify-between shadow-[0_10px_30px_rgba(52,65,54,0.1)] border border-sage/5 hover:scale-[1.02] active:scale-95 transition-all-custom text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center text-gold flex-shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+                            <div>
+                                <h3 class="font-bold text-darkSage text-base">Perfil de Inversor</h3>
+                                <p class="text-[11px] text-darkSage/50 mt-0.5">8 preguntas — Descubre qué tipo de inversor eres</p>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 text-darkSage/30 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </button>
+
+                    <button onclick="switchView('calculator')" class="w-full bg-gold rounded-2xl p-5 flex items-center justify-between shadow-[0_10px_40px_rgba(212,168,83,0.3)] hover:scale-[1.02] active:scale-95 transition-all-custom text-darkSage text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-darkSage/10 flex items-center justify-center flex-shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                            <div>
+                                <h3 class="font-bold text-base">Calculadora de Libertad</h3>
+                                <p class="text-[11px] opacity-60 mt-0.5">Tu número para la libertad financiera</p>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 opacity-50 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </button>
+                </div>
+
+                <!-- DESCARGAS -->
+                <span class="w-full text-[10px] font-bold tracking-[3px] text-darkSage/40 uppercase mb-4 block">Descargas</span>
+                <div class="space-y-3">
+                    <div class="w-full bg-warmGrey/40 rounded-2xl p-6 text-center border-2 border-dashed border-darkSage/15">
+                        <div class="w-12 h-12 mx-auto rounded-full bg-darkSage/5 flex items-center justify-center text-darkSage/40 mb-3"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg></div>
+                        <p class="text-xs font-bold text-darkSage/60 tracking-wide">Próximamente</p>
+                        <p class="text-[11px] text-darkSage/40 mt-1">Plantillas, guías y recursos descargables</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: PERFIL DE INVERSOR -->
+        <section id="view-perfil" class="view hidden bg-cream min-h-screen text-softBlack">
+            <nav class="bg-sageDeep px-6 py-5 flex justify-between items-center text-cream shadow-xl">
+                <div class="font-fraunces font-bold text-base tracking-tight">El Plan<span class="text-gold italic">QueFalta</span></div>
+                <button onclick="location.href='/herramientas/'" class="text-xs font-bold text-gold flex items-center gap-1 hover:text-cream transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 16 16"><path d="M10 4l-4 4 4 4"/></svg> VOLVER
+                </button>
+            </nav>
+
+            <header class="bg-sageDeep px-8 pt-10 pb-20 text-center text-cream relative overflow-hidden">
+                <div class="relative z-10 mx-auto text-center">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-[10px] font-bold text-gold uppercase tracking-[3px] mb-6">Test Gratuito</span>
+                    <h2 class="font-fraunces text-4xl font-bold leading-tight mb-4">Tu Perfil de<br><em>Inversor</em></h2>
+                    <p class="text-cream/60 text-sm max-w-xs mx-auto leading-relaxed">8 preguntas para entender cómo deberías invertir tu dinero.</p>
+                </div>
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-gold/5 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 right-0 h-12 bg-cream" style="clip-path: ellipse(55% 100% at 50% 100%);"></div>
+            </header>
+
+            <div class="max-w-md mx-auto px-6 -mt-12 pb-24 relative z-20">
+                <!-- PROGRESS BAR -->
+                <div id="perfil-progress-wrap" class="mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-[10px] font-bold text-darkSage/40 uppercase tracking-[2px]">Pregunta <span id="perfil-current">1</span> de 8</span>
+                        <span id="perfil-percent" class="text-[10px] font-bold text-gold">12%</span>
+                    </div>
+                    <div class="w-full h-1.5 bg-warmGrey rounded-full overflow-hidden">
+                        <div id="perfil-bar" class="h-full bg-gold transition-all duration-500" style="width: 12.5%"></div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[32px] p-8 shadow-[0_20px_60px_rgba(52,65,54,0.15)] border border-sage/5">
+                    <!-- QUESTION VIEW -->
+                    <div id="perfil-question-view" class="block text-left">
+                        <span class="text-[11px] font-bold text-gold uppercase tracking-[3px] block mb-3">Paso <span id="perfil-step-num">1</span> de 8</span>
+                        <h3 id="perfil-question-title" class="font-fraunces text-xl font-bold text-darkSage mb-6 leading-tight"></h3>
+                        <div id="perfil-options" class="space-y-2.5"></div>
+                        <button id="perfil-back-btn" onclick="perfilPrev()" class="w-full text-darkSage/40 font-bold text-[10px] uppercase tracking-[3px] mt-6 hidden">← Volver atrás</button>
+                    </div>
+
+                    <!-- RESULT VIEW -->
+                    <div id="perfil-result-view" class="hidden text-center">
+                        <span class="text-[11px] font-bold text-gold uppercase tracking-[4px] mb-3 block">Tu Perfil</span>
+                        <h3 id="perfil-result-name" class="font-fraunces text-4xl font-bold text-darkSage mb-2 leading-none"></h3>
+                        <p id="perfil-result-score" class="text-xs text-darkSage/40 mb-6">0 / 40 puntos</p>
+
+                        <div class="bg-sageDeep p-6 rounded-[24px] mb-6 text-left">
+                            <h4 class="text-gold text-[10px] font-bold uppercase tracking-[3px] mb-3">Qué significa</h4>
+                            <p id="perfil-result-desc" class="text-cream text-[13px] leading-relaxed opacity-90"></p>
+                        </div>
+
+                        <div class="bg-warmGrey/30 p-5 rounded-[20px] mb-8 text-left border border-sage/5">
+                            <h4 class="text-darkSage text-[10px] font-bold uppercase tracking-[3px] mb-3">Productos sugeridos</h4>
+                            <p id="perfil-result-products" class="text-darkSage text-[13px] leading-relaxed"></p>
+                        </div>
+
+                        <div class="bg-gold p-6 rounded-[28px] text-center space-y-4 shadow-2xl">
+                            <h5 class="font-fraunces font-bold text-darkSage text-lg">¿Quieres armar tu portafolio?</h5>
+                            <p class="text-[12px] text-darkSage/70 leading-relaxed">Agenda una sesión gratis y diseñamos tu plan personalizado.</p>
+                            <a href="https://calendar.app.google/b12dcLWdyYB7BiMg7" target="_blank" rel="noopener noreferrer" class="block w-full bg-darkSage text-cream py-4 rounded-xl text-sm font-bold shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Agendar Sesión Gratuita</a>
+                        </div>
+
+                        <button onclick="perfilReset()" class="w-full text-[10px] font-bold text-darkSage/30 uppercase tracking-[3px] mt-8 underline underline-offset-8">Volver a empezar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // ── SPA NAVIGATION ──
+        function switchView(viewId) {
+            document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+            document.getElementById('view-' + viewId).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ── CALCULATOR CORE LOGIC ──
+        const state = { gastos: 0, edad: 28, objetivo: 55 };
+
+        function updateDots(step) {
+            const dots = document.querySelectorAll('#calc-dots .dot');
+            dots.forEach((dot, i) => {
+                if(i + 1 === step) {
+                    dot.classList.replace('bg-warmGrey', 'bg-gold');
+                    dot.classList.add('scale-125', 'shadow-[0_0_10px_rgba(212,168,83,0.5)]');
+                } else {
+                    dot.classList.replace('bg-gold', 'bg-warmGrey');
+                    dot.classList.remove('scale-125', 'shadow-[0_0_10px_rgba(212,168,83,0.5)]');
+                }
+            });
+        }
+
+        function nextStep(step) {
+            if (step === 1) {
+                const raw = document.getElementById('input-gastos').value.replace(/[^0-9.]/g, '');
+                const g = parseInt(raw, 10);
+                if (!g || g < 1000) {
+                    document.getElementById('error-gastos').classList.remove('hidden');
+                    return;
+                }
+                document.getElementById('error-gastos').classList.add('hidden');
+                state.gastos = g;
+            }
+            document.getElementById(`calc-step-${step}`).classList.add('hidden');
+            document.getElementById(`calc-step-${step + 1}`).classList.remove('hidden');
+            updateDots(step + 1);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function prevStep(step) {
+            document.getElementById(`calc-step-${step}`).classList.add('hidden');
+            document.getElementById(`calc-step-${step - 1}`).classList.remove('hidden');
+            updateDots(step - 1);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function formatMoney(amount) {
+            return '$' + Math.round(amount).toLocaleString('es-MX');
+        }
+
+        function calculateResult() {
+            state.edad = parseInt(document.getElementById('input-edad').value, 10);
+            state.objetivo = parseInt(document.getElementById('input-objetivo').value, 10);
+
+            if (state.objetivo <= state.edad) {
+                document.getElementById('error-objetivo').classList.remove('hidden');
+                return;
+            }
+            document.getElementById('error-objetivo').classList.add('hidden');
+
+            const years = state.objetivo - state.edad;
+            const inflation = 0.04;
+            const roi = 0.08;
+            const safeWithdrawal = 0.04;
+
+            const futureMonthlyExpense = state.gastos * Math.pow(1 + inflation, years);
+            const futureAnnualExpense = futureMonthlyExpense * 12;
+            const freedomNumber = futureAnnualExpense / safeWithdrawal;
+
+            const r = roi / 12;
+            const n = years * 12;
+            const monthlySave = freedomNumber * r / (Math.pow(1 + r, n) - 1);
+
+            document.getElementById('result-number').innerText = formatMoney(freedomNumber);
+            document.getElementById('result-save').innerText = formatMoney(monthlySave);
+            document.getElementById('result-years').innerText = `${years} años`;
+
+            let insight = "";
+            const ratio = monthlySave / state.gastos;
+            if (ratio < 0.15) {
+                insight = "Tu meta es totalmente viable. Con menos del 15% de tu flujo actual puedes comprar tu libertad en el plazo elegido. El secreto será la constancia y el interés compuesto.";
+            } else if (ratio < 0.35) {
+                insight = `Para lograrlo necesitas destinar el ${Math.round(ratio*100)}% de tu gasto actual. Es ambicioso pero posible si elegimos los vehículos de inversión correctos desde hoy.`;
+            } else {
+                insight = "El monto de ahorro requerido es alto para tu flujo actual. Tenemos dos palancas: extender el plazo unos años o maximizar el rendimiento. Vamos a analizar cuál te conviene más.";
+            }
+            document.getElementById('result-insight').innerText = insight;
+
+            document.getElementById('calc-step-3').classList.add('hidden');
+            document.getElementById('calc-dots').classList.add('hidden');
+            document.getElementById('calc-result').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function resetCalc() {
+            state.gastos = 0;
+            state.edad = 28;
+            state.objetivo = 55;
+
+            document.getElementById('input-gastos').value = '';
+            document.getElementById('input-edad').value = 28;
+            document.getElementById('input-objetivo').value = 55;
+            document.getElementById('val-edad').innerText = 28;
+            document.getElementById('val-objetivo').innerText = 55;
+
+            document.getElementById('error-gastos').classList.add('hidden');
+            document.getElementById('error-objetivo').classList.add('hidden');
+
+            document.querySelectorAll('.calc-step').forEach(s => s.classList.add('hidden'));
+            document.getElementById('calc-step-1').classList.remove('hidden');
+            document.getElementById('calc-dots').classList.remove('hidden');
+
+            updateDots(1);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ── PERFIL DE INVERSOR ──
+        const perfilQuestions = [
+            {
+                title: '¿Cuál es tu principal objetivo al invertir?',
+                options: [
+                    { text: 'Proteger mi dinero contra la inflación', points: 1 },
+                    { text: 'Crecimiento moderado sin sustos', points: 2 },
+                    { text: 'Equilibrio entre crecimiento y estabilidad', points: 3 },
+                    { text: 'Crecimiento significativo de mi capital', points: 4 },
+                    { text: 'Maximizar rendimientos sin importar el riesgo', points: 5 },
+                ],
+            },
+            {
+                title: 'Si tu inversión perdiera valor temporalmente, ¿qué tan cómodo estarías?',
+                options: [
+                    { text: 'Muy incómodo, no podría dormir', points: 1 },
+                    { text: 'Incómodo, vendería parte', points: 2 },
+                    { text: 'Lo aceptaría pero preocupado', points: 3 },
+                    { text: 'Cómodo, mantendría la posición', points: 4 },
+                    { text: 'Muy cómodo, lo vería como oportunidad', points: 5 },
+                ],
+            },
+            {
+                title: '¿Cuál es tu horizonte de inversión?',
+                options: [
+                    { text: 'Menos de 1 año', points: 1 },
+                    { text: 'Entre 1 y 3 años', points: 2 },
+                    { text: 'Entre 3 y 5 años', points: 3 },
+                    { text: 'Entre 5 y 10 años', points: 4 },
+                    { text: 'Más de 10 años', points: 5 },
+                ],
+            },
+            {
+                title: 'Si tu inversión cayera 10% en un mes, ¿qué harías?',
+                options: [
+                    { text: 'Retiraría todo mi dinero', points: 1 },
+                    { text: 'Retiraría una parte importante', points: 2 },
+                    { text: 'No haría nada, esperaría', points: 3 },
+                    { text: 'Invertiría un poco más', points: 4 },
+                    { text: 'Invertiría significativamente más', points: 5 },
+                ],
+            },
+            {
+                title: '¿Qué porcentaje de tus ingresos puedes destinar a invertir?',
+                options: [
+                    { text: 'Menos del 5%', points: 1 },
+                    { text: 'Entre 5% y 10%', points: 2 },
+                    { text: 'Entre 10% y 20%', points: 3 },
+                    { text: 'Entre 20% y 30%', points: 4 },
+                    { text: 'Más del 30%', points: 5 },
+                ],
+            },
+            {
+                title: 'Sobre inversiones de alto riesgo y alto rendimiento, tú dirías:',
+                options: [
+                    { text: 'Las evito completamente', points: 1 },
+                    { text: 'Solo una pequeña parte de mi capital', points: 2 },
+                    { text: 'Las considero ocasionalmente', points: 3 },
+                    { text: 'Forman parte importante de mi estrategia', points: 4 },
+                    { text: 'Son mi enfoque principal', points: 5 },
+                ],
+            },
+            {
+                title: '¿Qué tan importante es tener acceso rápido a tu dinero?',
+                options: [
+                    { text: 'Necesito acceso inmediato', points: 1 },
+                    { text: 'Acceso en pocas semanas', points: 2 },
+                    { text: 'Acceso en algunos meses está bien', points: 3 },
+                    { text: 'Puedo esperar 1 o 2 años', points: 4 },
+                    { text: 'No me importa la liquidez', points: 5 },
+                ],
+            },
+            {
+                title: '¿Qué tan familiarizado estás con instrumentos financieros?',
+                options: [
+                    { text: 'Me parecen muy complicados', points: 1 },
+                    { text: 'Sé poco pero quiero aprender', points: 2 },
+                    { text: 'Tengo un conocimiento básico', points: 3 },
+                    { text: 'Conozco varios productos y los he usado', points: 4 },
+                    { text: 'Los entiendo bien y me emocionan', points: 5 },
+                ],
+            },
+        ];
+
+        const perfilProfiles = [
+            {
+                min: 8, max: 16, name: 'Conservador',
+                desc: 'Tu prioridad es preservar tu capital. Prefieres rendimientos predecibles aunque sean modestos, antes que arriesgar tu dinero. Tu estrategia debe enfocarse en inversiones de bajo riesgo y alta liquidez.',
+                products: 'CETES, fondos de deuda gubernamental, pagarés bancarios, bonos corporativos de alta calidad, fondos de inversión conservadores.',
+            },
+            {
+                min: 17, max: 24, name: 'Moderado',
+                desc: 'Buscas un balance entre seguridad y crecimiento. Aceptas algo de volatilidad para obtener rendimientos por arriba de la inflación, pero no toleras pérdidas grandes. Diversificación es tu palabra clave.',
+                products: 'Fondos balanceados (60% deuda / 40% renta variable), ETFs globales, bonos corporativos, una porción de acciones de empresas sólidas.',
+            },
+            {
+                min: 25, max: 32, name: 'Balanceado',
+                desc: 'Estás dispuesto a aceptar volatilidad significativa a cambio de mayor crecimiento a largo plazo. Entiendes que las caídas son temporales y forman parte del camino hacia mejores rendimientos.',
+                products: 'ETFs diversificados (S&P 500, mercados desarrollados), acciones individuales de empresas establecidas, mezcla 60/40 acciones-bonos, REITs.',
+            },
+            {
+                min: 33, max: 40, name: 'Agresivo',
+                desc: 'Buscas el máximo crecimiento posible y toleras alta volatilidad. Tu horizonte de largo plazo y conocimiento te permiten aprovechar oportunidades de mayor riesgo y mayor recompensa.',
+                products: 'Acciones de crecimiento, mercados emergentes, sectores específicos (tech, energía limpia), ETFs sectoriales, una porción en activos alternativos.',
+            },
+        ];
+
+        const perfilState = { current: 0, answers: [] };
+
+        function perfilRenderQuestion() {
+            const i = perfilState.current;
+            const q = perfilQuestions[i];
+
+            document.getElementById('perfil-current').innerText = i + 1;
+            document.getElementById('perfil-step-num').innerText = i + 1;
+            const pct = Math.round(((i + 1) / perfilQuestions.length) * 100);
+            document.getElementById('perfil-percent').innerText = pct + '%';
+            document.getElementById('perfil-bar').style.width = pct + '%';
+
+            document.getElementById('perfil-question-title').innerText = q.title;
+
+            const container = document.getElementById('perfil-options');
+            container.innerHTML = '';
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'w-full text-left bg-warmGrey/30 hover:bg-gold/20 border-2 border-transparent hover:border-gold/40 rounded-2xl py-4 px-5 text-darkSage font-medium text-sm transition-all-custom active:scale-95';
+                btn.innerHTML = `<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-darkSage/10 text-darkSage/60 text-[11px] font-bold mr-3">${idx + 1}</span>${opt.text}`;
+                btn.onclick = () => perfilAnswer(opt.points);
+                container.appendChild(btn);
+            });
+
+            const backBtn = document.getElementById('perfil-back-btn');
+            if (i > 0) backBtn.classList.remove('hidden');
+            else backBtn.classList.add('hidden');
+        }
+
+        function perfilAnswer(points) {
+            perfilState.answers[perfilState.current] = points;
+            if (perfilState.current < perfilQuestions.length - 1) {
+                perfilState.current++;
+                perfilRenderQuestion();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                perfilShowResult();
+            }
+        }
+
+        function perfilPrev() {
+            if (perfilState.current > 0) {
+                perfilState.current--;
+                perfilRenderQuestion();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function perfilShowResult() {
+            const total = perfilState.answers.reduce((a, b) => a + b, 0);
+            const profile = perfilProfiles.find(p => total >= p.min && total <= p.max);
+
+            document.getElementById('perfil-result-name').innerText = profile.name;
+            document.getElementById('perfil-result-score').innerText = `${total} / 40 puntos`;
+            document.getElementById('perfil-result-desc').innerText = profile.desc;
+            document.getElementById('perfil-result-products').innerText = profile.products;
+
+            document.getElementById('perfil-question-view').classList.add('hidden');
+            document.getElementById('perfil-progress-wrap').classList.add('hidden');
+            document.getElementById('perfil-result-view').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function perfilReset() {
+            perfilState.current = 0;
+            perfilState.answers = [];
+            document.getElementById('perfil-result-view').classList.add('hidden');
+            document.getElementById('perfil-progress-wrap').classList.remove('hidden');
+            document.getElementById('perfil-question-view').classList.remove('hidden');
+            perfilRenderQuestion();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        perfilRenderQuestion();
+    </script>
+<script>switchView('perfil');</script>
+</body>
+</html>
