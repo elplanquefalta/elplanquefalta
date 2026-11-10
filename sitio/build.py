@@ -29,7 +29,7 @@ def head(title, desc, path):
 <meta property="og:url" content="https://elplanquefalta.com{path}">
 <meta name="theme-color" content="#1E2620">
 {FONTS}
-<link rel="stylesheet" href="/site.css?v=20261110p">
+<link rel="stylesheet" href="/site.css?v=20261110m1">
 <script>window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -48,8 +48,8 @@ def nav(actual=""):
 {a('/#ediciones', 'Ediciones', 'ediciones')}
 {a('/herramientas/', 'Herramientas', 'herramientas')}
 {a('/contacto/', 'Contacto', 'asesoria')}
-<a class="btn" href="/#suscribirme">Suscribirme</a>
 </nav>
+<a class="btn" href="/#suscribirme">Suscribirme</a>
 </div>
 </header>
 """

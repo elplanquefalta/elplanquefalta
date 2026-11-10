@@ -11,12 +11,13 @@ p{margin:0}
 .dorado{color:var(--dorado)}
 
 .nav{background:var(--oscuro);padding:16px 0}
-.nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px}
+.nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 26px}
 .marca{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px;color:var(--crema);text-decoration:none}
+.nav .marca{margin-right:auto}
 .nav nav{display:flex;flex-wrap:wrap;align-items:center;gap:4px 26px}
 .nav nav a{color:var(--crema);text-decoration:none;font-weight:500;font-size:16px;padding:10px 0}
 .nav nav a:hover,.nav nav a[aria-current=page]{color:var(--dorado)}
-.nav nav a.btn{color:var(--negro);padding:12px 20px}
+.nav a.btn{color:var(--negro);padding:12px 20px}
 .btn{display:inline-block;background:var(--dorado);color:var(--negro);text-decoration:none;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;font-family:inherit}
 .btn:hover{background:#E0B968}
 .btn-cuadro{border-radius:10px;font-size:16px;padding:14px 22px}
@@ -370,3 +371,75 @@ dialog.agenda[open]{display:flex;flex-direction:column;animation:agenda-entra .2
 .legal-pag .ficha-legal{background:#2A352D;border:1px solid var(--salvia-prof);border-radius:16px;padding:22px 24px;margin:8px 0 4px}
 .legal-pag .ficha-legal p{margin:0 0 6px}
 .nota a{color:var(--crema)}
+
+/* ---- Menú en pantallas angostas: marca y botón arriba, ligas abajo ---- */
+@media (max-width:720px){
+.nav{padding:12px 0 0}
+.nav .wrap{gap:10px 12px}
+.nav nav{order:3;width:100%;justify-content:center;gap:0 36px;border-top:1px solid var(--salvia-prof)}
+.nav nav a{padding:11px 0}
+}
+
+/* ---- Celular (solo pantallas de 640 px o menos; la vista de computadora no cambia) ---- */
+@media (max-width:640px){
+.wrap{padding:0 18px}
+.nav .marca{font-size:20px}
+.nav a.btn{padding:9px 16px;font-size:14px}
+.nav nav{justify-content:space-between;gap:0}
+.nav nav a{font-size:15px}
+/* Portada y caja de suscripción */
+.hero{padding:40px 0 52px}
+.hero .wrap{gap:18px}
+.hero h1{font-size:clamp(32px,10.5vw,44px)}
+.hero p.sub{font-size:17px}
+.etiqueta{font-size:12px;letter-spacing:1.5px}
+.suscribir{flex-direction:column;gap:6px;margin:6px auto 4px}
+.suscribir input{flex:none;width:100%;text-align:center}
+.suscribir button{width:100%}
+.nota{font-size:13px}
+/* Rejillas a una columna para que nada se apriete */
+.rejilla,.dos,.tj-grid,.cmp-grid,.tres,.pilares{grid-template-columns:1fr}
+.rejilla{gap:18px}
+.tarjeta .cuerpo{padding:18px 18px 20px}
+.ediciones{padding:0 0 64px}
+.ediciones .cab{padding:32px 0 20px}
+.cierre,.sobre{padding:56px 0}
+/* Herramientas */
+.kit{padding:40px 0 64px}
+.kit .rejilla{margin-top:32px}
+.caja-cta{margin-top:48px;padding:32px 20px}
+.herr{padding:24px 0 64px}
+.herr .cabeza{margin:6px 0 24px}
+.herr .cabeza p{font-size:17px}
+.panel{padding:20px 18px;gap:16px}
+.resultado-caja{padding:22px 18px}
+.pregunta,.tj{padding:20px 18px}
+.bloque-h{margin-top:44px}
+.tabla-h{font-size:13px}
+.tabla-h th{padding:8px 6px;font-size:10px;letter-spacing:1px}
+.tabla-h td{padding:10px 6px}
+.pasos li{padding-left:46px}
+/* Contacto */
+.sm-hero{padding:32px 0 56px}
+.sm-hero .wrap{gap:36px}
+.acciones{flex-direction:column;align-self:stretch}
+.acciones a{text-align:center}
+.sm-sec{padding:0 0 56px}
+.pag-contacto .sm-sec .cab{padding-top:48px;margin-bottom:28px}
+.resultado,.lista,.sesion{padding:22px 20px}
+.sesion .btn,.pag-contacto .bio .btn{align-self:stretch;text-align:center}
+/* Edición: columna de texto más ancha */
+.edicion .wrap{padding:0 12px}
+.edicion .cab{padding:0 6px}
+.correo td[style*="padding:22px 24px"],.correo td[style*="padding:20px 24px"]{padding-left:18px !important;padding-right:18px !important}
+.correo td[style*="padding:9px 10px"]{padding-left:6px !important;padding-right:6px !important}
+/* Aviso de privacidad */
+.legal-pag{padding:36px 0 64px}
+/* Pie: Explorar y Comunidad lado a lado */
+.pie{padding:40px 0 32px}
+.pie .cols{gap:28px 20px}
+.pie .col{flex:1 1 40%}
+.pie .col.ancha{flex:1 1 100%}
+.pie .legal{margin-top:28px}
+}
+@media (max-width:340px){.nav .marca{font-size:17px}.nav a.btn{padding:8px 12px;font-size:13px}.nav nav a{font-size:14px}}
