@@ -1,4 +1,11 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "redirects": [
+    {
+      "source": "/sobre-mi",
+      "destination": "/asesoria#sobre-mi",
+      "permanent": false
+    }
+  ]
 }
