@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
-<link rel="stylesheet" href="/site.css?v=20261110b">
+<link rel="stylesheet" href="/site.css?v=20261110d">
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -28,64 +28,65 @@
 <a href="/#ediciones">Ediciones</a>
 <a href="/herramientas/" aria-current="page">Herramientas</a>
 <a href="/asesoria/">Asesoría</a>
-<a href="/#sobre-mi">Sobre mí</a>
+<a href="/sobre-mi/">Sobre mí</a>
 <a class="btn" href="/#suscribirme">Suscribirme</a>
 </nav>
 </div>
 </header>
 <main>
-<section class="hero hero-izq">
+<section class="kit">
 <div class="wrap">
-<div class="etiqueta">Herramientas gratis</div>
-<h1>Haz la cuenta <span class="dorado">con tus números.</span></h1>
-<p class="sub">Úsalas sin dejar tu correo. Ves tu resultado al momento.</p>
+<div class="cabeza">
+<span class="insignia">Gratis y sin registro</span>
+<h1>Tus <span class="dorado">Herramientas</span></h1>
+<p class="sub">Calculadoras, tests y recursos para que hagas la cuenta con tus números. Ves tu resultado al momento.</p>
+<div class="pestanas" role="tablist" aria-label="Tipo de herramienta">
+<button type="button" role="tab" aria-selected="true" data-tab="calc">Calculadoras y tests</button>
+<button type="button" role="tab" aria-selected="false" data-tab="rec">Recursos</button>
 </div>
-</section>
-<section class="claro">
-<div class="wrap">
-<div class="bloque">
-<div><h2>Calculadoras y tests</h2></div>
-<div class="rejilla">
-<a class="ficha" href="/tarjetas/">
-<span class="pildora">Tarjetas</span>
+<label class="oculto" for="buscar">Buscar herramienta</label>
+<input class="buscar" id="buscar" type="search" placeholder="Busca: tarjetas, retiro, inversión...">
+</div>
+<div class="rejilla" id="rejilla">
+<a class="tarjeta" href="/tarjetas/" data-cat="calc" data-k="tarjeta credito cashback puntos anualidad">
+<div class="img"><img src="/img/h-tarjetas.png" alt="Tres tarjetas en abanico: crema, dorada y verde" width="676" height="376"><span class="tag">Comparador</span></div>
+<div class="cuerpo">
 <h3>¿Qué tarjeta de crédito te conviene?</h3>
 <p>7 preguntas y 103 tarjetas comparadas, con topes, anualidades e IVA ya descontados.</p>
-<span class="ir">Abrir comparador</span>
+<div class="ir">Abrir comparador →</div>
+</div>
 </a>
-<a class="ficha" href="/herramientas/libertad/">
-<span class="pildora">Retiro</span>
+<a class="tarjeta" href="/herramientas/libertad/" data-cat="calc" data-k="retiro jubilacion ahorro libertad financiera pension">
+<div class="img"><img src="/img/h-libertad.png" alt="Reloj de arena junto a pilas de monedas doradas" width="676" height="376"><span class="tag">Calculadora</span></div>
+<div class="cuerpo">
 <h3>Tu Número de Libertad Financiera</h3>
 <p>Cuánto capital necesitas y cuánto apartar al mes para retirarte a la edad que quieres.</p>
-<span class="ir">Abrir calculadora</span>
+<div class="ir">Abrir calculadora →</div>
+</div>
 </a>
-<a class="ficha" href="/herramientas/perfil/">
-<span class="pildora">Inversión</span>
+<a class="tarjeta" href="/herramientas/perfil/" data-cat="calc" data-k="inversion invertir riesgo perfil">
+<div class="img"><img src="/img/h-perfil.png" alt="Brújula de latón abierta junto a una moneda dorada" width="676" height="376"><span class="tag">Test</span></div>
+<div class="cuerpo">
 <h3>Tu perfil de inversor</h3>
 <p>8 preguntas para saber qué tipo de inversionista eres.</p>
-<span class="ir">Hacer el test</span>
+<div class="ir">Hacer el test →</div>
+</div>
 </a>
-<div class="ficha pronto">
-<span class="pildora">Próximamente</span>
-<h3>¿Cuánto te devuelve el SAT?</h3>
-<p>Estima tu saldo a favor con tus deducciones personales.</p>
-</div>
-</div>
-</div>
-<div class="bloque">
-<div><h2>Recursos</h2></div>
-<div class="rejilla">
-<a class="ficha" href="https://forms.gle/LDvbtsaUaYV4GFVPA" target="_blank" rel="noopener noreferrer">
-<span class="pildora oro">Reto</span>
+<a class="tarjeta" href="https://forms.gle/LDvbtsaUaYV4GFVPA" data-cat="rec" data-k="reto presupuesto gastos claridad" target="_blank" rel="noopener noreferrer">
+<div class="img"><img src="/img/h-reto.png" alt="Cuaderno abierto con una pluma dorada" width="676" height="376"><span class="tag">Reto</span></div>
+<div class="cuerpo">
 <h3>Reto Claridad Financiera</h3>
 <p>Regístrate en el formulario para participar.</p>
-<span class="ir">Ir al registro</span>
+<div class="ir">Ir al registro →</div>
+</div>
 </a>
-<div class="ficha pronto">
-<span class="pildora">Próximamente</span>
-<h3>Descargables</h3>
-<p>Checklists y guías que te llegan a tu correo al suscribirte.</p>
 </div>
-</div>
+<p class="vacio" id="vacio">No encontré nada con esa búsqueda.</p>
+<p class="pronto">Próximamente: ¿Cuánto te devuelve el SAT? y descargables.</p>
+<div class="caja-cta">
+<h2>¿Quieres esto en tu correo?</h2>
+<p>Cada martes: las noticias de dinero que sí te pegan en el bolsillo, las tasas de la semana y una cosa concreta para hacer.</p>
+<a class="btn btn-cuadro" href="/#suscribirme">Unirme gratis</a>
 </div>
 </div>
 </section>
@@ -103,7 +104,7 @@
 <a href="/#ediciones">Ediciones</a>
 <a href="/herramientas/">Herramientas</a>
 <a href="/asesoria/">Asesoría</a>
-<a href="/#sobre-mi">Sobre mí</a>
+<a href="/sobre-mi/">Sobre mí</a>
 </div>
 <div class="col">
 <div class="etiqueta">Comunidad</div>
@@ -116,5 +117,30 @@
 <p class="copy">© 2026 El Plan Que Falta</p>
 </div>
 </footer>
+<script>
+(function () {
+  var tab = 'calc', q = '';
+  var cards = [].slice.call(document.querySelectorAll('#rejilla .tarjeta'));
+  var vacio = document.getElementById('vacio');
+  function pinta() {
+    var n = 0;
+    cards.forEach(function (c) {
+      var ok = (q ? true : c.dataset.cat === tab) && (c.textContent + ' ' + (c.dataset.k || '')).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').indexOf(q) !== -1;
+      c.style.display = ok ? '' : 'none';
+      if (ok) n++;
+    });
+    vacio.style.display = n ? 'none' : 'block';
+  }
+  document.querySelectorAll('.pestanas button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      tab = b.dataset.tab;
+      document.querySelectorAll('.pestanas button').forEach(function (x) { x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
+      pinta();
+    });
+  });
+  document.getElementById('buscar').addEventListener('input', function (e) { q = e.target.value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); pinta(); });
+  pinta();
+})();
+</script>
 </body>
 </html>
