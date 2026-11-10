@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
-<link rel="stylesheet" href="/site.css?v=20261110n">
+<link rel="stylesheet" href="/site.css?v=20261110o">
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -197,12 +197,14 @@
 <section class="cierre">
 <div class="wrap">
 <h2>Recíbelo cada martes, <span class="dorado">en tu correo.</span></h2>
-<form class="suscribir" data-suscribir>
+<form class="suscribir" data-suscribir method="POST" action="https://22703a60.sibforms.com/serve/MUIFAGGV8p2ufwIXhCqYjOsompEx08R_dU46BMnhp4TBatdFiEqK93yESB3HH9ava2uqmJqLantksJ274b7SVzwQE7TBKgp_HN900-WtFSrDPEysBqgEOar3rteTPCAChrtL9zuHeRGORtUOjSHWSQB65mjEkuks4vU0fzl46SelSP8YRU4xp7n9nuLeq6k74sytYsl9tZ3gUGbTqg==">
 <label class="oculto" for="correo-1">Tu correo electrónico</label>
 <input id="correo-1" type="email" name="EMAIL" required placeholder="Tu correo electrónico" autocomplete="email">
+<input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+<input type="hidden" name="locale" value="es">
 <button class="btn btn-cuadro" type="submit">Suscribirme gratis</button>
 </form>
-<div class="aviso" role="status" data-aviso>Pendiente: este formulario todavía no está conectado a la lista "Newsletter" de Brevo.</div>
+<div class="aviso" role="status" data-aviso></div>
 <p class="nota">Gratis. Te das de baja cuando quieras.</p>
 </div>
 </section>
@@ -233,12 +235,26 @@
 </div>
 </footer>
 <script>
-/* PENDIENTE: conectar con el formulario de Brevo de la lista "Newsletter" antes de publicar. */
+/* Suscripción: envía el correo al formulario de Brevo de la lista "Newsletter" sin salir de la página. */
 document.querySelectorAll('[data-suscribir]').forEach(function (f) {
   f.addEventListener('submit', function (e) {
     e.preventDefault();
-    var a = f.parentElement.querySelector('[data-aviso]');
-    if (a) a.classList.add('ver');
+    var aviso = f.parentElement.querySelector('[data-aviso]');
+    var boton = f.querySelector('button');
+    var correo = f.querySelector('input[type=email]');
+    function di(txt) { aviso.textContent = txt; aviso.classList.add('ver'); }
+    function listo() { di('¡Listo! Ya estás en la lista. Nos leemos el martes.'); correo.value = ''; try { window.va('event', { name: 'Suscripcion' }); } catch (err) {} }
+    function fin() { boton.disabled = false; boton.textContent = 'Suscribirme gratis'; }
+    boton.disabled = true; boton.textContent = 'Enviando…';
+    fetch(f.action + '?isAjax=1', { method: 'POST', body: new FormData(f) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) { if (j && j.success) listo(); else di('No pudimos registrar ese correo. Revisa que esté bien escrito e inténtalo de nuevo.'); })
+      .catch(function () {
+        var fd = new FormData(f); fd.append('html_type', 'simple');
+        return fetch(f.action, { method: 'POST', mode: 'no-cors', body: fd }).then(listo)
+          .catch(function () { di('No hay conexión. Inténtalo de nuevo en un momento.'); });
+      })
+      .then(fin);
   });
 });
 </script>
