@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap">
-<link rel="stylesheet" href="/site.css?v=20261110j">
+<link rel="stylesheet" href="/site.css?v=20261110k">
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -41,7 +41,7 @@
 <p>En 60 minutos revisamos tu situación real y te llevas la estructura para que tu dinero tenga un destino.</p>
 <p class="suave">Soy Chris Lamas, asesora financiera certificada ante la CNSF. Trabajo con profesionistas que ya tienen ingresos y todavía no tienen un plan.</p>
 <div class="acciones">
-<a class="btn btn-cuadro" href="https://calendar.app.google/b12dcLWdyYB7BiMg7" target="_blank" rel="noopener noreferrer">Agendar mi diagnóstico</a>
+<a class="btn btn-cuadro" href="https://calendar.app.google/b12dcLWdyYB7BiMg7" target="_blank" rel="noopener noreferrer" data-agenda="AcZssZ2gD0eoLi6TJUgbro9fpbhPyzRWQ2wDsOfrf8wuYr9W_P_mKTsaRIHP8etQ_X5sdxFpBVgYWAr4" data-titulo="Diagnóstico Financiero">Agendar mi diagnóstico</a>
 <a class="btn-linea" href="#recomendaciones">Ver qué dicen mis clientes</a>
 </div>
 </div>
@@ -161,13 +161,13 @@
 <span class="pildora">60 min</span>
 <h3>Diagnóstico Financiero</h3>
 <p>Revisamos tu estado real.</p>
-<a class="btn btn-cuadro" href="https://calendar.app.google/b12dcLWdyYB7BiMg7" target="_blank" rel="noopener noreferrer">Agendar</a>
+<a class="btn btn-cuadro" href="https://calendar.app.google/b12dcLWdyYB7BiMg7" target="_blank" rel="noopener noreferrer" data-agenda="AcZssZ2gD0eoLi6TJUgbro9fpbhPyzRWQ2wDsOfrf8wuYr9W_P_mKTsaRIHP8etQ_X5sdxFpBVgYWAr4" data-titulo="Diagnóstico Financiero">Agendar</a>
 </div>
 <div class="sesion">
 <span class="pildora">60 min</span>
 <h3>Retiro Inteligente</h3>
 <p>Estrategia de largo plazo.</p>
-<a class="btn btn-cuadro" href="https://calendar.app.google/PqH7RBjH1YqH94T39" target="_blank" rel="noopener noreferrer">Agendar</a>
+<a class="btn btn-cuadro" href="https://calendar.app.google/PqH7RBjH1YqH94T39" target="_blank" rel="noopener noreferrer" data-agenda="AcZssZ1k8XHg8LFPcwRL6QiXQpl4lLaE8qiA_CQiQf6QzfHQR4xL2VjuUOlI-8KKBhx4T7MPmhiOhaWn" data-titulo="Retiro Inteligente">Agendar</a>
 </div>
 <div class="sesion">
 <span class="pildora">Empresas y escuelas</span>
@@ -202,7 +202,7 @@
 <section class="cierre">
 <div class="wrap">
 <h2>Tu dinero, <span class="dorado">con destino claro.</span></h2>
-<a class="btn btn-cuadro" href="https://calendar.app.google/b12dcLWdyYB7BiMg7" target="_blank" rel="noopener noreferrer">Agendar mi diagnóstico</a>
+<a class="btn btn-cuadro" href="https://calendar.app.google/b12dcLWdyYB7BiMg7" target="_blank" rel="noopener noreferrer" data-agenda="AcZssZ2gD0eoLi6TJUgbro9fpbhPyzRWQ2wDsOfrf8wuYr9W_P_mKTsaRIHP8etQ_X5sdxFpBVgYWAr4" data-titulo="Diagnóstico Financiero">Agendar mi diagnóstico</a>
 <p class="nota">¿Todavía no? <a href="/#suscribirme" style="color:#F5F2EB">Suscríbete al newsletter</a> y nos leemos cada martes.</p>
 </div>
 </section>
@@ -232,6 +232,39 @@
 <p class="copy">© 2026 El Plan Que Falta</p>
 </div>
 </footer>
+<dialog class="agenda" id="agenda" aria-labelledby="agenda-titulo">
+<div class="barra">
+<div class="t"><span class="etiqueta">Agenda tu sesión</span><h2 id="agenda-titulo">Agendar</h2></div>
+<button class="cerrar" type="button" id="agenda-cerrar" aria-label="Cerrar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<div class="marco-cal"><div class="cargando" id="agenda-cargando">Cargando calendario…</div><iframe id="agenda-marco" title="Calendario para agendar" loading="lazy"></iframe></div>
+<p class="pie-agenda">Elige día y hora. ¿No carga? <a id="agenda-fuera" href="#" target="_blank" rel="noopener noreferrer">Ábrelo en otra pestaña</a>.</p>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('agenda');
+  if (!dlg || typeof dlg.showModal !== 'function') return; // sin soporte: los botones abren el calendario en otra pestaña
+  var marco = document.getElementById('agenda-marco'), cargando = document.getElementById('agenda-cargando');
+  marco.addEventListener('load', function () { if (marco.getAttribute('src')) cargando.style.display = 'none'; });
+  document.querySelectorAll('a[data-agenda]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+      e.preventDefault();
+      document.getElementById('agenda-titulo').textContent = a.dataset.titulo || 'Agendar';
+      document.getElementById('agenda-fuera').href = a.href;
+      cargando.style.display = '';
+      marco.src = 'https://calendar.google.com/calendar/appointments/schedules/' + a.dataset.agenda + '?gv=true';
+      dlg.showModal();
+      document.documentElement.style.overflow = 'hidden';
+      try { window.va('event', { name: 'AgendaAbrir', data: { sesion: a.dataset.titulo } }); } catch (err) {}
+    });
+  });
+  function cerrar() { dlg.close(); }
+  document.getElementById('agenda-cerrar').addEventListener('click', cerrar);
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) cerrar(); });
+  dlg.addEventListener('close', function () { marco.removeAttribute('src'); document.documentElement.style.overflow = ''; });
+})();
+</script>
 <script>
 (function () {
   var car = document.getElementById('carrusel');
