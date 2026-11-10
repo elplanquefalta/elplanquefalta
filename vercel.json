@@ -3,8 +3,13 @@
   "outputDirectory": "public",
   "redirects": [
     {
+      "source": "/asesoria",
+      "destination": "/contacto",
+      "permanent": false
+    },
+    {
       "source": "/sobre-mi",
-      "destination": "/asesoria#sobre-mi",
+      "destination": "/contacto#sobre-mi",
       "permanent": false
     }
   ]

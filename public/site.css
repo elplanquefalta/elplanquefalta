@@ -337,3 +337,17 @@ dialog.agenda[open]{display:flex;flex-direction:column;animation:agenda-entra .2
 .agenda .pie-agenda a{color:var(--crema)}
 @media (max-width:640px){dialog.agenda{width:100vw;height:100dvh;border-radius:0;border:0}.agenda .marco-cal{margin:8px}.agenda .barra h2{font-size:19px}}
 @media (prefers-reduced-motion:reduce){dialog.agenda[open]{animation:none}}
+
+/* ---- Página de Contacto: encabezados centrados, tarjetas que se iluminan y aparición al bajar ---- */
+.pag-contacto .sm-sec .cab{border-top:0;padding-top:96px;align-items:center;text-align:center;margin-bottom:40px}
+.pag-contacto .sm-sec .cab h2{font-size:clamp(32px,4.6vw,50px);line-height:1.08}
+.pag-contacto .sm-sec .cab p{margin:0 auto}
+.pag-contacto .resultado,.pag-contacto .lista,.pag-contacto .sesion,.pag-contacto .bio{position:relative;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease,background .25s ease}
+.pag-contacto .resultado:hover,.pag-contacto .lista:hover,.pag-contacto .sesion:hover,.pag-contacto .bio:hover,
+.pag-contacto .resultado:focus-within,.pag-contacto .sesion:focus-within{border-color:var(--dorado);background:#2F3C33;transform:translateY(-4px);box-shadow:0 0 0 1px rgba(212,168,83,.45),0 22px 50px -14px rgba(212,168,83,.45),0 0 60px -10px rgba(212,168,83,.22)}
+.pag-contacto .bio:hover{transform:none}
+.pag-contacto .resultado .marca-ok{width:46px;height:46px;border-radius:13px;background:rgba(212,168,83,.12);border:1px solid rgba(212,168,83,.5);color:var(--dorado);box-shadow:0 0 18px rgba(212,168,83,.18);transition:background .25s ease,color .25s ease}
+.pag-contacto .resultado:hover .marca-ok{background:var(--dorado);color:var(--negro)}
+.pag-contacto .aparece{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.pag-contacto .aparece.ya{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.pag-contacto .aparece{opacity:1;transform:none;transition:none}.pag-contacto .resultado:hover,.pag-contacto .lista:hover,.pag-contacto .sesion:hover{transform:none}}
