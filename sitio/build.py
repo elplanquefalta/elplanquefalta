@@ -130,6 +130,10 @@ END = "</body>\n</html>\n"
 # <!-- PIE -->, sin merge tags) en site/ediciones/<fecha>.html, la portada en assets/portada-<fecha>.jpg y añade su entrada aquí.
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 EDICIONES = [
+    dict(fecha="2026-11-17", titulo="Coyotes de la Afore: cobran por un trámite gratis",
+         ademas="el peso bajo presión, las tasas de la semana y cómo revisar tu Afore en 10 minutos con AforeMóvil.",
+         alt="Candado de latón cerrado sobre un sobre color crema con monedas doradas, en fondo verde oscuro",
+         desc="los coyotes que cobran hasta 11 mil pesos por un retiro por desempleo gratis, la apuesta contra el peso, las tasas de la semana y AforeMóvil."),
     dict(fecha="2026-11-10", titulo="Aguinaldo, ISR y lo que aún cuenta para tu anual",
          ademas="las Afores proponen ahorro voluntario automático, Banxico baja su tasa a 6.25% y un checklist de tus deducciones personales.",
          alt="Sobre color crema con monedas doradas y una caja de regalo verde",
