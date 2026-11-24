@@ -130,6 +130,10 @@ END = "</body>\n</html>\n"
 # <!-- PIE -->, sin merge tags) en site/ediciones/<fecha>.html, la portada en assets/portada-<fecha>.jpg y añade su entrada aquí.
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 EDICIONES = [
+    dict(fecha="2026-11-24", titulo="La bolsa cayó y rebotó: cómo aprovechar las bajas",
+         ademas="el dólar arriba de 19, las tasas de la semana y una calculadora de PPR para ver cuánto te regresa el SAT.",
+         alt="Figura de toro de latón junto a tres pilas de monedas doradas que crecen de izquierda a derecha, en fondo verde oscuro",
+         desc="del viernes negro al rebote del Nasdaq y por qué las bajas juegan a favor de quien aporta cada mes, el peso arriba de 19, las tasas de la semana y una calculadora de PPR."),
     dict(fecha="2026-11-17", titulo="Coyotes de la Afore: cobran por un trámite gratis",
          ademas="el peso bajo presión, las tasas de la semana y cómo revisar tu Afore en 10 minutos con AforeMóvil.",
          alt="Candado de latón cerrado sobre un sobre color crema con monedas doradas, en fondo verde oscuro",
