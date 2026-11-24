@@ -579,6 +579,8 @@ TOOLS = [
      "Ocho preguntas para conocer tu perfil de inversor y ver una mezcla de ejemplo para tu portafolio."),
     ("sat", "¿Cuánto te devuelve el SAT? Calculadora 2026 · El Plan Que Falta",
      "Calcula tu devolución de ISR 2026 con deducciones personales, colegiaturas, plan personal de retiro (art. 151) y art. 185."),
+    ("ppr", "¿Cuánto juntarías en un PPR y cuánto te regresa el SAT? · El Plan Que Falta",
+     "Calcula cuánto podrías juntar a los 65 en un plan personal de retiro invertido en bolsa y cuánto ISR te podría regresar el SAT cada año, con la tarifa 2026."),
 ]
 for slug, title, desc in TOOLS:
     out = PUB / "herramientas" / slug
